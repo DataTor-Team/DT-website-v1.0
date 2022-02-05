@@ -49,78 +49,97 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/tailwind.css" />
-    <title>Smartidly</title>
+    <title>Datator</title>
   </head>
   <body class="w-full scroll-smooth overflow-y-hidden">
     <!-- Start of Navbar Section -->
-    <nav
-      class="w-full fixed top-0 px-4 py-3 bg-transparent flex items-center justify-between z-50 transition-all"
-    >
-      <!-- Logo In the navbar -->
-      <a
-        href="/"
-        class="animate__animated animate__fadeInLeft p-3 uppercase font-megrim font-black text-xl tracking-wider bg-white rounded"
-      >
-        Smartidly
-      </a>
-      <input type="text" name="test" placeholder="enter text" class="DTinput" />
-      <!-- Navbar Toggle Button -->
-      <button
-        class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
-        id="toggle"
-      >
-        <!-- <span class="h-0.5 w-5 bg-black"></span>
+    <div class="flex justify-center w-screen">
+      <nav class="DTNavbar">
+        <!-- Logo In the navbar -->
+        <div class="flex flex-row items-center w-fit">
+          <img
+            class="mr-2"
+            src="assets/datatorlogo.svg"
+            alt="DatatorLogo"
+            width="30px"
+            height="auto"
+          />
+          <a
+            href="/"
+            class="DTNavbarLogoText pl-4"
+          >
+            DATATOR
+          </a>
+        </div>
+
+        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
+
+        <!-- Navbar Toggle Button -->
+        <button
+          class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
+          id="toggle"
+        >
+          <!-- <span class="h-0.5 w-5 bg-black"></span>
         <span class="h-0.5 w-5 bg-black my-1"></span>
         <span class="h-0.5 w-5 bg-black"></span> -->
-      </button>
+        </button>
 
-      <!-- Element just to import left-full class to the output file -->
-      <div class="hidden left-0"></div>
+        <!-- Element just to import left-full class to the output file -->
+        <div class="hidden left-0"></div>
 
-      <!-- Start of Navbar links -->
-      <div
-        class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none font-sans"
-        id="navbarLinks"
-      >
-        <a
-          class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-          href="#"
-          >Home</a
+        <!-- Start of Navbar links -->
+        <div
+          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          id="navbarLinks"
         >
-        <a
-          class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-          href="#our-products"
-          >Product</a
-        >
-        <a
-          class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-          href="#why-smartidly"
-          >Why Smartidly</a
-        >
-        <a
-          class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-          href="#contact-us"
-          >Contact</a
-        >
-        <a
-          class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-          href="https://restaurant.smartidly.com/login"
-          >Login</a
-        >
-        <a
-          class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-          href="https://restaurant.smartidly.com/register"
-          >Register</a
-        >
-      </div>
-      <!-- End of Navbar links -->
-    </nav>
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#"
+            >Privacy Movement</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#our-products"
+            >Solutions</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#why-smartidly"
+            >Resources</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#contact-us"
+            >Company</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="https://restaurant.smartidly.com/login"
+            >Contact</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="https://restaurant.smartidly.com/register"
+            >Login</a
+          >
+          <img
+            class="ml-3 mr-2"
+            src="assets/darkmodeicon.svg"
+            alt="theme"
+            width="18px"
+            height="auto"
+          />
+        </div>
+        <!-- End of Navbar links -->
+      </nav>
+    </div>
+
     <!-- End of Navbar Section -->
 
     <!-- Start of Hero Section -->
     <section
       id="hero-section"
-      class="w-full h-[calc(100vh+40px)] bg-cover relative transform -translate-y-10 scroll-smooth"
+      class="w-full h-[calc(100vh+40px)] bg-cover relative transform -translate-y-10 scroll-smooth heroBG"
     >
       <!-- Start of Content in hero section -->
       <div
@@ -128,8 +147,8 @@
       >
         <div
           class="w-full text-center text-2xl lg:text-6xl md:text-3xl font-bold text-white lg:tracking-wider tracking-wide flex items-center justify-center"
-        >
-          <p>Restaurants made</p>
+        > 
+          <!-- <p>Restaurants made</p>
           <span
             href="/"
             class="p-3 h-12 uppercase font-megrim font-black text-black text-xl tracking-wider bg-white rounded mx-4"
@@ -141,7 +160,11 @@
           class="lg:w-2/3 w-5/6 md:w-1/2 text-right text-white lg:text-2xl text-lg font-medium tracking-wide mt-3"
         >
           -- Your loyal digital servant
-        </div>
+        </div> -->
+        <img src="assets/heroLogo.svg" alt="Landing Logo" />
+
+        </svg>
+
       </div>
 
       <div

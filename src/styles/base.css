@@ -18,7 +18,8 @@
     var(--color-blue),
     var(--color-cyan)
   );
-  --hero-gradient: linear-gradient(113.8deg, #1d1f20, #b9d1e8);
+  --hero-gradient-dark: linear-gradient(113.8deg, #1d1f20, #b9d1e8);
+  --hero-gradient-light: linear-gradient(113.8deg, #ffffff, #b9d1e8);
   --input-outoffocus: #3e3e3e;
 }
 
@@ -36,8 +37,10 @@ body {
 }
 
 .DTinput {
-  @apply border-2 border-solid py-2 px-4;
-  @apply bg-gradient-to-br from-[var(--color-blue)] to-[var(--color-cyan)];
+  /* @apply border-2 border-solid py-2 px-4;
+  @apply bg-gradient-to-br from-[var(--color-blue)] to-[var(--color-cyan)]; */
+  border: 2px solid var(--input-outoffocus);
+  padding: 0.5rem 1rem;
   border-color: var(---input-outoffocus);
   border-radius: 0.25rem;
 }
@@ -46,9 +49,6 @@ body {
   outline: none;
   border-image-slice: 1;
   border-radius: 10px;
-}
-.testingTailwind {
-  /* @apply; */
 }
 .DTheading {
   font-size: 50px;
@@ -59,8 +59,31 @@ body {
   font-weight: 300;
 }
 
-.test {
-  background-color: var(--btn-gradient);
-  background-image: var(--hero-gradient);
-  /* background-color: white; */
+.heroBG {
+  background-image: var(--hero-gradient-light);
+}
+.DTNavbar {
+  /* @apply transition-all */
+  width: 95vw;
+  height: 70px;
+  position: fixed;
+  top: 1rem;
+  font-family: "Nunito", sans-serif;
+  margin: 0 1rem;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.DTNavbarLogoText {
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
