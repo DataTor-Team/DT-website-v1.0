@@ -388,7 +388,7 @@ Make sure disabled buttons don't get the pointer cursor.
 /*
 1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
 2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-This can trigger a poorly considered lint error in some tools but is included by design.
+   This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
 img,
@@ -518,6 +518,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bottom-14 {
   bottom: 3.5rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.bottom-12 {
+  bottom: 3rem;
+}
+
+.bottom-16 {
+  bottom: 4rem;
 }
 
 .z-50 {
@@ -693,6 +713,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .-translate-y-10 {
@@ -1357,6 +1385,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-1\/4 {
     width: 25%;
+  }
+
+  .lg\:w-4 {
+    width: 1rem;
+  }
+
+  .lg\:w-8 {
+    width: 2rem;
   }
 
   .lg\:rotate-0 {
