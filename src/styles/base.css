@@ -92,7 +92,7 @@ body {
 
 .bd-grid{
   display: grid;
-  gap: 1.5rem;
+  gap: 5.5rem;
 }
 
 .bd-container{
@@ -119,7 +119,7 @@ body {
 }
 
 .prodcard__img{
-  width: 100px;
+  width: 200px;
   align-self: center;
   margin-bottom: var(--mb-2);
 }
