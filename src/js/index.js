@@ -10,9 +10,9 @@ toggleButton.addEventListener("click", () => {
 document.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     navbar.classList.add("bg-white");
-    // navbar.classList.remove("sticky");
+    navbar.classList.add("boxshadow");
   } else {
     navbar.classList.remove("bg-white");
-    // navbar.classList.add("sticky");
+    navbar.classList.remove("boxshadow");
   }
 });

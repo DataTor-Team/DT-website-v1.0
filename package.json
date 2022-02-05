@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "serve ./src",
-    "build": "tailwindcss -i src/styles/base.css -o src/styles/tailwind.css --minify",
-    "dev": "concurrently \"tailwindcss -o src/styles/tailwind.css --watch\" \"serve ./src\"",
+    "build": "",
+    "dev": " serve ./src",
     "build:css": "postcss --use autoprefixer"
   },
   "devDependencies": {

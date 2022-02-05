@@ -78,6 +78,8 @@ body {
   z-index: 50;
   border-radius: 0.5rem;
   border: none;
+}
+.boxshadow {
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .DTNavbarLogoText {
@@ -86,4 +88,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
+}
+.btngradient {
+  background-image: var(--btn-gradient);
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  color: white;
+  font-weight: 500;
 }
