@@ -34,6 +34,7 @@ body {
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  color: var(--text-color-light);
 }
 
 .DTinput {
@@ -41,6 +42,7 @@ body {
   @apply bg-gradient-to-br from-[var(--color-blue)] to-[var(--color-cyan)]; */
   border: 2px solid var(--input-outoffocus);
   padding: 0.5rem 1rem;
+  width: 400px;
   border-color: var(---input-outoffocus);
   border-radius: 0.25rem;
 }
@@ -53,6 +55,7 @@ body {
 .DTheading {
   font-size: 50px;
   font-weight: bold;
+  margin-bottom: 2.5rem;
 }
 .DTbodytext {
   font-size: 14px;
@@ -61,6 +64,10 @@ body {
 
 .heroBG {
   background-image: var(--hero-gradient-light);
+}
+.sectionBG {
+  background-image: url("/assets/rightSideLogo.svg");
+  background-repeat: no-repeat;
 }
 .DTNavbar {
   /* @apply transition-all */
@@ -95,4 +102,27 @@ body {
   padding: 0.75rem 2rem;
   color: white;
   font-weight: 500;
+}
+.sectionPaddings {
+  padding: 8rem 7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionPaddings {
+    padding-left: 4.5rem;
+  }
+  .DTinput {
+    width: 250px !important;
+  }
+  .DTheading{
+    font-size: ;
+  }
+  .sectionBGImage{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 468px){
+  .sectionBGImage{
+    display: none;
+  }
 }
