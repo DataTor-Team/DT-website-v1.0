@@ -101,30 +101,44 @@
     </div>
 
     <section class="w-screen h-screen scroll-smooth relative">
-      <div class="flex h-[inherit] w-[inherit] items-end flex-col justify-center absolute">
         <img
-          class="sectionBGImage"
+          class="sectionBGImage absolute top-1/2 right-0"
           src="assets/rightSideLogo.svg"
           width="auto"
           height="auto"
         />
-      </div>
-      <div class="sectionPaddings border-2">
-        <h1 class="DTheading">Login</h1>
-        <label for="username">Username</label>  
-        <br />
-        <input
-          class="DTinput mb-6"
-          type="text | email"
-          name="username"
-          id="username"
-        />
-        <br />
-        <label for="password">Password</label><br />
-        <input class="DTinput" type="password" name="password" id="password" />
-        <br />
-        <button class="btngradient mt-4">Login</button>
-      </div>
+      <br /><br /><br /><br /><br /><br />
+
+      <div class="w-full md:w-1/2 flex flex-col">
+        <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
+            <p class="text-center text-3xl">Welcome to DT Portal</p>
+            <form class="flex flex-col pt-3 md:pt-8" onsubmit="event.preventDefault();">
+                <div class="flex flex-col pt-4">
+                    <label for="email" class="text-lg">Email</label>
+                    <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+
+                <div class="flex flex-col pt-4">
+                    <label for="password" class="text-lg">Password</label>
+                    <input type="password" id="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <br />
+                <div class="flex items-start mb-6">
+                  <div class="flex items-center h-5">
+                    <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                  </div>
+                </div>
+                <button class="btngradient mt-4">Login</button>
+            </form>
+            <div class="text-center pt-12 pb-12">
+                <p>Don't have an account? <a href="register.html" class="underline font-semibold">Register here.</a></p>
+            </div>
+        </div>
+
+    </div>
     </section>
   </body>
 </html>
