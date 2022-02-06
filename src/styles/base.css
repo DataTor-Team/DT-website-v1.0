@@ -96,3 +96,48 @@ body {
   color: white;
   font-weight: 500;
 }
+
+
+
+nav#dot-nav {
+  position: fixed;
+  left: 30px; }
+  nav#dot-nav a {
+    border: 1px solid #121212;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin: 10px;
+    -webkit-transition: all 0.4;
+    transition: all 0.4; }
+    nav#dot-nav a.active {
+      background: #121212;
+      border-top-left-radius: 20%;
+      border-bottom-left-radius: 20%;
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      
+      height: 40px; }
+  nav#dot-nav.red a {
+     }
+    nav#dot-nav.red a.active, nav#dot-nav.red a:first-child {
+       }
+
+
+    body.dark-theme{
+    --title-color: #F1F3F2;
+    --text-color: #C7D1CC;
+    --body-color: #1D2521;
+    --container-color: #27302C;
+  }
+  
+  /*========== Button Dark/Light ==========*/
+  .change-theme{
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+  }
