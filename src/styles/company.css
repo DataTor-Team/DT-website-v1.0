@@ -1,0 +1,50 @@
+body,
+html {
+  overflow-x: hidden;
+}
+
+[data-aos] {
+  opacity: 0;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transition: all 1s;
+}
+
+@keyframes from-left {
+  from {
+    left: -100vw;
+    transform: translateX(0);
+  }
+  to {
+    left: 50%;
+    transform: translateX(calc(100% - 200% - 2rem));
+  }
+}
+
+@keyframes from-right {
+  from {
+    right: -100vw;
+    transform: translateX(0);
+  }
+  to {
+    right: 50%;
+    transform: translateX(calc(100% + 2rem));
+  }
+}
+
+.first-step {
+  animation-name: from-left;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.second-step {
+  animation-name: from-right;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
