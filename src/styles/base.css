@@ -52,6 +52,15 @@ body {
   border-image-slice: 1;
   border-radius: 10px;
 }
+.DTTextArea{
+  border: var(--input-outoffocus);
+}
+.DTTextArea:focus{
+  border-image: var(--btn-gradient);
+  outline: none;
+  border-image-slice: 1;
+  border-radius: 10px;
+}
 .DTheading {
   font-size: 50px;
   font-weight: bold;
