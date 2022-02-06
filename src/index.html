@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/tailwind.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Datator</title>
   </head>
   <body class="w-full scroll-smooth overflow-y-hidden">
@@ -82,7 +82,7 @@
 
         <!-- Start of Navbar links -->
         <div
-          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          class="dark:bg-black dark:text-green-500 animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
           id="navbarLinks"
         >
           <a
@@ -106,7 +106,7 @@
             >Company</a
           >
           <a
-            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            class="dark:text-slate-100 lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
             href="contact.html"
             >Contact</a
           >
@@ -121,6 +121,7 @@
             alt="theme"
             width="18px"
             height="auto"
+            id="dark-mode-button"
           />
         </div>
         <!-- End of Navbar links -->

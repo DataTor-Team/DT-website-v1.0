@@ -16,8 +16,8 @@
   "scripts": {
     "start": "serve ./src",
     "build": "",
-    "dev": " serve ./src",
-    "build:css": "postcss --use autoprefixer"
+    "dev": "concurrently \"tailwind -o src/styles/tailwind.css --watch\" \"serve ./src\" ",
+    "build:css": "tailwindcss -o src/styles/tailwind.css"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",

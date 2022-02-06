@@ -1,6 +1,8 @@
 const navbar = document.querySelector("nav");
 const toggleButton = document.querySelector("#toggle");
 const navbarLinks = document.querySelector("#navbarLinks");
+const darkModeToggle = document.querySelector("#dark-mode-button");
+const html = document.querySelector("html");
 
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-0");
@@ -16,3 +18,5 @@ document.addEventListener("scroll", () => {
     navbar.classList.remove("boxshadow");
   }
 });
+
+darkModeToggle.addEventListener("click", () => html.classList.toggle("dark"));
