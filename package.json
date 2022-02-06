@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "serve ./src",
-    "build": "",
+    "build": "tailwind -o src/styles/tailwind.css",
     "dev": "concurrently \"tailwind -o src/styles/tailwind.css --watch\" \"serve ./src\" ",
     "build:css": "tailwindcss -o src/styles/tailwind.css"
   },
