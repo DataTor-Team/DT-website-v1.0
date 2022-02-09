@@ -18,11 +18,92 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/company.css" />
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
   </head>
   <body class="h-full w-full bg-[#1C1C1C]">
+    <div class="flex justify-center w-screen">
+      <nav class="DTNavbar">
+        <!-- Logo In the navbar -->
+        <div class="flex flex-row items-center w-fit">
+          <img
+            class="mr-2"
+            src="assets/datatorlogo.svg"
+            alt="DatatorLogo"
+            width="30px"
+            height="auto"
+          />
+          <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
+        </div>
+
+        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
+
+        <!-- Navbar Toggle Button -->
+        <button
+          class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
+          id="toggle"
+        >
+          <!-- <span class="h-0.5 w-5 bg-black"></span>
+        <span class="h-0.5 w-5 bg-black my-1"></span>
+        <span class="h-0.5 w-5 bg-black"></span> -->
+        </button>
+
+        <!-- Element just to import left-full class to the output file -->
+        <div class="hidden left-0"></div>
+
+        <!-- Start of Navbar links -->
+        <div
+          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          id="navbarLinks"
+        >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#"
+            >Privacy Movement</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#our-products"
+            >Solutions</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#why-smartidly"
+            >Resources</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="company.html"
+            >Company</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="login.html"
+            >Login</a
+          >
+          <img
+            class="ml-3 mr-2 dark:fill-white"
+            src="assets/darkmodeicon.svg"
+            alt="theme"
+            width="18px"
+            height="auto"
+            id="dark-mode-button"
+          />
+        </div>
+        <!-- End of Navbar links -->
+      </nav>
+    </div>
+    <!-- End of Navbar -->
     <!-- Start of hero section -->
-    <section id="hero-section" class="min-h-screen w-full"></section>
+    <section
+      id="hero-section"
+      class="min-h-screen bg-blue-500 w-full"
+    ></section>
     <!-- End of hero section -->
 
     <!-- Start of Animated Stepper Section -->

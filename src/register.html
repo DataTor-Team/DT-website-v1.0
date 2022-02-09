@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <meta name="theme-color" content="#161C1C" />
-    <meta name="robots" content="index,follow" />
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <title>Register</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -23,7 +20,8 @@
     <link rel="stylesheet" href="/styles/tailwind.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[#f3f3f3]">
+  <body>
+    <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
       <nav class="DTNavbar bg-white boxshadow" 0.>
         <!-- Logo In the navbar -->
@@ -99,74 +97,66 @@
         <!-- End of Navbar links -->
       </nav>
     </div>
-
+    <!-- Register section -->
     <section class="w-screen h-screen">
-      <div class="w-[inherit] h-[inherit] sectionPadding">
-        <div class="flex flex-row flex-nowrap justify-evenly items-center">
-          <div class="flex flex-col sectionPaddings">
-            <img
-              src="assets/datatorlogo.svg"
-              alt="datator logo"
-              width="280px"
-              height="auto"
-            />
-            <p class="tracking-[1.75em] mt-4 text-[1.5rem] font-thin">DATATOR</p>
-            <div class="flex flex-row w-[inherit] mt-[5rem] justify-start">
-              <a
-                class="mr-4"
-                href="https://www.linkedin.com/company/datator-lab/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin fa-2x"></i>
-              </a>
-              <a
-                class="mx-4"
-                href="https://twitter.com/data_tor"
-                target="_blank"
-              >
-                <i class="fab fa-twitter fa-2x"></i>
-              </a>
-              <a
-                class="mx-4"
-                href="https://www.facebook.com/data.tor.5/"
-                target="_blank"
-              >
-                <i class="fab fa-facebook fa-2x"></i>
-              </a>
+      <img
+        class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
+        src="assets/rightSideLogo.svg"
+        alt="datatorlogo"
+      />
+      <div class="sectionPaddings">
+        <h1 class="DTheading">Register</h1>
+        <form
+          class="flex flex-col justify-center items-start"
+          onsubmit="event.preventDefault();"
+        >
+          <div class="flex flex-row justify-between flex-wrap">
+            <div class="flex flex-col mr-8">
+              <label for="name">Name</label>
+              <input
+                class="DTinput"
+                type="text"
+                name="name"
+                placeholder="name"
+              />
             </div>
-            <a
-              class="font-bold text-[1.25rem] mt-4"
-              href="mailto:info@datator.tech"
-              >info@datator.tech</a
-            >
-            <p class="DTbodytext mt-2">
-              We usually work pretty much 24X7 in rotation basis, <br />
-              so just expect replies around the corner.
-            </p>
+            <div class="flex flex-col">
+              <label for="email">Email</label>
+              <input
+                class="DTinput"
+                type="email"
+                name="email"
+                placeholder="example@sample.com"
+              />
+            </div>
           </div>
-          <hr class="border-t-2 border-gray-500" />
-          <div class="">
-            <h1 class="font-bold text-[2rem] mb-4">Wanna Ask Query ?</h1>
-            <label for="name">Name</label>
-            <br />
-            <input class="DTinput mb-6" type="text" name="name" id="name" />
-            <br />
-            <label for="email">E-mail</label><br />
-            <input class="DTinput" type="text" name="email" id="email" />
-            <br />
-            <br />
+          <div class="flex flex-col mt-8">
+            <label for="phone">Phone Number</label>
+            <input
+              class="DTinput"
+              type="number"
+              name="phone"
+              placeholder="9999999999"
+            />
+          </div>
+
+          <div class="flex flex-col mt-8">
             <label for="msg">Query/Message</label><br />
             <textarea
-              class="DTTextArea"
+              class="DTTextArea w-[40vw] h-[18vh] xs:w-[80vw] xs:h-[5vh]"
               name="message"
               id="message"
-              cols="45"
-              rows="4"
             >
             </textarea>
-            <br />
-            <button class="btngradient mt-4">Submit</button>
           </div>
+
+          <button class="btngradient mt-4">Request</button>
+        </form>
+        <div class="text-center pt-12 pb-12">
+          <p>
+            Already have an account?
+            <a href="login.html" class="underline font-semibold">Login here.</a>
+          </p>
         </div>
       </div>
     </section>

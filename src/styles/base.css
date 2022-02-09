@@ -32,10 +32,18 @@
 html,
 body {
   font-family: "Nunito", sans-serif;
+  color: var(--text-color-light);
+  background-color: var(--body-color-light);
   overflow-x: hidden;
   scroll-behavior: smooth;
   color: var(--text-color-light);
 }
+
+.dark body {
+  color: var(--text-color-dark);
+  background-color: var(--body-color-dark);
+}
+
 
 .DTinput {
   /* @apply border-2 border-solid py-2 px-4;
@@ -52,10 +60,10 @@ body {
   border-image-slice: 1;
   border-radius: 10px;
 }
-.DTTextArea{
+.DTTextArea {
   border: var(--input-outoffocus);
 }
-.DTTextArea:focus{
+.DTTextArea:focus {
   border-image: var(--btn-gradient);
   outline: none;
   border-image-slice: 1;
@@ -95,6 +103,9 @@ body {
   border-radius: 0.5rem;
   border: none;
 }
+.dark .DTNavbar {
+  background-color: #272727;
+}
 .boxshadow {
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -123,15 +134,21 @@ body {
   .DTinput {
     width: 250px !important;
   }
-  .DTheading{
-    font-size: ;
+  .DTheading {
+    /* font-size: ; */
   }
-  .sectionBGImage{
+  .sectionBGImage {
     width: 200px;
   }
 }
-@media screen and (max-width: 468px){
-  .sectionBGImage{
+@media screen and (max-width: 468px) {
+  .sectionBGImage {
     display: none;
+  }
+  .sectionPaddings{
+    padding-left: 2.5rem;
+  }
+  .DTTextArea{
+  
   }
 }
