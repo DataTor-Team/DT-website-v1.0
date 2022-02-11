@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/tailwind.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Datator</title>
   </head>
   <body class="w-full scroll-smooth overflow-y-hidden">
@@ -129,372 +129,55 @@
     </div>
 
     <!-- End of Navbar Section -->
-    <!-- Start of Hero Section -->
-    <section id="herosection" class="w-screen h-screen heroBG scroll-smooth">
-      <div
-        class="w-[inherit] h-[inherit] flex flex-col justify-evenly items-center"
-      >
-        <img class="mt-12" src="assets/heroLogo.svg" alt="Landing Logo" />
-        <div class="flex flex-col justify-center items-center">
-          <p class="mb-2">
-            We create Data Awareness, by putting back the control of
-            connectivity to YOU !
+    <div class="w-screen h-auto heroBG">
+      <!-- Start of Hero Section -->
+      <section id="herosection" class="w-screen h-screen scroll-smooth">
+        <div
+          class="w-screen h-screen flex flex-col justify-evenly items-center"
+        >
+          <img class="mt-12" src="assets/heroLogo.svg" alt="Landing Logo" />
+          <div class="flex flex-col justify-center items-center">
+            <p class="mb-2">
+              We create Data Awareness, by putting back the control of
+              connectivity to YOU !
+            </p>
+            <button class="btngradient">Request Demo</button>
+            <p class="mt-2">Learn More</p>
+          </div>
+        </div>
+      </section>
+      <!-- End of Hero section  -->
+
+      <!-- Start what is Datator Section -->
+      <section class="w-screen h-screen bg-transparent relative">
+        <div class="sectionPaddings">
+          <h1 class="DTheading">What is Datator?</h1>
+          <p class="text-[20px] w-[45vw]">
+            With our unique privacy framework, we provide complete control of
+            the connectivity data by partnering with any trusted OEM and
+            partners, enabling fair data usage to all
           </p>
-          <button class="btngradient">Request Demo</button>
-          <p class="mt-2">Learn More</p>
-        </div>
-      </div>
-    </section>
-    <!--  -->
-
-    <!-- Start of Our Product Section -->
-    <section
-      id="our-products"
-      class="min-h-screen w-full relative bg-productSection bg-center bg-no-repeat scroll-m-20 scroll-smooth"
-    >
-      <h1
-        class="top-10 left-0 w-full block text-center text-xl lg:text-3xl font-bold tracking-wide"
-        data-aos="fade-down"
-        data-aos-offset="300"
-      >
-        Our Products
-      </h1>
-      <div
-        class="w-full flex items-center justify-center flex-col lg:flex-row mt-10 px-4"
-      >
-        <!-- Start of Fork Section -->
-        <div
-          class="w-full flex items-center justify-center flex-row"
-          data-aos="fade-right"
-          data-aos-offset="600"
-        >
-          <div class="w-full flex items-center justify-between flex-col">
-            <div class="flex flex-col items-center justify-center w-full">
-              <h1 class="w-full text-right text-xl font-semibold">
-                Smartidly Fork TM
-              </h1>
-              <p class="text-right w-full mt-2">
-                A mobile web app that looks and feels as fresh as you.
-              </p>
-            </div>
-            <p class="my-8 text-right w-full">
-              <span class="font-bold">Customisable</span> - Quick Web app
-              designed for<br class="hidden lg:flex" />
-              any mobiles with simple three step order
-            </p>
-            <p class="text-right w-full my-6">
-              Everything here is <span class="font-bold"> dynamic </span> and
-              within
-              <span class="font-bold">your control</span>
-            </p>
-            <div class="w-full mt-6">
-              <p class="w-full text-right">
-                <span class="font-bold"> CHOOSE</span> your food
-              </p>
-              <p class="w-full text-right">
-                <span class="font-bold"> PAY</span> for your order
-              </p>
-              <p class="w-full text-right">
-                <span class="font-bold"> TRACK</span> the food Ofcourse,
-              </p>
-              <p class="w-full text-right">
-                <span class="font-bold"> EAT</span> moreeee...
-              </p>
-            </div>
+          <!-- <img src="assets/WID_wholechart.svg" class="right-0 bottom-0 absoluteD" alt=""> -->
+          <img class=" absolute right-0 bottom-0 lg:w-[550px]" src="assets/WID_cornerbubble.svg" alt="">
+          <div class="absolute right-[12vw] top-1/4 flex flex-col items-center">
+             <img class="w-[130px] h-auto" src="assets/WID_serviceandproducts.svg" alt="">
+              <p class="mt-5">Your daily Services and Products</p>
           </div>
-          <img src="/assets/fork.png" alt="Smartidly Fork" srcset="" />
-        </div>
-        <!-- End of Fork Section -->
-
-        <!-- Start of Knif Section -->
-        <div
-          class="w-full flex items-center justify-center flex-row"
-          data-aos="fade-left"
-          data-aos-offset="600"
-        >
-          <img src="/assets/knife.png" alt="Smartidly Knif" srcset="" />
-          <div
-            class="w-full flex items-center justify-between flex-col lg:h-full"
-          >
-            <div class="flex flex-col items-center justify-center w-full">
-              <h1 class="w-full text-left text-xl font-semibold">
-                Smartidly Knif TM
-              </h1>
-              <p class="text-left w-full mt-2">
-                Handle order on your website Portal with one click
-              </p>
-            </div>
-            <p class="text-left w-full my-8">
-              <span class="font-bold">Live order</span> - handling and
-              <span class="font-bold"> Menu Management </span>
-              <br class="hidden lg:flex" />
-              keeping your restaurants sharp, always!!
-            </p>
-            <p class="text-left w-full my-6">
-              <span class="font-bold"> Dynamic dashboard </span> for live feeds,
-              settings etc. <br />
-              We ensure no one miss anything!!
-            </p>
-            <p class="w-full text-left mt-6">
-              With -- One new feature, every month <br class="hidden lg:flex" />
-              Knif creates magic to your thriving business
-            </p>
+         
+          <div class="absolute bottom-[10vh] right-[50vw] flex items-center flex-col">
+            <img class="w-[80px] h-[auto]" src="assets/WID_oemandpratners.svg" alt="">
+            <p class="mt-5">OEM and Partners</p>
           </div>
+          <img class="absolute bottom-[10vh] right-[10vw]" src="assets/WID_deviceicon.svg" alt="">
         </div>
-        <!-- End of Knif Section -->
-      </div>
-    </section>
-    <!-- End of Our Product Section -->
+        
+      </section>
+      <!-- End of what is Datator Section -->
+    
+    </div>
 
     <!-- Start of Why Smartidly Section -->
-    <section id="why-smartidly" class="min-h-screen w-full mt-16">
-      <h1
-        class="top-10 left-0 w-full block text-center text-xl lg:text-3xl font-bold tracking-wide"
-        data-aos="fade-down"
-        data-aos-offset="300"
-      >
-        Why Smartidly
-      </h1>
-      <p
-        class="block mt-20 lg:font-semibold font-medium tracking-wide text-center lg:text-2xl md:text-xl text-lg px-4"
-        data-aos="fade-left"
-        data-aos-offset="300"
-      >
-        No time to waste: Take your first online order within minutes
-      </p>
-      <p
-        class="block mt-6 lg:font-semibold font-medium tracking-wide text-center lg:text-2xl md:text-xl text-lg px-4"
-        data-aos="fade-right"
-        data-aos-offset="300"
-      >
-        No special device required: accept incoming orders from your smartphone
-      </p>
 
-      <div
-        class="mt-28 flex items-center justify-center lg:flex-row flex-col w-full"
-      >
-        <div
-          class="flex items-center justify-between flex-row lg:flex-col w-full"
-        >
-          <p
-            data-aos-offset="300"
-            data-aos="fade-right"
-            class="font-medium lg:text-lg text-base lg:text-center text-left px-3"
-          >
-            Modern upgrade for your restaurants
-          </p>
-          <div data-aos="fade-left" data-aos-offset="300">
-            <img
-              class="h-72 lg:rotate-0 -rotate-90 transform"
-              src="/assets/spoonspice-1.png"
-              alt="Modern upgrade for your restaurants"
-            />
-          </div>
-        </div>
-        <div
-          class="flex items-center justify-between flex-row-reverse lg:flex-col w-full"
-        >
-          <p
-            data-aos-offset="300"
-            class="font-medium lg:text-lg text-base lg:text-center text-right px-3"
-            data-aos="fade-left"
-          >
-            Live order control
-          </p>
-          <div data-aos-offset="300" data-aos="fade-right">
-            <img
-              class="lg:h-72 h-auto w-32 lg:w-auto lg:rotate-0 rotate-90"
-              src="/assets/spoonspice-2.png"
-              alt="Live order control"
-            />
-          </div>
-        </div>
-        <div
-          class="flex items-center justify-between flex-row lg:flex-col w-full"
-        >
-          <p
-            data-aos-offset="300"
-            class="font-medium lg:text-lg text-base lg:text-center text-left px-3"
-            data-aos="fade-right"
-          >
-            Customisable tools
-          </p>
-          <div data-aos-offset="300" data-aos="fade-left">
-            <img
-              class="h-72 lg:rotate-0 -rotate-90"
-              src="/assets/spoonspice-3.png"
-              alt="Customisable tools"
-            />
-          </div>
-        </div>
-        <div
-          class="flex items-center justify-between flex-row-reverse lg:flex-col w-full"
-        >
-          <p
-            data-aos-offset="300"
-            class="font-medium lg:text-lg text-base lg:text-center text-right px-3"
-            data-aos="fade-left"
-          >
-            All in one portal for less than <br class="flex lg:hidden" />
-            one servant cost
-          </p>
-          <div data-aos-offset="300" data-aos="fade-right">
-            <img
-              class="h-72 lg:rotate-0 rotate-90"
-              src="/assets/spoonspice-4.png"
-              alt="All in one portal for less than one servant cost"
-            />
-          </div>
-        </div>
-        <div
-          class="flex items-center justify-between flex-row lg:flex-col w-full"
-        >
-          <p
-            data-aos-offset="300"
-            class="font-medium lg:text-lg text-base lg:text-center text-left px-3"
-            data-aos="fade-right"
-          >
-            Low Cost quick <br class="flex lg:hidden" />
-            onboarding digital <br class="flex lg:hidden" />
-            servant
-          </p>
-          <div data-aos-offset="300" data-aos="fade-left">
-            <img
-              class="h-72 lg:rotate-0 -rotate-90"
-              src="/assets/spoonspice-5.png"
-              alt="Low cost quick onboarding digital servant"
-            />
-          </div>
-        </div>
-        <div
-          class="flex items-center justify-between flex-row-reverse lg:flex-col w-full"
-        >
-          <p
-            data-aos-offset="300"
-            class="font-medium lg:text-lg text-base lg:text-center text-right px-3"
-            data-aos="fade-left"
-          >
-            More analytics & <br class="flex lg:hidden" />insights automated
-          </p>
-          <div data-aos-offset="300" data-aos="fade-right">
-            <img
-              class="h-72 lg:rotate-0 rotate-90"
-              src="/assets/spoonspice-6.png"
-              alt="More Analytics and insights automated"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End of Why Smartidly Section -->
-
-    <!-- Start Of Contact Us Section -->
-    <section
-      class="min-h-screen flex items-center justify-start flex-col lg:bg-[url('/assets/coffee.jpeg')] bg-cover py-10"
-      id="contact-us"
-    >
-      <div
-        class="w-full flex items-center justify-between lg:px-10 nd:px-8 px-6"
-      >
-        <button
-          onclick="location.href='https://restaurant.smartidly.com/register'"
-          ,
-          type="button"
-          class="bg-black text-white py-3 px-5 rounded"
-          data-aos="fade-left"
-          data-aos-offset="300"
-        >
-          Register Now
-        </button>
-        <a
-          href="/"
-          class="p-3 uppercase font-megrim font-black text-xl tracking-wider bg-white rounded"
-          data-aos="fade-right"
-          data-aos-offset="300"
-        >
-          Smartidly
-        </a>
-      </div>
-      <div
-        class="w-full flex items-center justify-center flex-col lg:flex-row mt-20 lg:mt-52"
-      >
-        <div class="w-full flex flex-col items-start justify-between lg:pl-24">
-          <h1
-            class="font-bold text-xl lg:text-3xl tracking-wide lg:text-left text-center w-full"
-            data-aos="fade-left"
-            data-aos-offset="300"
-          >
-            Contact us
-          </h1>
-          <p
-            class="text-lg mt-4 lg:text-left text-center w-full"
-            data-aos="fade-right"
-            data-aos-offset="300"
-          >
-            Countries we spread our love and business, currently:
-          </p>
-          <table class="mt-6 w-full lg:w-2/3 text-left">
-            <tr class="w-full">
-              <td
-                class="py-3 font-bold text-left pl-10 text-lg"
-                data-aos="fade-right"
-              >
-                India
-              </td>
-              <td
-                class="py-3 font-medium text-right pr-10"
-                data-aos="fade-left"
-              >
-                +91 9488484111
-              </td>
-            </tr>
-            <tr class="w-full">
-              <td
-                class="py-3 font-bold text-left pl-10 text-lg"
-                data-aos="fade-right"
-              >
-                The Netherlands
-              </td>
-              <td
-                class="py-3 font-medium text-right pr-10"
-                data-aos="fade-left"
-              >
-                +31 685293646
-              </td>
-            </tr>
-            <tr class="w-full">
-              <td
-                class="py-3 font-bold text-left pl-10 text-lg"
-                data-aos="fade-right"
-              >
-                Sweden
-              </td>
-              <td
-                class="py-3 font-medium text-right pr-10"
-                data-aos="fade-left"
-              >
-                +46 734637445
-              </td>
-            </tr>
-          </table>
-          <div
-            class="w-5/6 flex self-center items-center justify-between mt-10"
-            data-aos="fade-up"
-          >
-            <a href="https://www.linkedin.com/company/smartidly/about/">
-              <i class="fab fa-linkedin fa-2x text-blue-500"></i>
-            </a>
-            <a href="https://www.instagram.com/smartidly/">
-              <i class="fab fa-instagram fa-2x text-purple-500"></i>
-            </a>
-            <a href="https://twitter.com/SmartidlyT">
-              <i class="fab fa-twitter fa-2x text-blue-500"></i>
-            </a>
-          </div>
-        </div>
-        <div class="w-full bg-[red]"></div>
-      </div>
-    </section>
     <!-- End Of Contact Us Section -->
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
