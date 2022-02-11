@@ -18,10 +18,16 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/company.css" />
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base.css" />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
   </head>
-  <body class="h-full w-full bg-[#1C1C1C]">
+  <body class="h-full w-full">
+    <img
+        class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
+        src="assets/rightSideLogo.svg"
+        alt="datatorlogo"
+      />
+    <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
       <nav class="DTNavbar">
         <!-- Logo In the navbar -->
@@ -100,16 +106,33 @@
     </div>
     <!-- End of Navbar -->
     <!-- Start of hero section -->
-    <section
-      id="hero-section"
-      class="min-h-screen bg-blue-500 w-full"
-    ></section>
+    <section id="hero-section" class="min-h-screen w-full">
+      
+      <div class="sectionPaddings">
+        <h1 class="DTheading">About</h1>
+        <p class="w-[50vw]">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro sint
+          perspiciatis iste, ipsam dolor ullam tempora quam voluptatibus. Nisi
+          nulla maiores perspiciatis exercitationem, velit excepturi deserunt
+          sequi eos deleniti veniam.
+        </p>
+        <p class="mt-4 w-[50vw]">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+          quaerat unde amet ipsam quidem dolorum consectetur atque expedita
+          laborum. Illum id eveniet earum dolorem? Officiis mollitia dicta
+          dolores quod minus. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Nam deleniti, eaque totam corrupti consequatur
+          nobis, voluptatum eligendi explicabo nemo labore nisi facere sed
+          aspernatur similique. Totam quos sint eum inventore!
+        </p>
+      </div>
+    </section>
     <!-- End of hero section -->
 
     <!-- Start of Animated Stepper Section -->
     <section
       id="stepper-section"
-      class="min-h-screen w-full text-white py-16 relative"
+      class="min-h-screen w-full py-16 relative"
     >
       <p
         class="block text-center px-4 md:px-10 lg:px-16 text-xl md:text-3xl lg:text-5xl font-semibold tracking-wide"
@@ -161,7 +184,7 @@
 
       <!-- Start of First Step Content -->
       <div
-        class="bg-[#3E3E3E] w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-32 ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
+        class="bg-white dark:bg-[#3E3E3E] boxshadow dark:text-white w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-32 ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
         data-aos="first-step"
         data-aos-offset="300"
       >
@@ -176,7 +199,7 @@
 
       <!-- Start of Second Step Content -->
       <div
-        class="bg-[#3E3E3E] w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-96 mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
+        class="bg-[#3e3e3e] boxshadow dark:bg-white dark:text-gray-800 w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-96 mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
         data-aos="second-step"
         data-aos-offset="200"
       >
@@ -189,7 +212,7 @@
 
       <!-- Start of Third Step Content -->
       <div
-        class="bg-[#3E3E3E] w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[36rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
+        class="bg-[#3e3e3e] boxshadow dark:bg-white w-[175px] dark:text-gray-800 lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[36rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
         data-aos="first-step"
         data-aos-offset="200"
       >
@@ -203,7 +226,7 @@
 
       <!-- Start of Fourth Step Content -->
       <div
-        class="bg-[#3E3E3E] w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[48rem] mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
+        class="bg-[#3e3e3e] boxshadow dark:bg-white dark:text-gray-800 w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[48rem] mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
         data-aos="second-step"
         data-aos-offset="200"
       >
@@ -218,7 +241,7 @@
 
       <!-- Start of Fifth Step Content -->
       <div
-        class="bg-[#3E3E3E] w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[58rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
+        class="boxshadow bg-[#3e3e3e] dark:text-gray-800 dark:bg-white boxshadow w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[58rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
         data-aos="first-step"
         data-aos-offset="200"
       >
@@ -233,8 +256,53 @@
       <!-- End of Fifth Step Content -->
     </section>
     <!-- End of Animated Stepper Section -->
-
-    <section class="h-screen w-full mt-80"></section>
+    <section class="h-screen w-full mt-80">
+      <div class="sectionPaddings">
+        <h1 class="DTheading">Partners</h1>
+        <div class="flex flex-row justify-start">
+          <!-- Mobility XLab card -->
+          <div class="group flex w-96 flex-col mr-8">
+            <div
+              class="bg-white rounded-[1rem] z-10 px-12 py-8 boxshadow flex flex-col justify-center items-center"
+            >
+              <img
+                width="226px"
+                class="max-w-[226px] max-h-[165.57px] object-none"
+                src="assets/mobilityxlablogo.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout Mobility XLab</p>
+              </a>
+            </div>
+          </div>
+          <!-- Volvo Card -->
+          <div class="group flex w-96 flex-col">
+            <div
+              class="bg-white rounded-[1rem] z-10 px-12 py-8 boxshadow flex flex-col justify-center items-center"
+            >
+              <img
+                width="226px"
+                class="max-w-[226px] max-h-[165.57px] object-none"
+                src="assets/volvologo.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout Volvo</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -244,4 +312,5 @@
       animatedClassName: "aos-animate",
     });
   </script>
+  <script src="/js/index.js"></script>
 </html>
