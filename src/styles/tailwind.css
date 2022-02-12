@@ -584,6 +584,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0.25rem;
 }
 
+.right-8 {
+  right: 2rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -688,6 +692,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2rem;
 }
 
+.mt-\[2rem\] {
+  margin-top: 2rem;
+}
+
+.-mt-\[2rem\] {
+  margin-top: -2rem;
+}
+
+.mt-\[1rem\] {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -728,6 +744,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: inherit;
 }
 
+.h-\[1000vh\] {
+  height: 1000vh;
+}
+
 .h-\[auto\] {
   height: auto;
 }
@@ -744,8 +764,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 18vh;
 }
 
+.h-\[115px\] {
+  height: 115px;
+}
+
+.h-\[30vh\] {
+  height: 30vh;
+}
+
 .max-h-\[165\.57px\] {
   max-height: 165.57px;
+}
+
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.max-h-\[115px\] {
+  max-height: 115px;
 }
 
 .min-h-screen {
@@ -820,6 +856,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[40vw\] {
   width: 40vw;
+}
+
+.w-\[225px\] {
+  width: 225px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[70vw\] {
+  width: 70vw;
+}
+
+.w-\[20vw\] {
+  width: 20vw;
+}
+
+.w-\[500px\] {
+  width: 500px;
 }
 
 .max-w-sm {
@@ -907,6 +963,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .overflow-y-hidden {
   overflow-y: hidden;
 }
@@ -991,8 +1051,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\/assets\/dtfastendark\.png\)\] {
+  background-image: url(/assets/dtfastendark.png);
+}
+
+.bg-\[url\(\/assets\/dtprovendark\.png\)\] {
+  background-image: url(/assets/dtprovendark.png);
 }
 
 .from-blue-600 {
@@ -1059,6 +1132,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pl-4 {
@@ -1276,6 +1354,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-\[url\(\'\/assets\/dtfasten\.png\'\)\] {
+  background-image: url('/assets/dtfasten.png');
+}
+
+.dark .dark\:bg-\[url\(\/assets\/dtproven\.png\)\] {
+  background-image: url(/assets/dtproven.png);
+}
+
+.dark .dark\:bg-\[url\(\'\/assets\/dtproven\.png\'\)\] {
+  background-image: url('/assets/dtproven.png');
 }
 
 .dark .dark\:fill-white {
