@@ -1153,6 +1153,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 500;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -1276,6 +1280,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .dark .dark\:fill-white {
   fill: #fff;
+}
+
+.dark .dark\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .dark .dark\:text-gray-800 {
