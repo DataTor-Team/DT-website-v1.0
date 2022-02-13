@@ -10,6 +10,8 @@ toggleButton.addEventListener("click", () => {
 });
 
 document.addEventListener("scroll", () => {
+  clg
+  
   if (window.scrollY > 0) {
     navbar.classList.add("bg-white");
     navbar.classList.add("boxshadow");
