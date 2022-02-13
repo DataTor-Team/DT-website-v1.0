@@ -46,16 +46,17 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/tailwind.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Datator</title>
   </head>
   <body class="w-full scroll-smooth overflow-y-hidden">
-    <!-- Start of Navbar Section -->
+    <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
-      <nav class="DTNavbar">
+      <nav id="navbar" class="DTNavbar">
         <!-- Logo In the navbar -->
         <div class="flex flex-row items-center w-fit">
           <img
+            id="navbar_logo"
             class="mr-2"
             src="assets/datatorlogo.svg"
             alt="DatatorLogo"
@@ -72,9 +73,9 @@
           class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
           id="toggle"
         >
-          <!-- <span class="h-0.5 w-5 bg-black"></span>
-        <span class="h-0.5 w-5 bg-black my-1"></span>
-        <span class="h-0.5 w-5 bg-black"></span> -->
+          <span class="h-0.5 w-5 bg-black"></span>
+          <span class="h-0.5 w-5 bg-black my-1"></span>
+          <span class="h-0.5 w-5 bg-black"></span>
         </button>
 
         <!-- Element just to import left-full class to the output file -->
@@ -116,18 +117,18 @@
             >Login</a
           >
           <img
+            id="theme_icon"
             class="ml-3 mr-2 dark:fill-white"
             src="assets/darkmodeicon.svg"
             alt="theme"
             width="18px"
             height="auto"
-            id="dark-mode-button"
           />
         </div>
         <!-- End of Navbar links -->
       </nav>
     </div>
-    <!-- End of Navbar Section -->
+    <!-- End of Navbar -->
     <div class="w-screen h-screen heroBG overflow-x-hidden overfl">
       <div class="w-[inherit] overfl">
         <!-- Hero Section -->
@@ -139,6 +140,7 @@
             class="w-screen h-screen flex flex-col justify-evenly items-center"
           >
             <img
+              id="hero_logo"
               class="mt-12 w-72 lg:w-auto"
               src="assets/heroLogo.svg"
               alt="Landing Logo"
@@ -171,7 +173,7 @@
             </p>
 
             <img
-              class="lg:absolute lg:right-0 lg:bottom-0 lg:w-[550px]"
+              class="absolute lg:right-0 lg:bottom-0 lg:w-[550px] bottom-0 -right-44"
               src="assets/WID_cornerbubble.svg"
               alt=""
             />
@@ -233,6 +235,7 @@
               </div>
               <div class="relative px-[2rem]">
                 <img
+                  id="HWSP_logo"
                   src="assets/datatorlogo.svg"
                   alt=""
                   width="441px"
@@ -250,7 +253,7 @@
           </div>
         </section>
         <!-- Advantages of Datator -->
-        <section class="w-screen h-screen bg-transparent">
+        <section class="w-screen min-h-screen bg-transparent">
           <div class="lg:px-[8rem] lg:py-[7rem] px-6 py-8">
             <h1
               class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
@@ -262,6 +265,7 @@
             >
               <div class="lg:w-[30vw] lg:h-[40vh] w-full">
                 <img
+                  id="DTA_logo"
                   src="assets/DTadvan_logo-dark.svg"
                   width="300px"
                   alt=""
@@ -287,7 +291,7 @@
                     regularly needlessly expose you to more data collection.
                   </p>
                   <hr
-                    class="mt-4 border-t-[0.1px] border-t-gray-500 w-1/2 self-center"
+                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 text-base lg:text-lg lg:text-left text-center">
                     We envision personalized privacy assistants as intelligent
@@ -312,7 +316,7 @@
                     regularly needlessly expose you to more data collection.
                   </p>
                   <hr
-                    class="mt-4 border-t-[0.1px] border-t-gray-500 w-1/2 self-center"
+                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 lg:text-left text-center">
                     We envision personalized privacy assistants as intelligent
@@ -337,7 +341,7 @@
                     regularly needlessly expose you to more data collection.
                   </p>
                   <hr
-                    class="mt-4 border-t-[0.1px] border-t-gray-500 w-1/2 self-center"
+                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 lg:text-left text-center">
                     We envision personalized privacy assistants as intelligent
@@ -362,7 +366,7 @@
                     regularly needlessly expose you to more data collection.
                   </p>
                   <hr
-                    class="mt-4 border-t-[0.1px] border-t-gray-500 w-1/2 self-center"
+                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 lg:text-left text-center">
                     We envision personalized privacy assistants as intelligent
@@ -380,7 +384,11 @@
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      useClassNames: true,
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate",
+    });
   </script>
   <script src="/js/index.js"></script>
 </html>

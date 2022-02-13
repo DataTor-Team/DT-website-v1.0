@@ -81,6 +81,10 @@ body {
 .heroBG {
   background-image: var(--hero-gradient-light);
 }
+
+.dark .heroBG{
+  background-image: var(--hero-gradient-dark);
+}
 .sectionBG {
   background-image: url("/assets/rightSideLogo.svg");
   background-repeat: no-repeat;
@@ -115,7 +119,7 @@ body {
   border: none;
 }
 .dark .DTNavbar {
-  background-color: #272727;
+  /* background-color: #272727; */
 }
 .boxshadow {
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
