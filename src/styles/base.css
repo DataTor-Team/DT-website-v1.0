@@ -86,6 +86,13 @@ body {
   background-image: url("/assets/rightSideLogo.svg");
   background-repeat: no-repeat;
 }
+.DThideScrollbar::-webkit-scrollbar{
+  display: none;
+}
+.DThideScrollbar{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .overfl{
   height: auto;
   overflow-y: scroll;
