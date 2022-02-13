@@ -66,16 +66,14 @@
           <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
         </div>
 
-        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
-
         <!-- Navbar Toggle Button -->
         <button
           class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
           id="toggle"
         >
-          <span class="h-0.5 w-5 bg-black"></span>
-          <span class="h-0.5 w-5 bg-black my-1"></span>
-          <span class="h-0.5 w-5 bg-black"></span>
+          <span class="h-0.5 w-5 bg-black dark:bg-white"></span>
+          <span class="h-0.5 w-5 bg-black dark:bg-white my-1"></span>
+          <span class="h-0.5 w-5 bg-black dark:bg-white "></span>
         </button>
 
         <!-- Element just to import left-full class to the output file -->
@@ -83,7 +81,7 @@
 
         <!-- Start of Navbar links -->
         <div
-          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white dark:bg-[#272727] lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
           id="navbarLinks"
         >
           <a
@@ -145,14 +143,15 @@
               src="assets/heroLogo.svg"
               alt="Landing Logo"
             />
+            <p class="DTNavbarLogoText pl-4"> THE PRIVACY COMPANY </p>
+
             <div
               class="flex flex-col justify-center items-center text-center lg:text-left px-6"
             >
               <p class="mb-2">
                 We create Data Awareness, by putting back the control of
                 connectivity to YOU !
-              </p>
-              <button class="btngradient">Request Demo</button>
+              </p>              
               <p class="mt-2">Learn More</p>
             </div>
           </div>
@@ -166,11 +165,17 @@
             >
               What is Datator?
             </h1>
-            <p class="text-[20px] lg:w-[45vw] text-center lg:text-left">
+            <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
+            <p class="lg:text-[30px] text-[20px] lg:w-[50vw] text-gray-600 text-center lg:text-left px-5 ">" Privacy is just an Art of handling your data, Datator helps you master this art "</p>
+            <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
+                  
+            
+            <p class="text-[20px] lg:w-[45vw] text-center lg:text-left mt-8">
               With our unique privacy framework, we provide complete control of
               the connectivity data by partnering with any trusted OEM and
               partners, enabling fair data usage to all
             </p>
+          
 
             <img
               class="absolute lg:right-0 lg:bottom-0 lg:w-[550px] bottom-0 -right-44"
@@ -178,10 +183,10 @@
               alt=""
             />
             <div
-              class="absolute lg:right-[12vw] right-20 lg:top-1/4 top-80 flex flex-col items-center"
+              class="absolute lg:right-[12vw] right-[3rem] lg:top-[30rem] top-[28rem] flex flex-col items-center"
             >
               <img
-                class="w-[130px] h-auto"
+                class="w-[130px] h-auto lg:w-[230px] lg:h-auto"
                 src="assets/WID_serviceandproducts.svg"
                 alt=""
               />
@@ -189,17 +194,18 @@
             </div>
 
             <div
-              class="absolute bottom-[10vh] lg:right-[50vw] right-1/2 flex items-center flex-col"
+              class="absolute bottom-[10vh] lg:right-[50vw] right-[14rem] flex items-center flex-col"
             >
               <img
-                class="lg:w-[80px] lg:h-[auto] h-32 w-28"
+                class="lg:w-[120px] lg:h-[auto] h-32 w-28"
                 src="assets/WID_oemandpratners.svg"
                 alt=""
               />
               <p class="mt-5">OEM and Partners</p>
             </div>
+            
             <img
-              class="absolute bottom-[10vh] lg:right-[10vw] right-8 lg:w-[80px] lg:h-[auto] h-32 w-28"
+              class="absolute bottom-[3vh] lg:right-[5vw] right-2 lg:w-[20rem] lg:h-[auto] h-[10rem] w-[10rem] "
               src="assets/WID_deviceicon.svg"
               alt=""
             />
@@ -212,27 +218,26 @@
             <h1
               class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
             >
-              How we solve problems ?
+            How Datator brings Privacy to you?
             </h1>
             <div
               class="flex flex-col-reverse lg:flex-row items-center justify-start w-full"
             >
               <div class="flex-1 flex flex-col items-start justify-start">
-                <h1
-                  class="text-2xl lg:text-5xl mt-8 lg:mt-0 mb-8 font-bold text-center lg:text-left w-full lg:w-auto"
-                >
-                  We put the control <br />
-                  back to you
-                </h1>
+              
                 <p
                   class="mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                  quia corrupti, deleniti neque quod magnam fugiat totam qui? Ad
-                  facilis mollitia voluptate sint praesentium eius sunt
-                  similique commodi harum velit!
+                Due to high connectivity between devices & services, the question of what we are sharing , to whom and the control of that are a puzzle to both user and businesses - creating privacy concerns. The need from the general fair connected data market is to have a fair and more transparent consentful data communications.  
+                </p>
+                <br />
+                <p
+                  class="mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
+                >
+                DataTor operates with unique privacy framework and intuitive design, thereby bringing data awareness and control to the device user. We do that without any intervention to the connection and without reading any user data payloads. It in-turn facilitate a consentful data collection to OEM and act as a privacy gateway for 3rd party services adding intelligence in every levels.All we do is putting you in an elegant state of control with our intelligence - Privacy is rest assured for all !!  
                 </p>
               </div>
+            
               <div class="relative px-[2rem]">
                 <img
                   id="HWSP_logo"
@@ -249,7 +254,7 @@
                   height="144px"
                 />
               </div>
-            </div>
+          </div>
           </div>
         </section>
         <!-- Advantages of Datator -->
@@ -389,6 +394,7 @@
             class="w-screen h-fit flex flex-col items-center mb-8"
           >
             <img
+              id="footer_logo"
               class="mt-12 w-72 lg:w-auto"
               src="assets/heroLogo.svg"
               alt="Landing Logo"
@@ -400,13 +406,13 @@
             <div
               class="bottom-0 flex flex-col justify-center items-center text-center mt-8 w-screen "
             >
-            <footer class="text-center lg:text-left bg-gray-100 text-gray-600 w-screen">
+            <footer class="text-center lg:text-left bg-gray-100 dark:bg-[#1c1c1c] dark:text-white text-gray-600 w-screen">
               <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
                 <div class="mr-12 hidden lg:block">
                   <span>Get connected with us on social networks:</span>
                 </div>
-                <div class="flex justify-center">
-                  <a href="#!" class="mr-6 text-gray-600">
+                <div class="flex justify-center text-gray-600 dark:text-white">
+                  <a href="#!" class="mr-6 text-gray-600 dark:text-white ">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
                       class="w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 320 512">
@@ -415,7 +421,7 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#!" class="mr-6 text-gray-600">
+                  <a href="#!" class="mr-6 text-gray-600 dark:text-white">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
                       class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                       <path fill="currentColor"
@@ -423,7 +429,7 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#!" class="mr-6 text-gray-600">
+                  <a href="#!" class="mr-6 text-gray-600 dark:text-white">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google"
                       class="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
                       <path fill="currentColor"
@@ -431,7 +437,7 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#!" class="mr-6 text-gray-600">
+                  <a href="#!" class="mr-6 text-gray-600 dark:text-white">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
                       class="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                       <path fill="currentColor"
@@ -439,7 +445,7 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#!" class="mr-6 text-gray-600">
+                  <a href="#!" class="mr-6 text-gray-600 dark:text-white">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in"
                       class="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512">
@@ -448,7 +454,7 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#!" class="text-gray-600">
+                  <a href="#!" class="text-gray-600 dark:text-white">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
                       class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                       <path fill="currentColor"
@@ -471,13 +477,15 @@
                         md:justify-start
                       ">
                       <img
+                        id="footersmall_logo"
                         class="mr-2"
                         src="assets/datatorlogo.svg"
                         alt="DatatorLogo"
                         width="30px"
                         height="auto"
                       />
-                      DataTor
+                      <p class="DTNavbarLogoText">DATATOR</p>
+                      
                     </h6>
                     <p>
                       The Privacy Company
@@ -488,16 +496,16 @@
                       DT-Verse
                     </h6>
                     <p class="mb-4">
-                      <a href="/privacy-movement" class="text-gray-600">Privacy Movement</a>
+                      <a href="/privacy-movement" class="dark:text-white text-gray-600">Privacy Movement</a>
                     </p>
                     <p class="mb-4">
-                      <a href="/solution" class="text-gray-600">Solutions</a>
+                      <a href="/solution" class="dark:text-white text-gray-600">Solutions</a>
                     </p>
                     <p class="mb-4">
-                      <a href="/blog" class="text-gray-600">Resources</a>
+                      <a href="/blog" class="dark:text-white text-gray-600">Resources</a>
                     </p>
                     <p>
-                      <a href="/company" class="text-gray-600">Company</a>
+                      <a href="/company" class="dark:text-white text-gray-600">Company</a>
                     </p>
                   </div>
                   <div class="">
@@ -505,16 +513,16 @@
                       Portal
                     </h6>
                     <p class="mb-4">
-                      <a href="/login" class="text-gray-600">Customer</a>
+                      <a href="/login" class="dark:text-white text-gray-600">Customer</a>
                     </p>
                     <p class="mb-4">
-                      <a href="/login" class="text-gray-600">Partner</a>
+                      <a href="/login" class="dark:text-white text-gray-600">Partner</a>
                     </p>
                     <p class="mb-4">
-                      <a href="/login" class="text-gray-600">Demo</a>
+                      <a href="/login" class="dark:text-white text-gray-600">Demo</a>
                     </p>
                     <p>
-                      <a href="/login" class="text-gray-600">Secret</a>
+                      <a href="/login" class="dark:text-white text-gray-600">Secret</a>
                     </p>
                   </div>
                   <div class="">
@@ -537,9 +545,9 @@
                   </div>
                 </div>
               </div>
-              <div class="text-center p-6 bg-gray-200">
-                <span>© 2021 Copyright:</span>
-                <a class="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Datator</a>
+              <div class="text-center p-6 bg-gray-200 dark:bg-[#1c1c1c]">
+                <span class="""dark:text-white">© 2021 Copyright:</span>
+                <a class="text-gray-600 dark:text-white font-semibold" href="https://tailwind-elements.com/">Datator</a>
               </div>
             </footer>
           </div>

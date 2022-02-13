@@ -28,23 +28,29 @@ darkModeToggle.addEventListener("click", () => html.classList.toggle("dark"));
 const navbar_logo = document.getElementById("navbar_logo");
 const themeIcon = document.getElementById("theme_icon");
 const heroLogo = document.getElementById("hero_logo");
+const footerLogo = document.getElementById("footer_logo");
 const HWSPLogo = document.getElementById("HWSP_logo");
 const DTA_logo = document.getElementById("DTA_logo");
+const footerSmallLogo = document.getElementById("footersmall_logo");
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
       if (navbar_logo.src.includes("/assets/datatorlogo-dark.svg")) {
         console.log("dark to light");
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
+        footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         heroLogo.setAttribute("src", "/assets/heroLogo.svg");
+        footerLogo.setAttribute("src", "/assets/heroLogo.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
       } else {
         console.log("light to dark");
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
+        footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         heroLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
+        footerLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo.svg");
       }
