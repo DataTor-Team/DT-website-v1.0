@@ -23,10 +23,10 @@
   </head>
   <body class="h-full w-full">
     <img
-        class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
-        src="assets/rightSideLogo.svg"
-        alt="datatorlogo"
-      />
+      class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
+      src="assets/rightSideLogo.svg"
+      alt="datatorlogo"
+    />
     <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
       <nav class="DTNavbar">
@@ -106,17 +106,20 @@
     </div>
     <!-- End of Navbar -->
     <!-- Start of hero section -->
-    <section id="hero-section" class="min-h-screen w-full">
-      
-      <div class="sectionPaddings">
-        <h1 class="DTheading">About</h1>
-        <p class="w-[50vw]">
+    <section id="hero-section" class="min-h-screen w-full mt-20 lg:mt-0">
+      <div class="lg:px-[8rem] lg:py-[7rem] px-8 py-6">
+        <h1
+          class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
+        >
+          About
+        </h1>
+        <p class="lg:w-[50vw] w-full">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro sint
           perspiciatis iste, ipsam dolor ullam tempora quam voluptatibus. Nisi
           nulla maiores perspiciatis exercitationem, velit excepturi deserunt
           sequi eos deleniti veniam.
         </p>
-        <p class="mt-4 w-[50vw]">
+        <p class="mt-4 lg:w-[50vw] w-full">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
           quaerat unde amet ipsam quidem dolorum consectetur atque expedita
           laborum. Illum id eveniet earum dolorem? Officiis mollitia dicta
@@ -130,10 +133,7 @@
     <!-- End of hero section -->
 
     <!-- Start of Animated Stepper Section -->
-    <section
-      id="stepper-section"
-      class="min-h-screen w-full py-16 relative"
-    >
+    <section id="stepper-section" class="min-h-screen w-full py-16 relative">
       <p
         class="block text-center px-4 md:px-10 lg:px-16 text-xl md:text-3xl lg:text-5xl font-semibold tracking-wide"
         data-aos="fade-right"
@@ -257,11 +257,17 @@
     </section>
     <!-- End of Animated Stepper Section -->
     <section class="h-screen w-full mt-80">
-      <div class="sectionPaddings">
-        <h1 class="DTheading">Partners</h1>
-        <div class="flex flex-row justify-start">
+      <div class="lg:px-[8rem] lg:py-[7rem] px-8 py-[7rem]">
+        <h1
+          class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
+        >
+          Partners
+        </h1>
+        <div
+          class="whitespace-nowrap w-full overflow-x-auto py-16 DThideScrollbar"
+        >
           <!-- Mobility XLab card -->
-          <div class="group flex w-96 flex-col mr-8">
+          <div class="group inline-flex w-96 flex-col mr-8">
             <div
               class="bg-white rounded-[1rem] z-10 px-12 py-8 boxshadow flex flex-col justify-center items-center"
             >
@@ -281,7 +287,7 @@
             </div>
           </div>
           <!-- Volvo Card -->
-          <div class="group flex w-96 flex-col">
+          <div class="group inline-flex w-96 flex-col">
             <div
               class="bg-white rounded-[1rem] z-10 px-12 py-8 boxshadow flex flex-col justify-center items-center"
             >
