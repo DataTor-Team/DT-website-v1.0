@@ -4,17 +4,18 @@ const navbarLinks = document.querySelector("#navbarLinks");
 const darkModeToggle = document.querySelector("#theme_icon");
 const html = document.querySelector("html");
 
+
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-0");
   navbarLinks.classList.toggle("left-full");
 });
-console.log("HEllo WOLRD");
 
 window.onscroll = () => {
   console.log("HEllo WOLRD - 1");
   if (window.scrollY > 0) {
     navbar.classList.add("bg-white");
     navbar.classList.add("boxshadow");
+    console.log("i am inside");
   } else {
     navbar.classList.remove("bg-white");
     navbar.classList.remove("boxshadow");
@@ -31,6 +32,8 @@ const footerLogo = document.getElementById("footer_logo");
 const HWSPLogo = document.getElementById("HWSP_logo");
 const DTA_logo = document.getElementById("DTA_logo");
 const footerSmallLogo = document.getElementById("footersmall_logo");
+const WIDimageMobile = document.getElementById("WID_mobileimg");
+const WIDimageDesktop = document.getElementById("WID_desktopimg")
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
@@ -45,6 +48,7 @@ const observer = new MutationObserver((mutations) => {
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
       } else {
         // light to dark
+        
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");

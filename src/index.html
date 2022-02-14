@@ -81,7 +81,7 @@
 
         <!-- Start of Navbar links -->
         <div
-          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          class="DTnavbarr animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
           id="navbarLinks"
         >
           <!-- <a
@@ -90,7 +90,7 @@
             >Privacy Movement</a
           > -->
           <a
-            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            class="NavbarLink lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
             href="solution.html"
             >Solutions</a
           >
@@ -100,17 +100,17 @@
             >Resources</a
           > -->
           <a
-            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            class="NavbarLink lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
             href="company.html"
             >Company</a
           >
           <a
-            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            class="NavbarLink lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
             href="contact.html"
             >Contact</a
           >
           <a
-            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            class="NavbarLink lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
             href="login.html"
             >Login</a
           >
@@ -158,7 +158,7 @@
         </section>
 
         <!-- What is Datator Section -->
-        <section class="w-screen h-screen bg-transparent relative">
+        <section class="w-screen lg:h-screen h-full bg-transparent relative">
           <div class="lg:px-[8rem] lg:py-[7rem] px-10 py-4">
             <h1
               class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
@@ -175,29 +175,32 @@
               the connectivity data by partnering with any trusted OEM and
               partners, enabling fair data usage to all
             </p>
-          
-
-            <img
-              class="absolute lg:right-0 lg:bottom-0 lg:w-[550px] bottom-0 -right-44"
+          </div>
+          <div class="lg:hidden w-screen h-full flex flex-row justify-end items-center">
+            <img id="WID_mobileimg" class="w-[50rem] lg:-top-0 mr-0 lg:w-[80rem] h-auto" src="assets/WID_fullimg-dark.svg" alt="flow" />
+          </div>
+          <img id="WID_desktopimg" class="lg:block lg:absolute hidden bottom-0 right-0 lg:w-[50rem] h-auto" src="assets/WID_fullimg-dark.svg" alt="flow" />
+            <!-- <img
+              class="absolute w-[20rem] lg:right-0 lg:bottom-0 lg:w-[39rem] bottom-0 -right-44"
               src="assets/WID_cornerbubble.svg"
               alt=""
             />
             <div
-              class="absolute lg:right-[12vw] right-[3rem] lg:top-[8rem] top-[28rem] flex flex-col items-center"
+              class="absolute lg:right-[12vw] right-[3rem] lg:top-[12rem] md:top-[25rem] top-[28rem] flex flex-col items-center"
             >
               <img
-                class="w-[9.25rem] h-auto lg:w-[16.5rem] lg:h-auto"
+                class="w-[5rem] h-auto lg:w-[12rem] md:w-[8rem] lg:h-auto"
                 src="assets/WID_serviceandproducts.svg"
                 alt=""
               />
-              <p class="mt-5">Your daily Services and Products</p>
+              <p class="mt-5 text-[0.5rem]">Your daily Services & Products</p>
             </div>
 
             <div
-              class="absolute bottom-[10vh] lg:right-[50vw] right-[14rem] flex items-center flex-col"
+              class="absolute bottom-[10vh] lg:right-[60rem] right-[12rem] flex items-center flex-col"
             >
               <img
-                class="lg:w-[8.6rem] lg:h-[auto] h-32 w-28"
+                class="lg:w-[5rem] md:w-[4rem] lg:h-[auto] h-[5rem] w-[3rem]"
                 src="assets/WID_oemandpratners.svg"
                 alt=""
               />
@@ -208,8 +211,9 @@
               class="absolute bottom-[3vh] lg:right-[5vw] right-2 lg:w-[20rem] lg:h-[auto] h-[10rem] w-[10rem] "
               src="assets/WID_deviceicon.svg"
               alt=""
-            />
-          </div>
+            />-->
+          
+           
         </section>
 
         <!-- How we solve problems -->
@@ -263,7 +267,7 @@
             <h1
               class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
             >
-              Datator Advantage!
+              Datator Advantages
             </h1>
             <div
               class="mt-12 flex flex-col lg:flex-row justify-center items-center lg:justify-around"
@@ -312,22 +316,18 @@
                   <h1
                     class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
                   >
-                    Data Transparacy
+                    Data Transparency
                   </h1>
                   <p
                     class="text-1xl mt-2 font-semibold w-[inherit] lg:text-left text-center"
                   >
-                    Apps on your connected device that you’re not using
-                    regularly needlessly expose you to more data collection.
+                  Data means nothing if you can’t trust it. We truly believe that Total Information Transparency is the only way forward to earn real digital trust
                   </p>
                   <hr
                     class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 lg:text-left text-center">
-                    We envision personalized privacy assistants as intelligent
-                    agents capable of learning the privacy preferences of their
-                    users over time, semi-automatically configuring many
-                    settings, and making many privacy decisions on their behalf.
+                    By collecting and combining data from various sources and visualizing it in intuitive ways to the organization, we quickly discover any imperfections. Therefore, transparency drives our performance. By being transparent we are constantly on show to run a smooth operation – there’s no place to hide.
                   </p>
                 </div>
                 <!-- Data Monitoring -3 -->
@@ -337,23 +337,19 @@
                   <h1
                     class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
                   >
-                    Data Monitoring
+                    Data Control
                   </h1>
                   <p
                     class="text-1xl mt-2 font-semibold w-[inherit] lg:text-left text-center"
                   >
-                    Apps on your connected device that you’re not using
-                    regularly needlessly expose you to more data collection.
+                    Any business is fair when there is equal opportunity and space for every parties involved. Same goes with your data - when you know more about what you share - you naturally have opinions on their existence. Control is what you need to take action. 
                   </p>
                   <hr
                     class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 lg:text-left text-center">
-                    We envision personalized privacy assistants as intelligent
-                    agents capable of learning the privacy preferences of their
-                    users over time, semi-automatically configuring many
-                    settings, and making many privacy decisions on their behalf.
-                  </p>
+                    As we preach privacy, part of privacy is state of making and effecting your decisions even at bit level. With the intuitive display and features, you definitely have options to say NO or YES to every and any app/service that signed up for. We call it
+                  </p> <p class= "DTNavbarLogoText lg:tracking-[1rem] text-center justify-center self-center"> #RightToSayNO </p>
                 </div>
                 <!-- Data Privacy -4 -->
                 <div
@@ -362,22 +358,18 @@
                   <h1
                     class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
                   >
-                    Data Privacy
+                    Data Consent
                   </h1>
                   <p
                     class="text-1xl mt-2 font-semibold w-[inherit] lg:text-left text-center"
                   >
-                    Apps on your connected device that you’re not using
-                    regularly needlessly expose you to more data collection.
+                    You share data not just from your systems, but also to any services that you click "Consent to share" - which again means to any party that they can share data with, inturn this continues. How privacy is ensured when your first point of contact is good but not the rest?
                   </p>
                   <hr
                     class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
                   />
                   <p class="mt-4 lg:text-left text-center">
-                    We envision personalized privacy assistants as intelligent
-                    agents capable of learning the privacy preferences of their
-                    users over time, semi-automatically configuring many
-                    settings, and making many privacy decisions on their behalf.
+                    We believe consents are not just consents but a compulsive clearance for their databanks to fill in with your data unless otherwise there is a clear aspect of transparency and control available for the users to even see how they stand in terms of their privacy values. And all we do is to ensure any consent providers with our privacy capability enablements.
                   </p>
                 </div>
               </div>
@@ -546,7 +538,7 @@
                 </div>
               </div>
               <div class="text-center p-6 bg-gray-200 dark:bg-[#1c1c1c]">
-                <span class="""dark:text-white">© 2021 Copyright:</span>
+                <span class="dark:text-white">© 2021 Copyright:</span>
                 <a class="text-gray-600 dark:text-white font-semibold" href="https://tailwind-elements.com/">Datator</a>
               </div>
             </footer>

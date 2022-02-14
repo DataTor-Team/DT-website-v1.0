@@ -9,6 +9,8 @@ toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-full");
 });
 
+function callfn(i) { document.getElementById(i).style.visibility='visible'; }
+
 window.onscroll = () => {
   if (window.scrollY > 0) {
     if (mode) {
