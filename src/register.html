@@ -21,12 +21,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    
     <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
-      <nav class="DTNavbar bg-white boxshadow" 0.>
+      <nav id="navbar" class="DTNavbar">
         <!-- Logo In the navbar -->
         <div class="flex flex-row items-center w-fit">
           <img
+            id="navbar_logo"
             class="mr-2"
             src="assets/datatorlogo.svg"
             alt="DatatorLogo"
@@ -36,16 +38,14 @@
           <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
         </div>
 
-        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
-
         <!-- Navbar Toggle Button -->
         <button
           class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
           id="toggle"
         >
-          <!-- <span class="h-0.5 w-5 bg-black"></span>
-        <span class="h-0.5 w-5 bg-black my-1"></span>
-        <span class="h-0.5 w-5 bg-black"></span> -->
+          <span class="h-0.5 w-5 NavbarToggle"></span>
+          <span class="h-0.5 w-5 NavbarToggle my-1"></span>
+          <span class="h-0.5 w-5 NavbarToggle"></span>
         </button>
 
         <!-- Element just to import left-full class to the output file -->
@@ -53,12 +53,12 @@
 
         <!-- Start of Navbar links -->
         <div
-          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
           id="navbarLinks"
         >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#"
+            href="privacymovement.html"
             >Privacy Movement</a
           >
           <a
@@ -68,7 +68,7 @@
           >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#why-smartidly"
+            href="blog.html"
             >Resources</a
           >
           <a
@@ -87,7 +87,8 @@
             >Login</a
           >
           <img
-            class="ml-3 mr-2"
+            id="theme_icon"
+            class="ml-3 mr-2 dark:fill-white"
             src="assets/darkmodeicon.svg"
             alt="theme"
             width="18px"
@@ -97,14 +98,16 @@
         <!-- End of Navbar links -->
       </nav>
     </div>
+
     <!-- Register section -->
     <section class="w-screen h-screen">
       <img
+        id="rightside_logo"
         class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
         src="assets/rightSideLogo.svg"
         alt="datatorlogo"
       />
-      <div class="sectionPaddings">
+      <div class="sectionPaddings lg:px-[7rem] lg:py-[8rem] px-[2rem] py-[7rem]">
         <h1 class="DTheading">Register</h1>
         <form
           class="flex flex-col justify-center items-start"
@@ -114,7 +117,7 @@
             <div class="flex flex-col mr-8">
               <label for="name">Name</label>
               <input
-                class="DTinput"
+                class="DTinput w-full"
                 type="text"
                 name="name"
                 placeholder="name"
@@ -123,7 +126,7 @@
             <div class="flex flex-col">
               <label for="email">Email</label>
               <input
-                class="DTinput"
+                class="DTinput w-full"
                 type="email"
                 name="email"
                 placeholder="example@sample.com"
@@ -133,7 +136,7 @@
           <div class="flex flex-col mt-8">
             <label for="phone">Phone Number</label>
             <input
-              class="DTinput"
+              class="DTinput w-full"
               type="number"
               name="phone"
               placeholder="9999999999"
@@ -161,4 +164,13 @@
       </div>
     </section>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      useClassNames: true,
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate",
+    });
+  </script>
+  <script src="/js/register.js"></script>
 </html>
