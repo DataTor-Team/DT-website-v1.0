@@ -1,3 +1,4 @@
+const navbar = document.getElementById("navbar");
 const toggleButton = document.querySelector("#toggle");
 const navbarLinks = document.querySelector("#navbarLinks");
 const darkModeToggle = document.querySelector("#theme_icon");
@@ -29,8 +30,8 @@ window.onscroll = () => {
 darkModeToggle.addEventListener("click", () => {
   html.classList.toggle("dark");
   mode = !mode;
-    navbar.classList.remove("bg-white");
-    navbar.classList.remove("bg-[#272727]")
+  navbar.classList.remove("bg-white");
+  navbar.classList.remove("bg-[#272727]");
   // if (screen.width > "768px") {
   //   navbarLinks.classList.remove("bg-white");
   //   navbarLinks.classList.remove("bg-[272727]");
