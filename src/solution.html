@@ -122,16 +122,18 @@
           here lorel ipsum some random text here
         </p>
 
-        <div class="flex flex-col lg:flex-row justify-start mt-8 px-4">
+        <div class="flex flex-col lg:flex-row justify-start lg:mt-8 lg:px-4">
           <!-- DT-Fasten Card -->
-          <div class="group flex w-96 flex-col mr-8">
+          <div class="group flex w-96 flex-col ml-[2rem] lg:ml-0 mr-8">
+
             <div
               class="solutionCard  rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
             >
               <!-- <div
                 class="w-[225px] h-[115px] bg-[url(/assets/dtfastendark.png)] dark:bg-[url('/assets/dtfasten.png')]"
               ></div> -->
-              <img
+              <a href="#dtfasten">
+                <img
                 width="226px"
                 height="115px"
                 class="max-w-[226px] max-h-[115px] object-none"
@@ -144,41 +146,45 @@
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
                 quibusdam cum animi totam sint.
               </p>
+              </a>
+              
             </div>
             <div
               class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
             >
-              <a href="#dtfasten">
+              <a href="register.html">
                 <p>Request Demo</p>
               </a>
             </div>
           </div>
           <!-- DT-proven Card -->
-          <div class="group flex w-96 flex-col mr-8 mt-8 lg:mt-0">
+          <div class="group flex w-96 flex-col mr-8 ml-[2rem] lg:ml-0 mt-[5rem] lg:mt-0">
             <div
               class="solutionCard rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
             >
               <!-- <div
                 class="w-[225px] h-[115px] bg-[url(/assets/dtprovendark.png)] dark:bg-[url(/assets/dtproven.png)]"
               ></div> -->
-              <img
+              <a href="#dtproven">
+                <img
                 width="226px"
                 height="115px"
                 class="max-w-[226px] max-h-[115px] object-none"
                 src="assets/dtprovendark.png"
                 alt=""
                 id="card_dtprovenimg"
-              />
-              <p class="font-bold uppercase mt-2">DT-Proven</p>
-              <p class="mt-2 DTbodytext">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
-                quibusdam cum animi totam sint.
-              </p>
+                />
+                <p class="font-bold uppercase mt-2">DT-Proven</p>
+                <p class="mt-2 DTbodytext">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                  quibusdam cum animi totam sint.
+                </p>
+              </a>
             </div>
             <div
               class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
             >
-              <a href="#dtproven">
+              <a href="register.html">
                 <p>Request Demo</p>
               </a>
             </div>
@@ -196,8 +202,10 @@
       />
       <img
         id="dtfasten_right"
-        class="absolute right-8 lg:top-1/2 lg:bottom-1/4 bottom-32 -mt-[2rem] w-[225px] h-[115px]" src="/assets/dtfastendark.png"
-      ></img>
+        class="absolute lg:right-8 md:right-[30rem] right-16 lg:top-1/2 lg:bottom-1/4 bottom-32 -mt-[2rem] w-[225px] h-[115px]" 
+        src="/assets/dtfastendark.png"
+        alt="dtfasten logo"
+      />
 
       <div class="lg:px-[8rem] lg:py-[7rem] py-6 px-8 my-20 lg:my-0">
         <div
@@ -236,7 +244,7 @@
         alt="datatorlogo"
       />
       <img id="dtproven_right"
-        class="absolute right-[10vw] lg:top-1/2 lg:bottom-1/4 bottom-32 mt-[1rem] w-[225px] h-[115px] " src="/assets/dtprovendark.png"
+        class="absolute lg:right-[5rem] md:right-[30rem] right-[8rem] lg:top-1/2 lg:bottom-1/4 bottom-32 mt-[1rem] w-[225px] h-[115px] " src="/assets/dtprovendark.png"
       ></img>
 
       <div class="lg:px-[8rem] lg:py-[7rem] py-6 px-8">
