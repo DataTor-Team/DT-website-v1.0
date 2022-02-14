@@ -21,11 +21,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
-      <nav class="DTNavbar">
+      <nav id="navbar" class="DTNavbar">
         <!-- Logo In the navbar -->
         <div class="flex flex-row items-center w-fit">
           <img
+            id="navbar_logo"
             class="mr-2"
             src="assets/datatorlogo.svg"
             alt="DatatorLogo"
@@ -35,16 +37,14 @@
           <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
         </div>
 
-        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
-
         <!-- Navbar Toggle Button -->
         <button
           class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
           id="toggle"
         >
-          <!-- <span class="h-0.5 w-5 bg-black"></span>
-        <span class="h-0.5 w-5 bg-black my-1"></span>
-        <span class="h-0.5 w-5 bg-black"></span> -->
+          <span class="h-0.5 w-5 NavbarToggle "></span>
+          <span class="h-0.5 w-5 NavbarToggle  my-1"></span>
+          <span class="h-0.5 w-5 NavbarToggle "></span>
         </button>
 
         <!-- Element just to import left-full class to the output file -->
@@ -52,22 +52,22 @@
 
         <!-- Start of Navbar links -->
         <div
-          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          class=" animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center  lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
           id="navbarLinks"
         >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#"
+            href="privacymovement.html"
             >Privacy Movement</a
           >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#our-products"
+            href="solution.html"
             >Solutions</a
           >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#why-smartidly"
+            href="blog.html"
             >Resources</a
           >
           <a
@@ -86,18 +86,19 @@
             >Login</a
           >
           <img
+            id="theme_icon"
             class="ml-3 mr-2 dark:fill-white"
             src="assets/darkmodeicon.svg"
             alt="theme"
             width="18px"
             height="auto"
-            id="dark-mode-button"
           />
         </div>
         <!-- End of Navbar links -->
       </nav>
     </div>
     <img
+      id="overview_rightlogo"
       class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
       src="assets/rightSideLogo.svg"
       alt="datatorlogo"
@@ -125,7 +126,7 @@
           <!-- DT-Fasten Card -->
           <div class="group flex w-96 flex-col mr-8">
             <div
-              class="bg-white rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
+              class="solutionCard  rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
             >
               <!-- <div
                 class="w-[225px] h-[115px] bg-[url(/assets/dtfastendark.png)] dark:bg-[url('/assets/dtfasten.png')]"
@@ -136,7 +137,7 @@
                 class="max-w-[226px] max-h-[115px] object-none"
                 src="assets/dtfastendark.png"
                 alt=""
-                id="dtfasten"
+                id="card_dtfastenimg"
               />
               <p class="font-bold uppercase mt-2">DT-FASTEN</p>
               <p class="mt-2 DTbodytext">
@@ -147,7 +148,7 @@
             <div
               class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
             >
-              <a href="#DT-Fasten">
+              <a href="#dtfasten">
                 <p>Request Demo</p>
               </a>
             </div>
@@ -155,7 +156,7 @@
           <!-- DT-proven Card -->
           <div class="group flex w-96 flex-col mr-8 mt-8 lg:mt-0">
             <div
-              class="bg-white rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
+              class="solutionCard rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
             >
               <!-- <div
                 class="w-[225px] h-[115px] bg-[url(/assets/dtprovendark.png)] dark:bg-[url(/assets/dtproven.png)]"
@@ -166,7 +167,7 @@
                 class="max-w-[226px] max-h-[115px] object-none"
                 src="assets/dtprovendark.png"
                 alt=""
-                id="dtproven"
+                id="card_dtprovenimg"
               />
               <p class="font-bold uppercase mt-2">DT-Proven</p>
               <p class="mt-2 DTbodytext">
@@ -177,7 +178,7 @@
             <div
               class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
             >
-              <a href="#DT-Proven">
+              <a href="#dtproven">
                 <p>Request Demo</p>
               </a>
             </div>
@@ -186,15 +187,17 @@
       </div>
     </section>
     <!-- DT-Fasten Section -->
-    <section class="w-screen h-screen relative">
+    <section id="dtfasten" class="w-screen h-screen relative">
       <img
+      id="dtfasten_rightlogo"
         class="hidden lg:flex absolute w-[200px] h-auto right-0 top-1/4 bottom-1/4 mt-[2rem]"
         src="assets/rightSideLogo.svg"
         alt="datatorlogo"
       />
-      <div
-        class="absolute right-8 lg:top-1/2 lg:bottom-1/4 bottom-32 -mt-[2rem] w-[225px] h-[115px] bg-[url(/assets/dtfastendark.png)] dark:bg-[url('/assets/dtfasten.png')]"
-      ></div>
+      <img
+        id="dtfasten_right"
+        class="absolute right-8 lg:top-1/2 lg:bottom-1/4 bottom-32 -mt-[2rem] w-[225px] h-[115px]" src="/assets/dtfastendark.png"
+      ></img>
 
       <div class="lg:px-[8rem] lg:py-[7rem] py-6 px-8 my-20 lg:my-0">
         <div
@@ -205,7 +208,9 @@
           >
             DT-Fasten
           </h1>
-          <button class="btngradient">Request Demo</button>
+          <a href="register.html">
+            <button class="btngradient">Request Demo</button>
+          </a>
         </div>
         <p class="DTbodytext lg:w-[50vw] w-full mt-4 lg:mt-0">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
@@ -223,15 +228,16 @@
     </section>
 
     <!-- DT-Proven Section -->
-    <section class="w-screen h-screen relative">
+    <section id="dtproven" class="w-screen h-screen relative">
       <img
+        id="dtproven_rightlogo"
         class="hidden lg:flex absolute w-[500px] h-auto right-0 top-1/4 bottom-1/4 mt-[2rem]"
         src="assets/dtprovenRightLogo-dark.svg"
         alt="datatorlogo"
       />
-      <div
-        class="absolute right-[10vw] lg:top-1/2 lg:bottom-1/4 bottom-32 mt-[1rem] w-[225px] h-[115px] bg-[url(/assets/dtprovendark.png)] dark:bg-[url('/assets/dtproven.png')]"
-      ></div>
+      <img id="dtproven_right"
+        class="absolute right-[10vw] lg:top-1/2 lg:bottom-1/4 bottom-32 mt-[1rem] w-[225px] h-[115px] " src="/assets/dtprovendark.png"
+      ></img>
 
       <div class="lg:px-[8rem] lg:py-[7rem] py-6 px-8">
         <div
@@ -242,7 +248,9 @@
           >
             DT-Proven
           </h1>
-          <button class="btngradient">Request Demo</button>
+          <a href="register.html">
+            <button class="btngradient">Request Demo</button>
+          </a>
         </div>
         <p class="DTbodytext lg:w-[50vw] w-full mt-4 lg:mt-0">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
@@ -267,6 +275,5 @@
       animatedClassName: "aos-animate",
     });
   </script>
-  <script src="/js/index.js"></script>
   <script src="/js/solution.js"></script>
 </html>

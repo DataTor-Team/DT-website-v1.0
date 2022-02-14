@@ -21,7 +21,6 @@ window.onscroll = () => {
   }
 };
 
-
 darkModeToggle.addEventListener("click", () => html.classList.toggle("dark"));
 
 //Images needes to be cchanged
@@ -36,7 +35,7 @@ const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
       if (navbar_logo.src.includes("/assets/datatorlogo-dark.svg")) {
-        console.log("dark to light");
+        // dark to light
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
@@ -45,7 +44,7 @@ const observer = new MutationObserver((mutations) => {
         HWSPLogo.setAttribute("src", "/assets/datatorlogo.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
       } else {
-        console.log("light to dark");
+        // light to dark
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");

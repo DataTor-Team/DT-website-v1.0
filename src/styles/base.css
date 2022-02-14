@@ -123,6 +123,18 @@ body {
 .dark .DTNavbar {
   /* background-color: #272727; */
 }
+.DTNavbarLinks{
+  background-color: white;
+}
+.dark .DTNavbarLinks{
+  background-color: #272727;
+}
+.NavbarToggle{
+  background-color: var(--text-color-light);
+}
+.dark .NavbarToggle{
+  background-color: var(--text-color-dark);
+}
 .boxshadow {
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -144,6 +156,15 @@ body {
   padding: 8rem 7rem;
 }
 
+/* Solution Page */
+.solutionCard{
+  background-color: var(--card-bg-color-light);
+  color: var(--text-color-light);
+}
+.dark .solutionCard{
+  background-color: var(--card-bgcolor-dark);
+  color: var(--text-color-dark);
+}
 @media screen and (max-width: 768px) {
   /* .sectionPaddings {
     padding-left: 4.5rem;
