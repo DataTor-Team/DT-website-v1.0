@@ -588,10 +588,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.5rem;
 }
 
-.top-1\/2 {
-  top: 50%;
-}
-
 .top-\[20rem\] {
   top: 20rem;
 }
@@ -787,6 +783,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mt-\[3rem\] {
+  margin-top: 3rem;
 }
 
 .ml-\[2rem\] {
@@ -1931,6 +1931,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .lg\:px-\[7rem\] {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .lg\:py-\[8rem\] {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .lg\:px-4 {

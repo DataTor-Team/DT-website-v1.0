@@ -135,6 +135,14 @@ body {
 .dark .NavbarToggle{
   background-color: var(--text-color-dark);
 }
+.stepperCard{
+  background-color: var(--card-bg-color-light);
+  color: var(--text-color-light);
+}
+.dark .stepperCard{
+  background-color: var(--card-bgcolor-dark);
+  color: var(--text-color-dark);
+}
 .boxshadow {
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
 }

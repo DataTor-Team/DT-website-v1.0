@@ -23,16 +23,18 @@
   </head>
   <body class="h-full w-full">
     <img
+    id="rightside_logo"
       class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
       src="assets/rightSideLogo.svg"
       alt="datatorlogo"
     />
-    <!-- start of Navbar -->
+      <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
-      <nav class="DTNavbar">
+      <nav id="navbar" class="DTNavbar">
         <!-- Logo In the navbar -->
         <div class="flex flex-row items-center w-fit">
           <img
+            id="navbar_logo"
             class="mr-2"
             src="assets/datatorlogo.svg"
             alt="DatatorLogo"
@@ -42,16 +44,14 @@
           <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
         </div>
 
-        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
-
         <!-- Navbar Toggle Button -->
         <button
           class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
           id="toggle"
         >
-          <!-- <span class="h-0.5 w-5 bg-black"></span>
-        <span class="h-0.5 w-5 bg-black my-1"></span>
-        <span class="h-0.5 w-5 bg-black"></span> -->
+          <span class="h-0.5 w-5 NavbarToggle"></span>
+          <span class="h-0.5 w-5 NavbarToggle my-1"></span>
+          <span class="h-0.5 w-5 NavbarToggle"></span>
         </button>
 
         <!-- Element just to import left-full class to the output file -->
@@ -59,12 +59,12 @@
 
         <!-- Start of Navbar links -->
         <div
-          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
           id="navbarLinks"
         >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#"
+            href="privacymovement.html"
             >Privacy Movement</a
           >
           <a
@@ -74,7 +74,7 @@
           >
           <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="#why-smartidly"
+            href="blog.html"
             >Resources</a
           >
           <a
@@ -93,18 +93,18 @@
             >Login</a
           >
           <img
+            id="theme_icon"
             class="ml-3 mr-2 dark:fill-white"
             src="assets/darkmodeicon.svg"
             alt="theme"
             width="18px"
             height="auto"
-            id="dark-mode-button"
           />
         </div>
         <!-- End of Navbar links -->
       </nav>
     </div>
-    <!-- End of Navbar -->
+
     <!-- Start of hero section -->
     <section id="hero-section" class="min-h-screen w-full mt-20 lg:mt-0">
       <div class="lg:px-[8rem] lg:py-[7rem] px-8 py-6">
@@ -184,7 +184,7 @@
 
       <!-- Start of First Step Content -->
       <div
-        class="bg-white dark:bg-[#3E3E3E] boxshadow dark:text-white w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-32 ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
+        class="stepperCard boxshadow  w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-32 ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
         data-aos="first-step"
         data-aos-offset="300"
       >
@@ -199,7 +199,7 @@
 
       <!-- Start of Second Step Content -->
       <div
-        class="bg-[#3e3e3e] boxshadow dark:bg-white dark:text-gray-800 w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-96 mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
+        class=" boxshadow stepperCard  w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-96 mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
         data-aos="second-step"
         data-aos-offset="200"
       >
@@ -212,7 +212,7 @@
 
       <!-- Start of Third Step Content -->
       <div
-        class="bg-[#3e3e3e] boxshadow dark:bg-white w-[175px] dark:text-gray-800 lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[36rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
+        class=" boxshadow stepperCard w-[175px]  lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[36rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
         data-aos="first-step"
         data-aos-offset="200"
       >
@@ -226,7 +226,7 @@
 
       <!-- Start of Fourth Step Content -->
       <div
-        class="bg-[#3e3e3e] boxshadow dark:bg-white dark:text-gray-800 w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[48rem] mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
+        class="boxshadow stepperCard w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[48rem] mr-2 right-1/2 translate-x-[calc(100%+2rem)]"
         data-aos="second-step"
         data-aos-offset="200"
       >
@@ -241,7 +241,7 @@
 
       <!-- Start of Fifth Step Content -->
       <div
-        class="boxshadow bg-[#3e3e3e] dark:text-gray-800 dark:bg-white boxshadow w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[58rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
+        class="boxshadow stepperCard boxshadow w-[175px] lg:w-[300px] max-w-sm rounded-md px-4 py-5 absolute top-[58rem] ml-2 left-1/2 -translate-x-[calc(100%+2rem)]"
         data-aos="first-step"
         data-aos-offset="200"
       >
@@ -264,24 +264,26 @@
           Partners
         </h1>
         <div
-          class="whitespace-nowrap w-full overflow-x-auto py-16 DThideScrollbar"
+          class=" w-full flex lg:flex-row flex-col flex-wrap py-16"
         >
           <!-- Mobility XLab card -->
-          <div class="group inline-flex w-96 flex-col mr-8">
+          <div class="group inline-flex mb-[5rem] lg:mb-0 w-96 flex-col mr-8">
             <div
               class="bg-white rounded-[1rem] z-10 px-12 py-8 boxshadow flex flex-col justify-center items-center"
             >
+            <a href="https://www.mobilityxlab.com/en" target="_blank">
               <img
                 width="226px"
-                class="max-w-[226px] max-h-[165.57px] object-none"
+                class="max-w-[226px] cursor-pointer max-h-[165.57px] object-none"
                 src="assets/mobilityxlablogo.png"
                 alt=""
               />
+            </a>
             </div>
             <div
               class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
             >
-              <a href="https://www.volvocars.com/" target="_blank">
+              <a href="https://www.mobilityxlab.com/en" target="_blank">
                 <p>Checkout Mobility XLab</p>
               </a>
             </div>
@@ -291,12 +293,15 @@
             <div
               class="bg-white rounded-[1rem] z-10 px-12 py-8 boxshadow flex flex-col justify-center items-center"
             >
+            <a href="https://www.volvocars.com/" target="_blank">
               <img
                 width="226px"
                 class="max-w-[226px] max-h-[165.57px] object-none"
                 src="assets/volvologo.png"
                 alt=""
               />
+            </a>
+              
             </div>
             <div
               class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
@@ -318,5 +323,5 @@
       animatedClassName: "aos-animate",
     });
   </script>
-  <script src="/js/index.js"></script>
+  <script src="/js/company.js"></script>
 </html>
