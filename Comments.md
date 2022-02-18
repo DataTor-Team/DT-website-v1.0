@@ -7,8 +7,7 @@
 ## Hero page
 
 ### Desktop
-
-1. Font size can be little bigger for "THE PRIVACY COMPANY"
+~~1. Font size can be little bigger for "THE PRIVACY COMPANY"~~
 2. Font size can be little bigger for other small sized texts
 3. Learn More missing Hyperlink
 4. Indentation in Text below "What is Datator" and it's not visible properly in dark mode
