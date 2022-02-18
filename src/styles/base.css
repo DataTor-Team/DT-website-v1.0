@@ -163,6 +163,13 @@ body {
   font-weight: 300;
   text-transform: uppercase;
 }
+.DTheading2Text {
+  font-size: 1.00rem;
+  letter-spacing: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 .btngradient {
   background-image: var(--btn-gradient);
   border-radius: 8px;
