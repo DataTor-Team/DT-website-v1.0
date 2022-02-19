@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --color-blue: #606eef;
   --color-cyan: #46e0c5;
@@ -179,6 +180,20 @@ body {
 }
 .sectionPaddings {
   padding: 8rem 7rem;
+}
+.ct-btn-scroll {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 50px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 /* Solution Page */
