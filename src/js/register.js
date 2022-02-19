@@ -38,7 +38,6 @@ const navbar_logo = document.getElementById("navbar_logo");
 const themeIcon = document.getElementById("theme_icon");
 const rightSideLogo = document.getElementById("rightside_logo");
 
-
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
@@ -58,3 +57,13 @@ const observer = new MutationObserver((mutations) => {
 });
 
 observer.observe(document.querySelector("html"), { attributes: true });
+
+document.querySelector("#form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  axios.post("https://dt-backend-server.herokuapp.com/register", {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    message: document.querySelector("#message").value,
+    phone: document.querySelector("#phone").value,
+  });
+});

@@ -84,4 +84,6 @@ form.addEventListener("submit", (event) => {
     `mailto:info@datator.tech?cc=${email.value}&subject=Query from ${name.value}&body=${textArea.value}`
   );
   tempAnchorLink.click();
+
+  tempAnchorLink.remove();
 });
