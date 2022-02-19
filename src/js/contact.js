@@ -3,6 +3,10 @@ const toggleButton = document.querySelector("#toggle");
 const navbarLinks = document.querySelector("#navbarLinks");
 const darkModeToggle = document.querySelector("#theme_icon");
 const html = document.querySelector("html");
+/**
+ * @type HTMLFormElement
+ */
+const form = document.querySelector("#submitForm");
 
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-0");
@@ -73,3 +77,28 @@ const observer = new MutationObserver((mutations) => {
 });
 
 observer.observe(document.querySelector("html"), { attributes: true });
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  /**
+   * @type HTMLTextAreaElement
+   */
+  const textArea = document.querySelector("#message");
+  /**
+   * @type HTMLInputElement
+   */
+  const name = document.querySelector("#name");
+  /**
+   * @type HTMLInputElement
+   */
+  const email = document.querySelector("#email");
+
+  const tempAnchorLink = document.querySelector("a");
+  tempAnchorLink.setAttribute(
+    "href",
+    `mailto:info@datator.tech?cc=${email.value}&subject=Query from ${name.value}&body=${textArea.value}`
+  );
+  tempAnchorLink.click();
+
+  tempAnchorLink.remove();
+});
