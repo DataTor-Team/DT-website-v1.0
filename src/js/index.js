@@ -10,19 +10,42 @@ toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-full");
 });
 
+window.onload = () => {
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  navbar.classList.remove("bg-white");
+  navbar.classList.remove("bg-[#272727]");
+}
+
+const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
+
+const modifyThemeInLocalStorage = () => {
+  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
+}
+
 window.onscroll = () => {
-  console.log("HEllo WOLRD - 1");
   if (window.scrollY > 0) {
-    navbar.classList.add("bg-white");
+    if (!isDarkModeOn()) {
+      navbar.classList.add("bg-white");
+    } else {
+      navbar.classList.add("bg-[#272727]");
+    }
     navbar.classList.add("boxshadow");
-    console.log("i am inside");
   } else {
-    navbar.classList.remove("bg-white");
+    if (!isDarkModeOn()) {
+      navbar.classList.remove("bg-white");
+    } else {
+      navbar.classList.remove("bg-[#272727]");
+    }
     navbar.classList.remove("boxshadow");
   }
 };
 
-darkModeToggle.addEventListener("click", () => html.classList.toggle("dark"));
+darkModeToggle.addEventListener("click", () => {
+  html.classList.toggle("dark");
+  modifyThemeInLocalStorage();
+  navbar.classList.remove("bg-white");
+  navbar.classList.remove("bg-[#272727]");
+});
 
 //Images needes to be cchanged
 const navbar_logo = document.getElementById("navbar_logo");
@@ -33,11 +56,13 @@ const HWSPLogo = document.getElementById("HWSP_logo");
 const DTA_logo = document.getElementById("DTA_logo");
 const footerSmallLogo = document.getElementById("footersmall_logo");
 const WIDimageMobile = document.getElementById("WID_mobileimg");
-const WIDimageDesktop = document.getElementById("WID_desktopimg")
+const WIDimageDesktop = document.getElementById("WID_desktopimg");
+const homeIcon = document.getElementById("home_icon");
+
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
-      if (navbar_logo.src.includes("/assets/datatorlogo-dark.svg")) {
+      if (!isDarkModeOn()) {
         // dark to light
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
@@ -46,6 +71,7 @@ const observer = new MutationObserver((mutations) => {
         footerLogo.setAttribute("src", "/assets/heroLogo.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
+        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
       } else {
         // light to dark
         
@@ -56,6 +82,7 @@ const observer = new MutationObserver((mutations) => {
         footerLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo.svg");
+        homeIcon.setAttribute("src","assets/homeicon.svg")
       }
     }
   });

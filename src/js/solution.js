@@ -9,6 +9,18 @@ toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-full");
 });
 
+window.onload = () => {
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  navbar.classList.remove("bg-white");
+  navbar.classList.remove("bg-[#272727]");
+}
+
+const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
+
+const modifyThemeInLocalStorage = () => {
+  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
+}
+
 window.onscroll = () => {
   if (window.scrollY > 0) {
     if (mode) {
@@ -29,13 +41,9 @@ window.onscroll = () => {
 
 darkModeToggle.addEventListener("click", () => {
   html.classList.toggle("dark");
-  mode = !mode;
+  modifyThemeInLocalStorage();
   navbar.classList.remove("bg-white");
   navbar.classList.remove("bg-[#272727]");
-  // if (screen.width > "768px") {
-  //   navbarLinks.classList.remove("bg-white");
-  //   navbarLinks.classList.remove("bg-[272727]");
-  // }
 });
 
 const dtfastenImg = document.getElementById("card_dtfastenimg");
@@ -47,11 +55,13 @@ const dtfastenRightLogo = document.getElementById("dtfasten_rightlogo");
 const dtfastenRight = document.getElementById("dtfasten_right");
 const dtprovenRight = document.getElementById("dtproven_right");
 const dtprovenRightLogo = document.getElementById("dtproven_rightlogo");
+const footerSmallLogo = document.getElementById("footersmall_logo");
+const homeIcon = document.getElementById("home_icon");
 
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
-      if (dtfastenImg.src.includes("/assets/dtfastendark.png")) {
+      if (isDarkModeOn()) {
         // dark to light
         dtfastenImg.setAttribute("src", "/assets/dtfasten.png");
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
@@ -62,6 +72,8 @@ const observer = new MutationObserver((mutations) => {
         dtprovenRightLogo.setAttribute("src", "/assets/dtprovenRightLogo.svg");
         dtfastenRight.setAttribute("src", "/assets/dtfasten.png");
         dtprovenRight.setAttribute("src", "/assets/dtproven.png");
+        footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
+        homeIcon.setAttribute("src","assets/homeicon.svg")
       } else {
         // light to dark
         dtfastenImg.setAttribute("src", "/assets/dtfastendark.png");
@@ -76,6 +88,8 @@ const observer = new MutationObserver((mutations) => {
         );
         dtfastenRight.setAttribute("src", "/assets/dtfastendark.png");
         dtprovenRight.setAttribute("src", "/assets/dtprovendark.png");
+        footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
+        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
       }
     }
   });
