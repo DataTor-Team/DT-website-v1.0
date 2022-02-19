@@ -73,7 +73,9 @@ const observer = new MutationObserver((mutations) => {
         footerLogo.setAttribute("src", "/assets/heroLogo.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
-        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
+        homeIcon.setAttribute("src","assets/homeicon-dark.svg");
+        scrollDownChev.setAttribute("src","assets/downChevDark.svg")
+
       } else {
         // light to dark
         
@@ -84,7 +86,11 @@ const observer = new MutationObserver((mutations) => {
         footerLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo.svg");
-        homeIcon.setAttribute("src","assets/homeicon.svg")
+        homeIcon.setAttribute("src","assets/homeicon.svg");
+        scrollDownChev.setAttribute("src","assets/downChevLight.svg")
+
+
+
       }
     }
   });
