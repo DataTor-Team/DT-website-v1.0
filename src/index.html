@@ -50,6 +50,7 @@
     <title>Datator</title>
   </head>
   <body class="w-full scroll-smooth overflow-y-hidden">
+
     <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
       <nav id="navbar" class="DTNavbar">
@@ -166,24 +167,23 @@
               src="assets/heroLogo.svg"
               alt="Landing Logo"
             />
-            <p class="DTNavbarLogoText lg:tracking-[1rem] pl-4">
-              THE PRIVACY COMPANY
-            </p>
+            <p class="DTheading2Text lg:tracking-[1rem] pl-4"> THE PRIVACY COMPANY </p>
 
             <div
               class="flex flex-col justify-center items-center text-center lg:text-left px-6"
             >
-              <p class="mb-2">
+              <p class="mb-2 text-xl">
                 We create Data Awareness, by putting back the control of
                 connectivity to YOU !
-              </p>
-              <p class="mt-2">Learn More</p>
-            </div>
+              </p>              
+              <p class="mt-10">Learn More</p>
+            <a href="#section2" class="mt-8 marker:ct-btn-scroll ct-js-btn-scroll"><img id="scrollDownChev" alt="Arrow Down Icon" src="assets/downChevDark.svg"></a>
+            </div>  
           </div>
         </section>
 
         <!-- What is Datator Section -->
-        <section class="w-screen lg:h-screen h-full bg-transparent relative">
+        <section id = "section2" class="w-screen lg:h-screen h-full bg-transparent relative">
           <div class="lg:px-[8rem] lg:py-[7rem] px-10 py-4">
             <h1
               class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
@@ -191,12 +191,7 @@
               What is Datator?
             </h1>
             <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
-            <p
-              class="lg:text-[2rem] text-[1.5rem] lg:w-[45rem] text-gray-600 text-center lg:text-left px-5"
-            >
-              " Privacy is just an Art of handling your data, Datator helps you
-              master this art "
-            </p>
+            <p class="lg:text-[2rem] text-[1.5rem] lg:w-[45rem] text-center lg:text-left ">" Privacy is just an Art of handling your data, Datator helps you master this art "</p>
             <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
 
             <p
@@ -255,10 +250,11 @@
               src="assets/WID_deviceicon.svg"
               alt=""
             />-->
+            
         </section>
 
         <!-- How we solve problems -->
-        <section class="w-screen lg:h-screen h-full bg-transparent">
+        <section id="section3" class="w-screen lg:h-screen h-full bg-transparent mt-10">
           <div class="lg:px-[8rem] lg:py-[7rem]">
             <h1
               class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
@@ -347,7 +343,7 @@
                     Data Privacy
                   </h1>
                   <p
-                    class="lg:text-xl text-base mt-2 font-semibold w-[inherit]lg:text-left text-center"
+                    class="lg:text-xl text-base mt-2 font-semibold w-[inherit]lg:text-left"
                   >
                     Apps on your connected device that you’re not using
                     regularly needlessly expose you to more data collection.
@@ -656,7 +652,7 @@
                 </div>
               </div>
               <div class="text-center p-6 DTFooterDown">
-                <span class="DTFooterLink">© 2021 Copyright:</span>
+                <span class="DTFooterLink">© 2022 Copyright:</span>
                 <a
                   class="DTFooterLink font-semibold"
                   href="https://tailwind-elements.com/"

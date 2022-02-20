@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --color-blue: #606eef;
   --color-cyan: #46e0c5;
@@ -48,6 +49,7 @@ body {
   background-color: var(--body-color-dark);
 }
 
+
 .DTinput {
   /* @apply border-2 border-solid py-2 px-4;
   @apply bg-gradient-to-br from-[var(--color-blue)] to-[var(--color-cyan)]; */
@@ -61,6 +63,54 @@ body {
   border-image-slice: 1;
   border-radius: 10px;
 }
+.arrow,
+.arrow:before {
+  position: static;
+  left: 50%;
+  }
+
+.arrow{
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+}
+  
+
+  
+.arrow:before
+{content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+  
+  
+@keyframes arrow{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+  
+
+
 .DTTextArea {
   border: var(--input-outoffocus);
 }
@@ -191,6 +241,13 @@ body {
   font-weight: 300;
   text-transform: uppercase;
 }
+.DTheading2Text {
+  font-size: 1.00rem;
+  letter-spacing: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 .btngradient {
   background-image: var(--btn-gradient);
   border-radius: 8px;
@@ -200,6 +257,20 @@ body {
 }
 .sectionPaddings {
   padding: 8rem 7rem;
+}
+.ct-btn-scroll {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 50px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 /* Solution Page */

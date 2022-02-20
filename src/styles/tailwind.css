@@ -855,6 +855,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mr-\[2rem\] {
+  margin-right: 2rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1089,6 +1097,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[500px\] {
   width: 500px;
+}
+
+.w-\[30rem\] {
+  width: 30rem;
 }
 
 .max-w-7xl {
@@ -1568,6 +1580,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.5rem;
 }
 
+.text-\[2\.25rem\] {
+  font-size: 2.25rem;
+}
+
+.text-\[4\.25rem\] {
+  font-size: 4.25rem;
+}
+
+.text-\[1\.75rem\] {
+  font-size: 1.75rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -1825,6 +1849,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .sm\:text-\[2\.25rem\] {
+    font-size: 2.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1885,6 +1913,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-\[2\.25rem\] {
+    font-size: 2.25rem;
+  }
+
+  .md\:text-\[4\.25rem\] {
+    font-size: 4.25rem;
   }
 }
 
@@ -2194,6 +2230,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-\[2\.25rem\] {
+    font-size: 2.25rem;
   }
 
   .lg\:font-medium {
