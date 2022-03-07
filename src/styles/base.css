@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --color-blue: #606eef;
   --color-cyan: #46e0c5;
@@ -49,7 +48,6 @@ body {
   background-color: var(--body-color-dark);
 }
 
-
 .DTinput {
   /* @apply border-2 border-solid py-2 px-4;
   @apply bg-gradient-to-br from-[var(--color-blue)] to-[var(--color-cyan)]; */
@@ -67,9 +65,9 @@ body {
 .arrow:before {
   position: static;
   left: 50%;
-  }
+}
 
-.arrow{
+.arrow {
   width: 40px;
   height: 40px;
   top: 50%;
@@ -80,11 +78,9 @@ body {
   border-right: 2px #fff solid;
   border-bottom: 2px #fff solid;
 }
-  
 
-  
-.arrow:before
-{content: '';
+.arrow:before {
+  content: "";
   width: 20px;
   height: 20px;
   top: 50%;
@@ -97,19 +93,16 @@ body {
   animation-iteration-count: infinite;
   animation-name: arrow;
 }
-  
-  
-@keyframes arrow{
-  0%{
+
+@keyframes arrow {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
     transform: translate(-10px, -10px);
   }
 }
-  
-
 
 .DTTextArea {
   border: var(--input-outoffocus);
@@ -242,7 +235,7 @@ body {
   text-transform: uppercase;
 }
 .DTheading2Text {
-  font-size: 1.00rem;
+  font-size: 1rem;
   letter-spacing: 0.25rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -281,6 +274,13 @@ body {
 .dark .solutionCard {
   background-color: var(--card-bgcolor-dark);
   color: var(--text-color-dark);
+}
+
+.Meettheteam {
+  background-color: white;
+}
+.dark .Meettheteam {
+  background-color: #1d1f20;
 }
 @media screen and (max-width: 768px) {
   /* .sectionPaddings {
