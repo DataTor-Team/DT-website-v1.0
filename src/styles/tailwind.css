@@ -823,6 +823,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mr-0 {
   margin-right: 0px;
 }
@@ -857,10 +861,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-\[2rem\] {
   margin-right: 2rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .block {
@@ -1450,11 +1450,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .px-\[2rem\] {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1559,8 +1554,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.5rem;
 }
 
-.text-\[1\.25rem\] {
-  font-size: 1.25rem;
+.text-\[4\.25rem\] {
+  font-size: 4.25rem;
 }
 
 .text-\[2rem\] {
@@ -1571,25 +1566,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
 }
 
+.text-\[1\.75rem\] {
+  font-size: 1.75rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
+.text-\[1\.25rem\] {
+  font-size: 1.25rem;
+}
+
 .text-\[0\.5rem\] {
   font-size: 0.5rem;
-}
-
-.text-\[2\.25rem\] {
-  font-size: 2.25rem;
-}
-
-.text-\[4\.25rem\] {
-  font-size: 4.25rem;
-}
-
-.text-\[1\.75rem\] {
-  font-size: 1.75rem;
 }
 
 .font-semibold {
@@ -1672,11 +1663,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
@@ -1685,6 +1671,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1849,10 +1840,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-
-  .sm\:text-\[2\.25rem\] {
-    font-size: 2.25rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1913,14 +1900,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .md\:text-\[2\.25rem\] {
-    font-size: 2.25rem;
-  }
-
-  .md\:text-\[4\.25rem\] {
-    font-size: 4.25rem;
   }
 }
 
@@ -2232,8 +2211,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.75rem;
   }
 
-  .lg\:text-\[2\.25rem\] {
-    font-size: 2.25rem;
+  .lg\:text-\[19px\] {
+    font-size: 19px;
   }
 
   .lg\:font-medium {
