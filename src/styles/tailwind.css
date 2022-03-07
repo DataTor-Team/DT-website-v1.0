@@ -502,6 +502,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -656,6 +660,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .right-\[8rem\] {
   right: 8rem;
+}
+
+.top-\[15rem\] {
+  top: 15rem;
+}
+
+.top-\[12rem\] {
+  top: 12rem;
+}
+
+.top-\[26rem\] {
+  top: 26rem;
+}
+
+.top-\[39rem\] {
+  top: 39rem;
+}
+
+.top-\[52rem\] {
+  top: 52rem;
+}
+
+.top-\[64rem\] {
+  top: 64rem;
 }
 
 .z-10 {
@@ -1101,6 +1129,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[30rem\] {
   width: 30rem;
+}
+
+.w-\[8rem\] {
+  width: 8rem;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .max-w-7xl {
@@ -1867,6 +1903,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 50%;
   }
 
+  .md\:w-\[12\.5rem\] {
+    width: 12.5rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2114,6 +2154,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-\[20vw\] {
     width: 20vw;
+  }
+
+  .lg\:w-\[21\.5rem\] {
+    width: 21.5rem;
+  }
+
+  .lg\:w-96 {
+    width: 24rem;
+  }
+
+  .lg\:w-\[0rem\] {
+    width: 0rem;
+  }
+
+  .lg\:w-\[90rem\] {
+    width: 90rem;
   }
 
   .lg\:grid-cols-4 {

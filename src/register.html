@@ -22,7 +22,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
   </head>
   <body>
-    <!-- start of Navbar -->
+    <!-- start of Navbar 
+    Change 5️
+  Name and email increase width
+not visible in dark mode 
+query padding
+Phone Number field change
+-->
     <div class="flex justify-center w-screen">
       <nav id="navbar" class="DTNavbar">
         <!-- Logo In the navbar -->
@@ -133,13 +139,13 @@
       <div
         class="sectionPaddings lg:px-[7rem] lg:py-[8rem] px-[2rem] py-[7rem]"
       >
-        <h1 class="DTheading">Register</h1>
+        <h1 class="text-3xl mb-8">Request Form</h1>
         <form class="flex flex-col justify-center items-start" id="form">
           <div class="flex flex-row justify-between flex-wrap">
             <div class="flex flex-col mr-8">
               <label for="name">Name</label>
               <input
-                class="DTinput w-full"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 name="name"
                 id="name"
@@ -149,7 +155,7 @@
             <div class="flex flex-col">
               <label for="email">Email</label>
               <input
-                class="DTinput w-full"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                 type="email"
                 name="email"
                 id="email"
@@ -157,16 +163,7 @@
               />
             </div>
           </div>
-          <div class="flex flex-col mt-8">
-            <label for="phone">Phone Number</label>
-            <input
-              class="DTinput w-full"
-              type="number"
-              name="phone"
-              id="phone"
-              placeholder="With country code"
-            />
-          </div>
+      
 
           <div class="flex flex-col mt-8">
             <label for="msg">Query/Message</label><br />
@@ -179,7 +176,7 @@
             </textarea>
           </div>
 
-          <button class="btngradient mt-4">Request for Registration</button>
+          <button class="btngradient mt-8">Request for Registration</button>
         </form>
         <div class="text-center pt-12 pb-12">
           <p>
