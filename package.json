@@ -1,0 +1,27 @@
+{
+  "name": "smartidly-portfolio",
+  "version": "1.0.0",
+  "description": "The portfolio website for Smartidly",
+  "main": "index.js",
+  "repository": "https://github.com/Smartidly-Org/portfolio",
+  "author": "Smartidly-Org",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "serve": "^14.0.1",
+    "tailwindcss": "^3.0.18"
+  },
+  "scripts": {
+    "start": "serve ./src",
+    "build": "tailwind -o src/styles/tailwind.css",
+    "dev": "concurrently \"tailwind -o src/styles/tailwind.css --watch\" \"serve ./src\" ",
+    "build:css": "tailwindcss -o src/styles/tailwind.css"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2"
+  }
+}

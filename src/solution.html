@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- CHANGE 6
+      Image quality
+      Card Hover in mobile
+      Card sidelined in mobile
+      remove DT fasten and DT Proven image in the mobile view above the text
+      DT fasten image update a new image with a 3D effect (change it in Figma and upload)
+      DT Proven please change it as it doesnt make sense
+      start of Navbar -->
+    <div class="flex justify-center w-screen">
+      <nav id="navbar" class="DTNavbar">
+        <!-- Logo In the navbar -->
+        <div class="flex flex-row items-center w-fit">
+          <a href="/">
+            <img
+              id="navbar_logo"
+              class="mr-2"
+              src="assets/datatorlogo.svg"
+              alt="DatatorLogo"
+              width="30px"
+              height="auto"
+            />
+          </a>
+          <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
+        </div>
+
+        <!-- Navbar Toggle Button -->
+        <button
+          class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
+          id="toggle"
+        >
+          <span class="h-0.5 w-5 NavbarToggle"></span>
+          <span class="h-0.5 w-5 NavbarToggle my-1"></span>
+          <span class="h-0.5 w-5 NavbarToggle"></span>
+        </button>
+
+        <!-- Element just to import left-full class to the output file -->
+        <div class="hidden left-0"></div>
+
+        <!-- Start of Navbar links -->
+        <div
+          class="DTnavbarr animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          id="navbarLinks"
+        >
+          <a
+            class="DTnavbarr lg:hidden block lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="/"
+            onclick="closeNavbar()"
+            >Home</a
+          >
+          <!-- <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="privacymovement.html"
+            >Privacy Movement</a
+          > -->
+          <a
+            class="DTnavbarr lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="solution.html"
+            onclick="closeNavbar()"
+            >Solutions</a
+          >
+          <!-- <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="blog.html"
+            >Resources</a
+          > -->
+          <a
+            onclick="closeNavbar()"
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="company.html"
+            >Company</a
+          >
+          <a
+            onclick="closeNavbar()"
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            onclick="closeNavbar()"
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="login.html"
+            >Login</a
+          >
+          <img
+            id="theme_icon"
+            onclick="closeNavbar()"
+            class="ml-3 mr-2 dark:fill-white"
+            src="assets/darkmodeicon.svg"
+            alt="theme"
+            width="18px"
+            height="auto"
+          />
+          <a href="/" onclick="closeNavbar()">
+            <img
+              id="home_icon"
+              class="ml-3 mr-2 NavbarHomeicon lg:block hidden"
+              width="15px"
+              height="auto"
+              src="assets/homeicon.svg"
+              alt="home icon"
+            />
+          </a>
+        </div>
+        <!-- End of Navbar links -->
+      </nav>
+    </div>
+    <img
+      id="overview_rightlogo"
+      class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
+      src="assets/rightSideLogo.svg"
+      alt="datatorlogo"
+    />
+    <!-- section 1 -->
+    <section class="w-screen h-screen scroll-sn mt-20 lg:mt-0">
+      <div class="lg:px-[8rem] lg:py-[7rem] py-6">
+        <h1
+          class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left px-8"
+        >
+          Solutions
+        </h1>
+        <p class="DTbodytext lg:text-lg text-lg lg:w-[50vw] w-full text-center lg:text-left px-8">
+          We differentiate ourselves with our approach and our privacy
+          technology framework stands for it. Our products provides complete
+          transparency and choice of control of the data flow to users, directly
+          from the source.
+          We achieve it through our intelligence models on top of platform-agnostic core
+          capabilities.
+        </p>
+
+        <div class="flex flex-col lg:flex-row justify-start lg:mt-8 lg:px-4">
+          <!-- DT-Fasten Card -->
+          <div class="group flex w-96 flex-col ml-[2rem] lg:ml-0 mr-8">
+            <div
+              class="solutionCard rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
+            >
+              <!-- <div
+                class="w-[225px] h-[115px] bg-[url(/assets/dtfastendark.png)] dark:bg-[url('/assets/dtfasten.png')]"
+              ></div> -->
+              <a href="#dtfasten">
+                <img
+                  width="226px"
+                  height="115px"
+                  class="max-w-[226px] max-h-[115px] object-none"
+                  src="assets/dtfastendark.png"
+                  alt=""
+                  id="card_dtfastenimg"
+                />
+                <p class="mt-2 DTbodytext">
+                  Privacy Companion for Android Automotive
+                </p>
+              </a>
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="register.html">
+                <p>Request Demo</p>
+              </a>
+            </div>
+          </div>
+          <!-- DT-proven Card -->
+          <div
+            class="group flex w-96 flex-col mr-8 ml-[2rem] lg:ml-0 mt-[5rem] lg:mt-0"
+          >
+            <div
+              class="solutionCard rounded-[1rem] z-10 px-6 py-8 boxshadow flex flex-col justify-center items-start"
+            >
+              <!-- <div
+                class="w-[225px] h-[115px] bg-[url(/assets/dtprovendark.png)] dark:bg-[url(/assets/dtproven.png)]"
+              ></div> -->
+              <a href="#dtproven">
+                <img
+                  width="226px"
+                  height="115px"
+                  class="max-w-[226px] max-h-[115px] object-none"
+                  src="assets/dtprovendark.png"
+                  alt=""
+                  id="card_dtprovenimg"
+                />
+                <p class="mt-2 DTbodytext">
+                  Privacy gateway for cloud data sharing capabilities
+                </p>
+              </a>
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="register.html">
+                <p>Request Demo</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- DT-Fasten Section -->
+    <section id="dtfasten" class="w-screen h-screen relative">
+      <img
+        id="dtfasten_rightlogo"
+        class="hidden lg:flex absolute w-[200px] h-auto right-0 top-1/4 bottom-1/4 mt-[2rem]"
+        src="assets/rightSideLogo.svg"
+        alt="datatorlogo"
+      />
+      <img
+        id="dtfasten_right"
+        class="absolute lg:right-8 md:right-[30rem] right-16 lg:top-1/2 lg:bottom-1/4 bottom-32 -mt-[2rem] w-[225px] h-[115px]"
+        src="/assets/dtfastendark.png"
+        alt="dtfasten logo"
+      />
+
+      <div class="lg:px-[8rem] lg:py-[7rem] py-6 px-8 my-20 lg:my-0">
+        <div
+          class="lg:w-[70vw] w-full flex flex-row justify-between items-center"
+        >
+          <h1
+            class="text-2xl lg:text-5xl lg:mb-8 font-bold text-center lg:text-left"
+          >
+            DT-Fasten
+      </h1>
+        </div>
+        <p class="DTbodytext lg:text-lg text-lg lg:w-[50vw] w-full mt-4 lg:mt-0">
+          All the driver essentials needed for the Android System in providing complete transparency and control, with more native approach.
+          On top of the android interactions, DT Fasten also acts as a window for the connected car data sharing. 
+        </p>
+        <div class="lg:w-[90rem] overflow-x-auto flex-nowrap flex flex-row justify-start items-center">
+          <img class="lg:w-50rem md:w-30rem mr-8 mt-[4rem]" src="assets/Sol_dtf_asset.png" alt="assets">
+          <!-- <img class="lg:w-15rem" src="assets/Sol_dtf_asset2.svg" alt="assets">
+          <img class="lg:w-10rem" src="assets/Sol_dtf_asset3. svg" alt="assets"> -->
+        </div>
+        <!-- <div
+          class="mt-8 rounded-[1rem] h-[30vh] lg:w-[20vw] w-72 bg-gray-600"
+        ></div> -->
+      </div>
+    </section>
+
+    <!-- DT-Proven Section -->
+    <section id="dtproven" class="w-screen h-screen relative">
+      <img
+        id="dtproven_rightlogo"
+        class="hidden lg:flex absolute w-[500px] h-auto right-0 top-1/4 bottom-1/4 mt-[2rem]"
+        src="assets/dtprovenRightLogo-dark.svg"
+        alt="datatorlogo"
+      />
+      <img
+        id="dtproven_right"
+        class="absolute lg:right-[5rem] md:right-[30rem] right-[8rem] lg:top-1/2 lg:bottom-1/4 bottom-32 mt-[1rem] w-[225px] h-[115px]"
+        src="/assets/dtprovendark.png"
+      />
+      <div class="lg:px-[8rem] lg:py-[7rem] py-6 px-8">
+        <div
+          class="lg:w-[70vw] w-full flex flex-row justify-between items-center"
+        >
+          <h1
+            class="text-2xl lg:text-5xl lg:mb-8 font-bold text-center lg:text-left"
+          >
+            DT-Proven
+          </h1>
+        </div>
+        <p class="DTbodytext lg:text-lg text-lg lg:w-[50vw] w-full mt-4 lg:mt-0">
+          With exploding amount of data being aggregated by OEMs from connected cars to multiple services, need for visualising and managing the consents are evident.
+          DT Proven handles this at ease, providing fleet-level insights and opportunities. In addition, adherance to dynamic, stringent data protection regulations and laws can also be met. 
+        </p>
+        <div class="flex flex-row flex-wrap justify-start h-auto items-center w-[30rem]" >
+          <img class="boxshadow w-[10rem] mr-[2rem] mt-[1rem]" src="/assets/Sol_dtp_asset1.svg" alt="assets">
+          <img class="boxshadow w-[10rem] mr-[2rem] mt-[1rem]" src="/assets/Sol_dtp_asset1.svg" alt="assets">
+          <img class="boxshadow w-[10rem] mr-[2rem] mt-[1rem]" src="/assets/Sol_dtp_asset1.svg" alt="assets">
+          <img class="boxshadow w-[10rem] mr-[2rem] mt-[1rem]" src="/assets/Sol_dtp_asset1.svg" alt="assets">
+        </div>
+        
+      </div>
+    </section>
+    <!-- Sitemap Start -->
+    <div
+      class="boxshadow bottom-0 flex flex-col justify-center items-center text-center mt-8 w-screen"
+    >
+      <footer class="text-center lg:text-left DTFooter w-screen">
+        <div
+          class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300"
+        >
+          <div class="mr-12 hidden lg:block">
+            <span class="DTFooterLink"
+              >Get connected with us on social networks:</span
+            >
+          </div>
+          <div class="flex justify-center DTFooterLink">
+            <a
+              href="https://www.facebook.com/datatorlab"
+              class="mr-6 DTFooterLink"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="facebook-f"
+                class="w-2.5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/data_tor" class="mr-6 DTFooterLink">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="twitter"
+                class="w-4"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              href="https://www.instagram.com/datator_lab/"
+              class="mr-6 DTFooterLink"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="instagram"
+                class="w-3.5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/datator-lab/about/"
+              class="mr-6 DTFooterLink"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="linkedin-in"
+                class="w-3.5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mx-6 py-10 text-center md:text-left">
+          <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="">
+              <h6
+                class="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start"
+              >
+                <img
+                  id="footersmall_logo"
+                  class="mr-2"
+                  src="assets/datatorlogo.svg"
+                  alt="DatatorLogo"
+                  width="30px"
+                  height="auto"
+                />
+                <p class="DTNavbarLogoText DTFooterLink">DATATOR</p>
+              </h6>
+              <p class="DTFooterLink">The Privacy Company</p>
+            </div>
+            <div class="">
+              <h6
+                class="DTFooterLink uppercase font-semibold mb-4 flex justify-center md:justify-start"
+              >
+                DT-Verse
+              </h6>
+              <p class="mb-4">
+                <a href="/solution" class="DTFooterLink">Solutions</a>
+              </p>
+              <p>
+                <a href="/company" class="DTFooterLink">Company</a>
+              </p>
+            </div>
+            <div class="">
+              <h6
+                class="DTFooterLink uppercase font-semibold mb-4 flex justify-center md:justify-start"
+              >
+                Portal
+              </h6>
+              <p class="mb-4">
+                <a href="/login" class="DTFooterLink">Customer</a>
+              </p>
+              <p class="mb-4">
+                <a href="/login" class="DTFooterLink">Partner</a>
+              </p>
+              <p class="mb-4">
+                <a href="/login" class="DTFooterLink">Demo</a>
+              </p>
+            </div>
+            <div class="">
+              <h6
+                class="uppercase DTFooterLink font-semibold mb-4 flex justify-center md:justify-start"
+              >
+                Contact
+              </h6>
+              <p
+                class="DTFooterLink flex items-center justify-center md:justify-start mb-4"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="envelope"
+                  class="w-4 mr-4"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  ></path>
+                </svg>
+                <a href="mailto:info@datator.tech" class="DTFooterLink"
+                  >info@datator.tech</a
+                >
+              </p>
+              <p class="DTFooterLink">
+                Since we preach privacy - we do not carry any cookie !
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-6 DTFooterDown">
+          <span class="DTFooterLink">© 2022 Copyright:</span>
+          <a
+            class="DTFooterLink font-semibold"
+            href="https://www.datator.tech"
+            >Datator</a
+          >
+        </div>
+      </footer>
+    </div>
+    <!-- Sitemap End -->
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      useClassNames: true,
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate",
+    });
+  </script>
+  <script src="/js/solution.js"></script>
+  <script>
+    function closeNavbar() {
+      navbarLinks.classList.toggle("left-0");
+      navbarLinks.classList.toggle("left-full");
+    }
+  </script>
+</html>

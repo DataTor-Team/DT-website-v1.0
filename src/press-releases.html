@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/press-releases.css" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+    <title>Press Releases - Datator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-full w-full">
+    <!-- start of Navbar -->
+    <div class="flex justify-center w-screen">
+      <nav class="DTNavbar">
+        <!-- Logo In the navbar -->
+        <div class="flex flex-row items-center w-fit">
+          <img
+            class="mr-2"
+            src="assets/datatorlogo.svg"
+            alt="DatatorLogo"
+            width="30px"
+            height="auto"
+          />
+          <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
+        </div>
+
+        <!-- <input type="text" name="test" placeholder="enter text" class="DTinput" /> -->
+
+        <!-- Navbar Toggle Button -->
+        <button
+          class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
+          id="toggle"
+        >
+          <!-- <span class="h-0.5 w-5 bg-black"></span>
+        <span class="h-0.5 w-5 bg-black my-1"></span>
+        <span class="h-0.5 w-5 bg-black"></span> -->
+        </button>
+
+        <!-- Element just to import left-full class to the output file -->
+        <div class="hidden left-0"></div>
+
+        <!-- Start of Navbar links -->
+        <div
+          class="animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+          id="navbarLinks"
+        >
+          <!-- <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#"
+            >Privacy Movement</a
+          > -->
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="solution.html"
+            >Solutions</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="#why-smartidly"
+            >Resources</a
+          >
+          <!-- <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="company.html"
+            >Company</a
+          > -->
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
+            href="login.html"
+            >Login</a
+          >
+          <img
+            class="ml-3 mr-2 dark:fill-white"
+            src="assets/darkmodeicon.svg"
+            alt="theme"
+            width="18px"
+            height="auto"
+            id="dark-mode-button"
+          />
+        </div>
+        <!-- End of Navbar links -->
+      </nav>
+    </div>
+
+    <!-- End of Navbar -->
+
+    <img
+      class="absolute w-40 h-auto right-0 top-1/4 bottom-1/4 mt-[4rem]"
+      src="assets/rightSideLogo.svg"
+      alt="datatorlogo"
+    />
+    <section class="w-screen h-screen mt-20 lg:mt-0">
+      <div class="lg:px-[8rem] lg:py-[7rem] px-6 py-7">
+        <h1 class="text-2xl lg:text-5xl mb-8 font-bold text-left">
+          Press Releases
+        </h1>
+        <h5 class="font-bold text-base mb-4">Latest Press Release</h5>
+        <!-- caoursel Div -->
+        <div
+          class="w-full min-h-[15rem] DThideScrollbar whitespace-nowrap overflow-x-auto"
+        >
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old press Releases -->
+        <h5 class="font-bold text-base mb-4">Old Press Release</h5>
+        <!-- caoursel Div -->
+        <div
+          class="w-full min-h-[15rem] DThideScrollbar whitespace-nowrap overflow-x-auto"
+        >
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- press release card -->
+          <div class="group inline-flex w-64 flex-col mr-8">
+            <div class="bg-white rounded-[1rem] z-10 boxshadow">
+              <img
+                width="inherit"
+                class="object-fill"
+                src="assets/pressreleasecover.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="-mt-24 group-hover:translate-y-[4rem] duration-300 ease-in-out pt-12 rounded-[1rem] z-[5] cursor-pointer flex flex-row justify-center items-center btngradient"
+            >
+              <a href="https://www.volvocars.com/" target="_blank">
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      useClassNames: true,
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate",
+    });
+  </script>
+  <script src="/js/index.js"></script>
+</html>
