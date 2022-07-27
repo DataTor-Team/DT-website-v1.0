@@ -1,96 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Smartidly provides the ease - less expensive - best digital tools for restaurant"
-    />
-    <meta
-      name="title"
-      content="Smartidly - Your favourite digital menu service provider available"
-    />
-    <meta
-      name="keywords"
-      content="smartidly,smartidly login,smartidly register"
-    />
-    <meta
-      name="keywords"
-      content="restaurant management system, restaurant management, hotel, hotel management"
-    />
-    <meta
-      name="keywords"
-      content="digital menu, digital menu service, kinf, fork, restautant and customer app"
-    />
+    <meta name="description" content="Smartidly provides the ease - less expensive - best digital tools for restaurant" />
+    <meta name="title" content="Smartidly - Your favourite digital menu service provider available" />
+    <meta name="keywords" content="smartidly,smartidly login,smartidly register" />
+    <meta name="keywords" content="restaurant management system, restaurant management, hotel, hotel management" />
+    <meta name="keywords" content="digital menu, digital menu service, kinf, fork, restautant and customer app" />
     <meta name="keywords" content="digital tools for restaurant" />
-    <meta
-      name="keywords"
-      content="live order control, restaurant analytics, Low Cost quick onboarding digital servant, restautant portal"
-    />
+    <meta name="keywords" content="live order control, restaurant analytics, Low Cost quick onboarding digital servant, restautant portal" />
     <meta name="theme-color" content="#161C1C" />
     <meta name="robots" content="index,follow" />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/tailwind.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Datator</title>
-  </head>
-  <body class="w-full scroll-smooth overflow-y-hidden">
+</head>
+
+<body class="w-full scroll-smooth overflow-y-hidden">
     <!-- start of Navbar -->
     <div class="flex justify-center w-screen">
-      <nav id="navbar" class="DTNavbar">
-        <!-- Logo In the navbar -->
-        <div class="flex flex-row items-center w-fit">
-          <a href="/">
-            <img
-              id="navbar_logo"
-              class="mr-2"
-              src="assets/datatorlogo.svg"
-              alt="DatatorLogo"
-              width="30px"
-              height="auto"
-            />
-          </a>
-          <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
-        </div>
+        <nav id="navbar" class="DTNavbar">
+            <!-- Logo In the navbar -->
+            <div class="flex flex-row items-center w-fit">
+                <a href="/">
+                    <img id="navbar_logo" class="mr-2" src="assets/datatorlogo.svg" alt="DatatorLogo" width="30px" height="auto" />
+                </a>
+                <a href="/" class="DTNavbarLogoText pl-4"> DATATOR </a>
+            </div>
 
-        <!-- Navbar Toggle Button -->
-        <button
-          class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden"
-          id="toggle"
-        >
+            <!-- Navbar Toggle Button -->
+            <button class="animate__fadeInRight animate__animated p-4 flex flex-col lg:hidden" id="toggle">
           <span class="h-0.5 w-5 NavbarToggle"></span>
           <span class="h-0.5 w-5 NavbarToggle my-1"></span>
           <span class="h-0.5 w-5 NavbarToggle"></span>
         </button>
 
-        <!-- Element just to import left-full class to the output file -->
-        <div class="hidden left-0"></div>
+            <!-- Element just to import left-full class to the output file -->
+            <div class="hidden left-0"></div>
 
-        <!-- Start of Navbar links -->
-        <div
-          class="DTnavbarr animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
-          id="navbarLinks"
-        >
-          <a
-            class="DTnavbarr lg:hidden block lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
-            href="/"
-            onclick="closeNavbar()"
-            >Home</a
+            <!-- Start of Navbar links -->
+            <div class="DTnavbarr animate__fadeInRight animate__animated flex w-full fixed top-24 left-full lg:static lg:w-auto lg:flex-row flex-col items-center lg:justify-between justify-center bg-white lg:bg-transparent pb-4 lg:pb-0 transition-all shadow-lg lg:shadow-none"
+                id="navbarLinks">
+                <a class="DTnavbarr lg:hidden block lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition" href="/" onclick="closeNavbar()">Home</a
           >
           <!-- <a
             class="lg:mx-4 lg:my-0 my-3 tracking-wide font-semibold lg:tracking-normal lg:font-medium hover:scale-110 transform transition"
@@ -145,96 +105,52 @@
               alt="home icon"
             />
           </a>
-        </div>
-        <!-- End of Navbar links -->
-      </nav>
+            </div>
+            <!-- End of Navbar links -->
+        </nav>
     </div>
 
     <div class="w-screen h-screen heroBG overflow-x-hidden overfl">
-      <div class="w-[inherit] overfl snap-mandatory snap-y scrollsnap">
-        <!-- Hero Section -->
-        <section
-          id="herosection"
-          class="w-screen h-screen bg-transparent scroll-smooth snap-start"
-        >
-          <div
-            class="w-screen h-screen flex flex-col justify-evenly items-center"
-          >
-            <img
-              id="hero_logo"
-              class="mt-12 w-72 lg:w-auto"
-              src="assets/heroLogo.svg"
-              alt="Landing Logo"
-            />
-            <p class="DTheading2Text lg:tracking-[1rem] pl-4">
-              THE PRIVACY COMPANY
-            </p>
+        <div class="w-[inherit] overfl snap-mandatory snap-y scrollsnap">
+            <!-- Hero Section -->
+            <section id="herosection" class="w-screen h-screen bg-transparent scroll-smooth snap-start">
+                <div class="w-screen h-screen flex flex-col justify-evenly items-center">
+                    <img id="hero_logo" class="mt-12 w-72 lg:w-auto" src="assets/heroLogo.svg" alt="Landing Logo" />
+                    <p class="DTheading2Text lg:tracking-[1rem] pl-4">
+                        THE PRIVACY COMPANY
+                    </p>
 
-            <div
-              class="flex flex-col justify-center items-center text-center lg:text-left px-6"
-            >
-              <p class="mb-2 text-2xl">
-                We create Data Awareness, by putting back the control of
-                connectivity to YOU !
-              </p>
-              <p class="mt-10 text-l">Learn More</p>
-              <a
-                href="#section2"
-                class="mt-8 marker:ct-btn-scroll ct-js-btn-scroll"
-                ><img
-                  id="scrollDownChev"
-                  alt="Arrow Down Icon"
-                  src="assets/downChevDark.svg"
-              /></a>
-            </div>
-          </div>
-        </section>
+                    <div class="flex flex-col justify-center items-center text-center lg:text-left px-6">
+                        <p class="mb-2 text-2xl text-center">
+                            We enable complete internet connected data awareness to all</br>thereby facilitating more healthy data businesses !!
+                        </p>
+                        <p class="mt-10 text-l">Learn More</p>
+                        <a href="#section2" class="mt-8 marker:ct-btn-scroll ct-js-btn-scroll"><img id="scrollDownChev" alt="Arrow Down Icon" src="assets/downChevDark.svg" /></a>
+                    </div>
+                </div>
+            </section>
 
-        <!-- What is Datator Section -->
-        <section
-          id="section2"
-          class="w-screen lg:h-screen h-full bg-transparent relative snap-start"
-        >
-          <div class="lg:px-[8rem] lg:py-[7rem] px-10 py-4">
-            <h1
-              class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
-            >
-              What is Datator?
-            </h1>
-            <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
-            <p
-              class="lg:text-[1.5rem] text-[1.2rem] lg:w-[45rem] text-center lg:text-left"
-            >
-              " Privacy is an Art of handling your data, Datator helps you
-              master this art. "
-            </p>
-            <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
+            <!-- What is Datator Section -->
+            <section id="section2" class="w-screen lg:h-screen h-full bg-transparent relative snap-start">
+                <div class="lg:px-[8rem] lg:py-[7rem] px-10 py-4">
+                    <h1 class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left">
+                        What is Datator?
+                    </h1>
+                    <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
+                    <p class="lg:text-[1.5rem] text-[1.2rem] lg:w-[45rem] text-center lg:text-left">
+                        " Privacy is an Art of handling your data, Datator helps you master this art. "
+                    </p>
+                    <!-- <p class="text-3xl text-indigo-500 text-left leading-tight h-3">“</p> -->
 
-            <p
-              class="lg:text-[1rem] text-[1.25rem] lg:w-[35rem] text-center lg:text-left mt-8"
-            >
-              With our unique privacy framework, we provide complete control of
-              the connectivity data by partnering with any trusted OEM and
-              partners, enabling fair data usage to all
-            </p>
-          </div>
-          <div
-            class="lg:hidden w-screen h-full flex flex-row justify-end items-center"
-          >
-            <img
-              id="WID_mobileimg"
-              class="w-[50rem] lg:-top-0 mr-0 lg:w-[80rem] h-auto"
-              src="assets/WID_fullimg-dark.svg"
-              alt="flow"
-            />
-          </div>
-          <img
-            id="WID_desktopimg"
-            class="lg:block lg:absolute hidden bottom-0 right-0 lg:w-[50rem] h-auto"
-            src="assets/WID_fullimg-dark.svg"
-            alt="flow"
-          />
-          <!-- <img
+                    <p class="lg:text-[1rem] text-[1.25rem] lg:w-[35rem] text-center lg:text-left mt-8">
+                        With our unique privacy framework, we provide complete control of the connectivity data by partnering with any trusted OEM and partners, enabling fair data usage to all
+                    </p>
+                </div>
+                <div class="lg:hidden w-screen h-full flex flex-row justify-end items-center">
+                    <img id="WID_mobileimg" class="w-[50rem] lg:-top-0 mr-0 lg:w-[80rem] h-auto" src="assets/WID_fullimg-dark.svg" alt="flow" />
+                </div>
+                <img id="WID_desktopimg" class="lg:block lg:absolute hidden bottom-0 right-0 lg:w-[50rem] h-auto" src="assets/WID_fullimg-dark.svg" alt="flow" />
+                <!-- <img
               class="absolute w-[20rem] lg:right-0 lg:bottom-0 lg:w-[39rem] bottom-0 -right-44"
               src="assets/WID_cornerbubble.svg"
               alt=""
@@ -266,36 +182,23 @@
               src="assets/WID_deviceicon.svg"
               alt=""
             />-->
-        </section>
+            </section>
 
-        <!-- How we solve problems -->
-        <section
-          id="section3"
-          class="w-screen lg:h-screen h-full bg-transparent mt-10 snap-start"
-        >
-          <div class="lg:px-[8rem] lg:py-[7rem]">
-            <h1
-              class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
-            >
-              What does Datator offers?
-            </h1>
-            <div
-              class="flex flex-col-reverse lg:flex-row items-center justify-start w-full"
-            >
-              <div class="flex-1 flex flex-col items-start justify-start">
-                <p
-                  class="lg:text-[1rem] text-[1.25rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
-                >
-                  Due to high connectivity between devices & services, the
-                  question of what we are sharing , to whom and the control of
-                  that are a puzzle to both user and businesses - creating
-                  privacy concerns. The need from the general fair connected
-                  data market is to have a fair and more transparent consentful
-                  data communications.
-                </p>
-                <br />
+            <!-- How we solve problems -->
+            <section id="section3" class="w-screen lg:h-screen h-full bg-transparent mt-10 snap-start">
+                <div class="lg:px-[8rem] lg:py-[7rem]">
+                    <h1 class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left">
+                        What does Datator offers?
+                    </h1>
+                    <div class="flex flex-col-reverse lg:flex-row items-center justify-start w-full">
+                        <div class="flex-1 flex flex-col items-start justify-start">
+                            <p class="lg:text-[1rem] text-[1.25rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]">
+                                Due to high connectivity between devices & services, the question of what we are sharing , to whom and the control of that are a puzzle to both user and businesses - creating privacy concerns. The need from the general fair connected data market is to
+                                have a fair and more transparent consentful data communications.
+                            </p>
+                            <br />
 
-                <!-- 
+                            <!-- 
                   CHANGE 1
                   Four pointers
                   Any internet connected data is made intuitively transparent and controllable
@@ -304,227 +207,122 @@
                   Data protection compliance and regulation check for user data 
                 -->
 
-                <p
-                  class="lg:text-[1rem] text-[1.25rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
-                >
-                  <!-- DataTor operates with unique privacy framework and intuitive
+                            <p class="lg:text-[1rem] text-[1.25rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]">
+                                <!-- DataTor operates with unique privacy framework and intuitive
                   design, thereby bringing data awareness and control to the
                   device user.  -->
-                  We do that without any intervention to the connection and
-                  without reading any user data payloads.
-                  <!-- It
+                                We do that without any intervention to the connection and without reading any user data payloads.
+                                <!-- It
                   in-turn facilitate a consentful data collection to OEM and act
                   as a privacy gateway for 3rd party services adding
                   intelligence in every levels. -->
-                  All we do is putting you in an elegant state of control with
-                  our intelligence - Privacy is rest assured for all !
-                </p>
-              </div>
+                                All we do is putting you in an elegant state of control with our intelligence - Privacy is rest assured for all !
+                            </p>
+                        </div>
 
-              <div class="relative px-[2rem]">
-                <img
-                  id="HWSP_logo"
-                  src="assets/datatorlogo.svg"
-                  alt=""
-                  width="441px"
-                  class="lg:h-auto lg:w-[441px] w-64 h-56"
-                />
-                <img
-                  class="absolute bottom-0 right-0 lg:h-[144px] lg:w-[115px] w-64 h-32"
-                  src="assets/padLock.svg"
-                  alt=""
-                  width="115px"
-                  height="144px"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- CHANGE 2️⃣
+                        <div class="relative px-[2rem]">
+                            <img id="HWSP_logo" src="assets/datatorlogo.svg" alt="" width="441px" class="lg:h-auto lg:w-[441px] w-64 h-56" />
+                            <img class="absolute bottom-0 right-0 lg:h-[144px] lg:w-[115px] w-64 h-32" src="assets/padLock.svg" alt="" width="115px" height="144px" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CHANGE 2️⃣
           Shorten the lines two at max
           
           Advantages of Datator -->
-        <section class="w-screen min-h-screen bg-transparent snap-start">
-          <div class="lg:px-[8rem] lg:py-[7rem] px-6 py-8">
-            <h1
-              class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
-            >
-              Datator Advantages
-            </h1>
-            <div
-              class="mt-12 flex flex-col lg:flex-row justify-center items-center lg:justify-around"
-            >
-              <div class="lg:w-[30vw] lg:h-[40vh] w-full">
-                <img
-                  id="DTA_logo"
-                  src="assets/DTadvan_logo-dark.svg"
-                  width="300px"
-                  alt=""
-                  class="lg:w-[300px] w-64 mx-auto"
-                />
-              </div>
-              <div
-                class="lg:w-[40vw] lg:h-[42vh] DThideScrollbar overflow-x-hidden scroll overflow-y-scroll snap-mandatory snap-y scrollsnap"
-              >
-                <!-- Data Privacy -1 -->
-                <div
-                  class="w-[inherit] h-[inherit] DThideScrollbar flex flex-col items-start justify-center snap-start"
-                >
-                  <h1
-                    class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
-                  >
-                    Data Privacy
-                  </h1>
-                  <p
-                    class="lg:text-xl text-base mt-2 font-semibold w-[inherit]lg:text-left"
-                  >
-                    Apps on your connected device that you’re not using
-                    regularly needlessly expose you to more data collection.
-                  </p>
-                  <hr
-                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
-                  />
-                  <p class="mt-4 text-base lg:text-lg lg:text-left text-center">
-                    We envision personalized privacy assistants as intelligent
-                    agents capable of learning
-                    <!-- the privacy preferences of their
-                    users over time, semi-automatically configuring many
-                    settings,  -->
-                    and making many privacy decisions on their behalf.
-                  </p>
+            <section class="w-screen min-h-screen bg-transparent snap-start">
+                <div class="lg:px-[8rem] lg:py-[7rem] px-6 py-8">
+                    <h1 class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left">
+                        Datator Advantages
+                    </h1>
+
+                    <div class="absolute bottom-3 -left-64 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute top-0 -right-44 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="absolute bottom-6 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                    <div class="m-8 relative space-y-4">
+
+                        <div class="lg:w-9/10 lg:h-[42vh] DThideScrollbar overflow-x-hidden scroll overflow-y-scroll snap-mandatory snap-y scrollsnap">
+                            <!-- Data Privacy -1 -->
+
+
+                            <div class="w-[inherit] h-[inherit] DThideScrollbar flex items-start justify-center snap-start">
+                                <img id="DTA_logo" src="assets/DTadvan_logo-dark.svg" width="300px" alt="" class="lg:w-[300px] w-64 mx-auto" />
+                                <div class="flex-col">
+                                    <h1 class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8">
+                                        Data Privacy
+                                    </h1>
+                                    <p class="lg:text-xl text-base mt-2 font-semibold w-[inherit]lg:text-left">
+                                        Apps on your connected device that you’re not using regularly needlessly expose you to more data collection.
+                                    </p>
+                                    <hr class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center" />
+                                    <p class="mt-4 text-base lg:text-lg lg:text-left text-center">
+                                        We envision personalized privacy assistants as intelligent agents capable of learning
+                                        <!-- the privacy preferences of their
+users over time, semi-automatically configuring many
+settings,  -->
+                                        and making many privacy decisions on their behalf.
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="w-[inherit] h-[inherit] DThideScrollbar flex items-start justify-center snap-start">
+                                <img id="DTA_logo" src="assets/DTadvan_logo-dark2.svg" width="300px" alt="" class="lg:w-[300px] w-64 mx-auto" />
+                                <div class="flex-col">
+                                    <h1 class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8">
+                                        Data Privacy
+                                    </h1>
+                                    <p class="lg:text-xl text-base mt-2 font-semibold w-[inherit]lg:text-left">
+                                        Apps on your connected device that you’re not using regularly needlessly expose you to more data collection.
+                                    </p>
+                                    <hr class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center" />
+                                    <p class="mt-4 text-base lg:text-lg lg:text-left text-center">
+                                        We envision personalized privacy assistants as intelligent agents capable of learning
+                                        <!-- the privacy preferences of their
+users over time, semi-automatically configuring many
+settings,  -->
+                                        and making many privacy decisions on their behalf.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
                 </div>
-                <!-- Data Transparacy -2 -->
-                <div
-                  class="w-[inherit] h-[inherit] DThideScrollbar flex flex-col items-start justify-center snap-start"
-                >
-                  <h1
-                    class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
-                  >
-                    Data Transparency
-                  </h1>
-                  <p
-                    class="text-xl lg:text-xl mt-2 font-semibold w-[inherit] lg:text-left text-center"
-                  >
-                    Data means nothing if you can’t trust it.
-                    <!-- We truly believe
-                    that Total Information Transparency is the only way forward
-                    to earn real digital trust -->
-                  </p>
-                  <hr
-                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
-                  />
-                  <p class="mt-4 lg:text-lg lg:text-left text-center">
-                    <!-- By collecting and combining data from various sources and
-                    visualizing it in intuitive ways to the organization, we
-                    quickly discover any imperfections. Therefore, transparency
-                    drives our performance.  -->
-                    By being transparent we are constantly on show to run a
-                    smooth operation – there’s no place to hide.
-                  </p>
-                </div>
-                <!-- Data Monitoring -3 -->
-                <div
-                  class="w-[inherit] h-[inherit] DThideScrollbar flex flex-col items-start justify-center snap-start"
-                >
-                  <h1
-                    class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
-                  >
-                    Data Control
-                  </h1>
-                  <p
-                    class="text-xl lg:text-xl mt-2 font-semibold w-[inherit] lg:text-left text-center"
-                  >
-                    <!-- Any business is fair when there is equal opportunity and
-                    space for every parties involved. Same goes with your data -
-                    when you know more about what you share - you naturally have
-                    opinions on their existence.  -->
-                    Control is what you need to take action.
-                  </p>
-                  <hr
-                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
-                  />
-                  <p class="mt-4 lg:text-lg lg:text-left text-center">
-                    <!-- As we preach privacy, part of privacy is state of making and
-                    effecting your decisions even at bit level. With the
-                    intuitive display and features,  -->
-                    You definitely have options to say NO or YES to every and
-                    any app/service that signed up for. We call it
-                  </p>
-                  <p
-                    class="DTNavbarLogoText mt-4 lg:tracking-[1rem] text-center justify-center self-center"
-                  >
-                    #RightToSayNO
-                  </p>
-                </div>
-                <!-- Data Privacy -4 -->
-                <div
-                  class="w-[inherit] h-[inherit] DThideScrollbar flex flex-col items-start justify-center snap-start"
-                >
-                  <h1
-                    class="text-3xl lg:text-[2rem] font-bold lg:text-left text-center w-full mt-8"
-                  >
-                    Data Consent
-                  </h1>
-                  <p
-                    class="text-1xl lg:text-xl mt-2 font-semibold w-[inherit] lg:text-left text-center"
-                  >
-                    <!-- You share data not just from your systems, but also to any
-                    services that you click "Consent to share" - which again
-                    means to any party that they can share data with, inturn
-                    this continues.  -->
-                    How privacy is ensured when your first point of contact is
-                    good but not the rest?
-                  </p>
-                  <hr
-                    class="mt-4 border-t-[0.1px] dark:border-t-white border-t-gray-500 w-1/2 self-center"
-                  />
-                  <p class="mt-4 lg:text-lg lg:text-left text-center">
-                    We believe consents are not just consents but a compulsive
-                    clearance for their databanks to fill in with your data
-                    unless otherwise there is a clear aspect of transparency and
-                    control available for the users to even see how they stand
-                    in terms of their privacy values. And all we do is to ensure
-                    any consent providers with our privacy capability
-                    enablements.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- CHANGE 3 
+        </div>
+    </div>
+
+    </div>
+    </section>
+    <!-- CHANGE 3 
           Move the button up
           Footer Page Section -->
 
-        <section
-          id="herosection"
-          class="w-screen h-fit bg-transparent scroll-smooth"
-        >
-          <div class="w-screen h-fit flex flex-col items-center mb-8">
-            <img
-              id="footer_logo"
-              class="mt-12 w-72 lg:w-auto"
-              src="assets/heroLogo.svg"
-              alt="Landing Logo"
-            />
+    <section id="herosection" class="w-screen h-fit bg-transparent scroll-smooth">
+        <div class="w-screen h-fit flex flex-col items-center mb-8">
+            <img id="footer_logo" class="mt-12 w-72 lg:w-auto" src="assets/heroLogo.svg" alt="Landing Logo" />
             <a href="register.html">
-              <button class="btngradient">Request Demo</button>
+                <button class="btngradient">Request Demo</button>
             </a>
-          </div>
+        </div>
 
-          <!-- CHANGE 4️
+        <!-- CHANGE 4️
             Underline light
             Sitemap Start -->
-          <div
-            class="boxshadow bottom-0 flex flex-col justify-center items-center text-center mt-8 w-screen"
-          >
+        <div class="boxshadow bottom-0 flex flex-col justify-center items-center text-center mt-8 w-screen">
             <footer class="text-center lg:text-left DTFooter w-screen">
-              <div
-                class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300"
-              >
-                <div class="mr-12 hidden lg:block">
-                  <span class="DTFooterLink"
-                    >Get connected with us on social networks:</span
+                <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
+                    <div class="mr-12 hidden lg:block">
+                        <span class="DTFooterLink">Get connected with us on social networks:</span
                   >
                 </div>
                 <div class="flex justify-center DTFooterLink">
@@ -694,10 +492,7 @@
               </div>
               <div class="text-center p-6 DTFooterDown">
                 <span class="DTFooterLink">© 2022 Copyright:</span>
-                <a
-                  class="DTFooterLink font-semibold"
-                  href="https://www.datator.tech"
-                  >Datator</a
+                        <a class="DTFooterLink font-semibold" href="https://www.datator.tech">Datator</a
                 >
               </div>
             </footer>
