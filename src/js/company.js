@@ -10,12 +10,21 @@ toggleButton.addEventListener("click", () => {
 });
 
 window.onload = () => {
+    getSysTheme();
     isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
     navbar.classList.remove("bg-white");
     navbar.classList.remove("bg-[#272727]");
 }
 
-const isDarkModeOn = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
+
+const getSysTheme = () => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+}
 
 const modifyThemeInLocalStorage = () => {
     html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");

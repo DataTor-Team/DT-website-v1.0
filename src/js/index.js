@@ -23,9 +23,9 @@ const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
 
 const getSysTheme = () => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        localStorage.setItem("theme", "dark") = true;
+        localStorage.setItem("theme", "dark");
     } else {
-        localStorage.setItem("theme", "dark") = false;
+        localStorage.setItem("theme", "light");
     }
 }
 
