@@ -25,7 +25,9 @@ const modifyThemeInLocalStorage = () => {
 };
 
 window.onscroll = () => {
+  console.log("adsfasdjlkjlsadfkj");
   if (window.scrollY > 0) {
+    console.log("scrolling" + window.scrollY);
     if (!isDarkModeOn()) {
       navbar.classList.add("bg-white");
     } else {
@@ -53,7 +55,7 @@ darkModeToggle.addEventListener("click", () => {
 const navbar_logo = document.getElementById("navbar_logo");
 const themeIcon = document.getElementById("theme_icon");
 const heroLogo = document.getElementById("hero_logo");
-const footerLogo = document.getElementById("footer_logo");
+// const footerLogo = document.getElementById("footer_logo");
 const HWSPLogo = document.getElementById("HWSP_logo");
 const DTA_logo = document.getElementById("DTA_logo");
 const footerSmallLogo = document.getElementById("footersmall_logo");
@@ -69,7 +71,7 @@ const observer = new MutationObserver((mutations) => {
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         heroLogo.setAttribute("src", "/assets/heroLogo.svg");
-        footerLogo.setAttribute("src", "/assets/heroLogo.svg");
+        // footerLogo.setAttribute("src", "/assets/heroLogo.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
         homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
@@ -81,7 +83,7 @@ const observer = new MutationObserver((mutations) => {
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         heroLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
-        footerLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
+        // footerLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo.svg");
         homeIcon.setAttribute("src", "assets/homeicon.svg");

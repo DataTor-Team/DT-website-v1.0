@@ -50,7 +50,7 @@
     <title>Datator</title>
   </head>
 
-  <body class="w-full scroll-smooth overflow-y-hidden relative">
+  <body id="body" class="w-full scroll-smooth relative">
     <!-- start of Navbar -->
     <div class="flex justify-center w-screen relative">
       <nav id="navbar" class="DTNavbar">
@@ -294,7 +294,7 @@
             >
               <div class="flex-1 flex flex-col items-start justify-start">
                 <p
-                  class="lg:text-[1rem] text-[1.25rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
+                  class="lg:text-[1rem] text-[1.25rem] w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
                 >
                   Due to high connectivity between devices & services, the
                   question of what we are sharing , to whom and the control of
@@ -775,7 +775,11 @@ settings,  -->
           break;
         case "rotate(360deg)":
           DTA_logo.style.transform = "rotate(" + 90 + "deg)";
-          DTAdavantageDiv.scrollTop -= 300 * 4;
+          if (screen.width >= 768) {
+            DTAdavantageDiv.scrollTop -= 300 * 4;
+          } else {
+            DTAdavantageDiv.scrollTop -= 200 * 4;
+          }
           break;
       }
       // DTAdavantageDiv.scrollTop += 100;
@@ -785,19 +789,35 @@ settings,  -->
       switch (DTA_logo.style.transform) {
         case "rotate(90deg)":
           DTA_logo.style.transform = "rotate(" + 0 + "deg)";
-          DTAdavantageDiv.scrollTop -= 300;
+          if (screen.width >= 768) {
+            DTAdavantageDiv.scrollTop -= 300;
+          } else {
+            DTAdavantageDiv.scrollTop -= 200;
+          }
           break;
         case "rotate(180deg)":
           DTA_logo.style.transform = "rotate(" + 90 + "deg)";
-          DTAdavantageDiv.scrollTop -= 300;
+          if (screen.width >= 768) {
+            DTAdavantageDiv.scrollTop -= 300;
+          } else {
+            DTAdavantageDiv.scrollTop -= 200;
+          }
           break;
         case "rotate(270deg)":
           DTA_logo.style.transform = "rotate(" + 180 + "deg)";
-          DTAdavantageDiv.scrollTop -= 300;
+          if (screen.width >= 768) {
+            DTAdavantageDiv.scrollTop -= 300;
+          } else {
+            DTAdavantageDiv.scrollTop -= 200;
+          }
           break;
         case "rotate(360deg)":
           DTA_logo.style.transform = "rotate(" + 270 + "deg)";
-          DTAdavantageDiv.scrollTop -= 300;
+          if (screen.width >= 768) {
+            DTAdavantageDiv.scrollTop -= 300;
+          } else {
+            DTAdavantageDiv.scrollTop -= 200;
+          }
           break;
       }
       // DTAdavantageDiv.scrollTop -= 100;
