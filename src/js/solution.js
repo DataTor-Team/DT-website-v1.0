@@ -10,34 +10,33 @@ toggleButton.addEventListener("click", () => {
 });
 
 window.onload = () => {
-  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark");
   navbar.classList.remove("bg-white");
   navbar.classList.remove("bg-[#272727]");
-}
+};
 
 const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
 
 const modifyThemeInLocalStorage = () => {
-  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
-}
+  html.classList.contains("dark")
+    ? localStorage.setItem("theme", "dark")
+    : localStorage.setItem("theme", "light");
+};
 
-window.onscroll = () => {
-  if (window.scrollY > 0) {
-    if (mode) {
-      navbar.classList.add("bg-white");
+const maindiv = document.getElementById("main");
+maindiv.addEventListener("scroll", () => {
+  if (maindiv.scrollTop > 2) {
+    if (!isDarkModeOn()) {
+      navbar.style.backgroundColor = "white";
     } else {
-      navbar.classList.add("bg-[#272727]");
+      navbar.style.backgroundColor = "#272727";
     }
     navbar.classList.add("boxshadow");
   } else {
-    if (mode) {
-      navbar.classList.remove("bg-white");
-    } else {
-      navbar.classList.remove("bg-[#272727]");
-    }
+    navbar.style.backgroundColor = "transparent";
     navbar.classList.remove("boxshadow");
   }
-};
+});
 
 darkModeToggle.addEventListener("click", () => {
   html.classList.toggle("dark");
@@ -73,7 +72,7 @@ const observer = new MutationObserver((mutations) => {
         dtfastenRight.setAttribute("src", "/assets/dtfasten.png");
         dtprovenRight.setAttribute("src", "/assets/dtproven.png");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
-        homeIcon.setAttribute("src","assets/homeicon.svg")
+        homeIcon.setAttribute("src", "assets/homeicon.svg");
       } else {
         // light to dark
         dtfastenImg.setAttribute("src", "/assets/dtfastendark.png");
@@ -89,7 +88,7 @@ const observer = new MutationObserver((mutations) => {
         dtfastenRight.setAttribute("src", "/assets/dtfastendark.png");
         dtprovenRight.setAttribute("src", "/assets/dtprovendark.png");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
-        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
+        homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
       }
     }
   });

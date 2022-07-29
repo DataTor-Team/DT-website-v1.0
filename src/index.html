@@ -50,7 +50,7 @@
     <title>Datator</title>
   </head>
 
-  <body id="body" class="w-full scroll-smooth relative">
+  <body id="body" class="scroll-smooth relative">
     <!-- start of Navbar -->
     <div class="flex justify-center w-screen relative">
       <nav id="navbar" class="DTNavbar">
@@ -160,7 +160,7 @@
     <div
       class="absolute bottom-6 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"
     ></div> -->
-    <div class="w-screen h-screen heroBG overflow-x-hidden overfl">
+    <div id="main" class="w-screen h-screen heroBG overflow-x-hidden overfl">
       <div class="w-[inherit] overfl snap-mandatory snap-y scrollsnap">
         <!-- Hero Section -->
         <section
@@ -183,7 +183,7 @@
             <div
               class="flex flex-col justify-center items-center text-center lg:text-left px-6"
             >
-              <p class="mb-2 text-2xl text-center">
+              <p class="mb-2 lg:text-[1.2rem] text-[0.8rem] text-center">
                 We enable complete internet connected data awareness to all
                 thereby facilitating more healthy data businesses !!
               </p>
@@ -284,17 +284,34 @@
           class="w-screen lg:h-screen h-full bg-transparent mt-10 snap-start"
         >
           <div class="lg:px-[8rem] lg:py-[7rem]">
-            <h1
-              class="text-2xl lg:text-5xl mb-8 font-bold text-center lg:text-left"
-            >
-              What does Datator offers?
-            </h1>
             <div
-              class="flex flex-col-reverse lg:flex-row items-center justify-start w-full"
+              class="flex flex-col-reverse lg:flex-row items-center justify-evenly w-full"
             >
-              <div class="flex-1 flex flex-col items-start justify-start">
+              <div class="flex flex-col items-start justify-start">
+                <h1
+                  class="text-2xl lg:text-5xl mb-10 font-bold text-center lg:text-left"
+                >
+                  What does Datator offers?
+                </h1>
+                <div class="relative mb-8 lg:hidden block px-[2rem]">
+                  <img
+                    id="HWSP_logo"
+                    src="assets/datatorlogo.svg"
+                    alt="Datator provides control over your privacy"
+                    width="380px"
+                    class="lg:h-auto lg:w-[380px] w-64 h-56"
+                  />
+                  <img
+                    class="absolute bottom-0 right-0 lg:h-[144px] lg:w-[115px] w-64 h-32"
+                    src="assets/padLock.svg"
+                    alt=""
+                    width="115px"
+                    height="144px"
+                  />
+                </div>
+
                 <p
-                  class="lg:text-[1rem] text-[1.25rem] w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
+                  class="lg:text-[1rem] text-[1rem] w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
                 >
                   Due to high connectivity between devices & services, the
                   question of what we are sharing , to whom and the control of
@@ -315,7 +332,7 @@
                 -->
 
                 <p
-                  class="lg:text-[1rem] text-[1.25rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
+                  class="lg:text-[1rem] text-[1rem] mt-4 w-full px-8 lg:px-0 text-center lg:text-left lg:w-[40vw]"
                 >
                   <!-- DataTor operates with unique privacy framework and intuitive
                   design, thereby bringing data awareness and control to the
@@ -331,13 +348,13 @@
                 </p>
               </div>
 
-              <div class="relative px-[2rem]">
+              <div class="relative lg:block hidden px-[2rem]">
                 <img
                   id="HWSP_logo"
                   src="assets/datatorlogo.svg"
                   alt=""
-                  width="441px"
-                  class="lg:h-auto lg:w-[441px] w-64 h-56"
+                  width="380px"
+                  class="lg:h-auto lg:w-[380px] w-64 h-56"
                 />
                 <img
                   class="absolute bottom-0 right-0 lg:h-[144px] lg:w-[115px] w-64 h-32"

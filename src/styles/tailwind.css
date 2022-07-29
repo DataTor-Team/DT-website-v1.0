@@ -876,6 +876,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -1251,6 +1255,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .snap-start {
   scroll-snap-align: start;
+}
+
+.snap-center {
+  scroll-snap-align: center;
 }
 
 .appearance-none {
@@ -1741,6 +1749,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[1\.75rem\] {
   font-size: 1.75rem;
+}
+
+.text-\[0\.8rem\] {
+  font-size: 0.8rem;
 }
 
 .text-3xl {
@@ -2243,6 +2255,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 34vh;
   }
 
+  .lg\:h-\[100vh\] {
+    height: 100vh;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
@@ -2307,20 +2323,24 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 20rem;
   }
 
-  .lg\:w-\[40vw\] {
-    width: 40vw;
-  }
-
-  .lg\:w-\[441px\] {
-    width: 441px;
+  .lg\:w-\[380px\] {
+    width: 380px;
   }
 
   .lg\:w-\[115px\] {
     width: 115px;
   }
 
+  .lg\:w-\[40vw\] {
+    width: 40vw;
+  }
+
   .lg\:w-\[300px\] {
     width: 300px;
+  }
+
+  .lg\:w-\[100vw\] {
+    width: 100vw;
   }
 
   .lg\:w-\[70vw\] {
@@ -2406,6 +2426,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
   }
 
   .lg\:text-\[1\.5rem\] {

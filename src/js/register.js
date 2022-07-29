@@ -23,23 +23,21 @@ const modifyThemeInLocalStorage = () => {
     : localStorage.setItem("theme", "light");
 };
 
-window.onscroll = () => {
-  if (window.scrollY > 0) {
+const maindiv = document.getElementById("main");
+maindiv.addEventListener("scroll", () => {
+  if (maindiv.scrollTop > 2) {
+    console.log(maindiv.scrollTop);
     if (!isDarkModeOn()) {
-      navbar.classList.add("bg-white");
+      navbar.style.backgroundColor = "white";
     } else {
-      navbar.classList.add("bg-[#272727]");
+      navbar.style.backgroundColor = "#272727";
     }
     navbar.classList.add("boxshadow");
   } else {
-    if (!isDarkModeOn()) {
-      navbar.classList.remove("bg-white");
-    } else {
-      navbar.classList.remove("bg-[#272727]");
-    }
+    navbar.style.backgroundColor = "transparent";
     navbar.classList.remove("boxshadow");
   }
-};
+});
 
 darkModeToggle.addEventListener("click", () => {
   html.classList.toggle("dark");

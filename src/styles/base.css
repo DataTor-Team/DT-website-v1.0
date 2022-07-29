@@ -175,9 +175,7 @@ body {
   fill: white;
   border-color: white;
 }
-.DTNavbar {
-  background-color: white;
-}
+
 .dark .DTNavbar {
   background-color: #272727;
 }
@@ -290,6 +288,14 @@ body {
 }
 .dark .Meettheteam {
   background-color: #1d1f20;
+}
+.scrollsnapSolutions {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+.scrollsnapSolutionsChild {
+  scroll-snap-align: start;
 }
 @media screen and (max-width: 768px) {
   /* .sectionPaddings {

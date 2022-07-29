@@ -27,23 +27,19 @@ const modifyThemeInLocalStorage = () => {
     : localStorage.setItem("theme", "light");
 };
 
-window.onscroll = () => {
-  if (window.scrollY > 0) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 2) {
     if (!isDarkModeOn()) {
-      navbar.classList.add("bg-white");
+      navbar.style.backgroundColor = "white";
     } else {
-      navbar.classList.add("bg-[#272727]");
+      navbar.style.backgroundColor = "#272727";
     }
     navbar.classList.add("boxshadow");
   } else {
-    if (!isDarkModeOn()) {
-      navbar.classList.remove("bg-white");
-    } else {
-      navbar.classList.remove("bg-[#272727]");
-    }
+    navbar.style.backgroundColor = "transparent";
     navbar.classList.remove("boxshadow");
   }
-};
+});
 
 darkModeToggle.addEventListener("click", () => {
   html.classList.toggle("dark");

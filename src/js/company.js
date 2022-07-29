@@ -10,34 +10,33 @@ toggleButton.addEventListener("click", () => {
 });
 
 window.onload = () => {
-  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark");
   navbar.classList.remove("bg-white");
   navbar.classList.remove("bg-[#272727]");
-}
+};
 
 const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
 
 const modifyThemeInLocalStorage = () => {
-  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
-}
+  html.classList.contains("dark")
+    ? localStorage.setItem("theme", "dark")
+    : localStorage.setItem("theme", "light");
+};
 
-window.onscroll = () => {
-  if (window.scrollY > 0) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 2) {
+    // console.log(maindiv.scrollTop);
     if (!isDarkModeOn()) {
-      navbar.classList.add("bg-white");
+      navbar.style.backgroundColor = "white";
     } else {
-      navbar.classList.add("bg-[#272727]");
+      navbar.style.backgroundColor = "#272727";
     }
     navbar.classList.add("boxshadow");
   } else {
-    if (!isDarkModeOn()) {
-      navbar.classList.remove("bg-white");
-    } else {
-      navbar.classList.remove("bg-[#272727]");
-    }
+    navbar.style.backgroundColor = "transparent";
     navbar.classList.remove("boxshadow");
   }
-};
+});
 
 darkModeToggle.addEventListener("click", () => {
   html.classList.toggle("dark");
@@ -61,14 +60,14 @@ const observer = new MutationObserver((mutations) => {
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         rightSideLogo.setAttribute("src", "assets/rightSideLogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
-        homeIcon.setAttribute("src","assets/homeicon.svg")
+        homeIcon.setAttribute("src", "assets/homeicon.svg");
       } else {
         // light to dark
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         rightSideLogo.setAttribute("src", "assets/rightSideLogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
-        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
+        homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
       }
     }
   });
