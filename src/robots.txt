@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.smartidly.com/sitemap.xml
+Sitemap: https://www.datator.tech/sitemap.xml
