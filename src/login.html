@@ -141,6 +141,7 @@
         >
           <p class="text-center text-3xl">Welcome to DT Portal</p>
           <form
+            name="login"
             class="flex flex-col pt-3 md:pt-8"
             onsubmit="event.preventDefault();"
           >
@@ -148,7 +149,9 @@
               <label for="email" class="text-lg">Email</label>
               <input
                 type="email"
+                name="email"
                 id="email"
+                placeholder="sample@example.com"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -156,8 +159,10 @@
             <div class="flex flex-col pt-4">
               <label for="password" class="text-lg">Password</label>
               <input
+                name="password"
                 type="password"
                 id="password"
+                placeholder="********"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -172,14 +177,12 @@
                 />
               </div>
               <div class="ml-3 text-sm">
-                <label for="remember" class="font-medium"
-                  >Remember me</label
-                >
+                <label for="remember" class="font-medium">Remember me</label>
               </div>
             </div>
             <button
               id="thumb0"
-              onclick="callfn('rnd')"
+              onclick="validateForm()"
               class="btngradient mt-4"
             >
               Login
@@ -187,7 +190,7 @@
             <div
               id="rnd"
               style="visibility: hidden"
-              class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+              class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4"
               role="alert"
             >
               <strong class="font-bold">Holy smokes!</strong>
@@ -198,6 +201,7 @@
                 <svg
                   class="fill-current h-6 w-6 text-red-500"
                   role="button"
+                  onclick="toggleAlertMessage(false)"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                 >
@@ -222,209 +226,194 @@
     </section>
     <!-- Footer Page Section -->
 
-    <section
-      id="herosection"
-      class="w-screen h-fit bg-transparent scroll-smooth"
+    <!-- Sitemap Start -->
+    <div
+      class="boxshadow bottom-0 flex flex-col justify-center items-center text-center mt-8 w-screen"
     >
-      <div class="w-screen h-fit flex flex-col items-center mb-8">
-        <img
-          id="hero_logo"
-          class="mt-12 w-72 lg:w-auto"
-          src="assets/heroLogo.svg"
-          alt="Landing Logo"
-        />
-        <a href="register.html">
-          <button class="mt-[3rem] btngradient">Request Demo</button>
-        </a>
-      </div>
+      <footer class="text-center lg:text-left DTFooter w-screen">
+        <div
+          class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300"
+        >
+          <div class="mr-12 hidden lg:block">
+            <span class="DTFooterLink"
+              >Get connected with us on social networks:</span
+            >
+          </div>
 
-      <!-- Sitemap Start -->
-      <div
-        class="boxshadow bottom-0 flex flex-col justify-center items-center text-center mt-8 w-screen"
-      >
-        <footer class="text-center lg:text-left DTFooter w-screen">
-          <div
-            class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300"
-          >
-            <div class="mr-12 hidden lg:block">
-              <span class="DTFooterLink"
-                >Get connected with us on social networks:</span
+          <div class="flex justify-center DTFooterLink">
+            <a
+              href="https://www.facebook.com/datatorlab"
+              class="mr-6 DTFooterLink"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="facebook-f"
+                class="w-2.5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
               >
-            </div>
-            <div class="flex justify-center DTFooterLink">
-              <a
-                href="https://www.facebook.com/datatorlab"
-                class="mr-6 DTFooterLink"
+                <path
+                  fill="currentColor"
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/data_tor" class="mr-6 DTFooterLink">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="twitter"
+                class="w-4"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
               >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fab"
-                  data-icon="facebook-f"
-                  class="w-2.5"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 320 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                  ></path>
-                </svg>
+                <path
+                  fill="currentColor"
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              href="https://www.instagram.com/datator_lab/"
+              class="mr-6 DTFooterLink"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="instagram"
+                class="w-3.5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/datator-lab/about/"
+              class="mr-6 DTFooterLink"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="linkedin-in"
+                class="w-3.5"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mx-6 py-10 text-center md:text-left">
+          <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="">
+              <h6
+                class="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start"
+              >
+                <img
+                  id="footersmall_logo"
+                  class="mr-2"
+                  src="assets/datatorlogo.svg"
+                  alt="DatatorLogo"
+                  width="30px"
+                  height="auto"
+                />
+                <p class="DTNavbarLogoText DTFooterLink">DATATOR</p>
+              </h6>
+              <p class="DTFooterLink">The Privacy Company</p>
+              <a href="register.html">
+                <button class="mt-[3rem] btngradient">Request Demo</button>
               </a>
-              <a href="https://twitter.com/data_tor" class="mr-6 DTFooterLink">
+            </div>
+            <div class="">
+              <h6
+                class="DTFooterLink uppercase font-semibold mb-4 flex justify-center md:justify-start"
+              >
+                DT-Verse
+              </h6>
+              <p class="mb-4">
+                <a href="/solution" class="DTFooterLink">Solutions</a>
+              </p>
+              <p>
+                <a href="/company" class="DTFooterLink">Company</a>
+              </p>
+            </div>
+            <div class="">
+              <h6
+                class="DTFooterLink uppercase font-semibold mb-4 flex justify-center md:justify-start"
+              >
+                Portal
+              </h6>
+              <p class="mb-4">
+                <a href="/login" class="DTFooterLink">Customer</a>
+              </p>
+              <p class="mb-4">
+                <a href="/login" class="DTFooterLink">Partner</a>
+              </p>
+              <p class="mb-4">
+                <a href="/login" class="DTFooterLink">Demo</a>
+              </p>
+            </div>
+            <div class="">
+              <h6
+                class="uppercase DTFooterLink font-semibold mb-4 flex justify-center md:justify-start"
+              >
+                Contact
+              </h6>
+              <p
+                class="DTFooterLink flex items-center justify-center md:justify-start mb-4"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
-                  data-prefix="fab"
-                  data-icon="twitter"
-                  class="w-4"
+                  data-prefix="fas"
+                  data-icon="envelope"
+                  class="w-4 mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                 >
                   <path
                     fill="currentColor"
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
                   ></path>
                 </svg>
-              </a>
-
-              <a
-                href="https://www.instagram.com/datator_lab/"
-                class="mr-6 DTFooterLink"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fab"
-                  data-icon="instagram"
-                  class="w-3.5"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
+                <a href="mailto:info@datator.tech" class="DTFooterLink"
+                  >info@datator.tech</a
                 >
-                  <path
-                    fill="currentColor"
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/datator-lab/about/"
-                class="mr-6 DTFooterLink"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fab"
-                  data-icon="linkedin-in"
-                  class="w-3.5"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  ></path>
-                </svg>
-              </a>
+              </p>
+              <p class="DTFooterLink">
+                Since we preach privacy - we do not carry any cookie !
+              </p>
             </div>
           </div>
-          <div class="mx-6 py-10 text-center md:text-left">
-            <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div class="">
-                <h6
-                  class="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start"
-                >
-                  <img
-                    id="footersmall_logo"
-                    class="mr-2"
-                    src="assets/datatorlogo.svg"
-                    alt="DatatorLogo"
-                    width="30px"
-                    height="auto"
-                  />
-                  <p class="DTNavbarLogoText DTFooterLink">DATATOR</p>
-                </h6>
-                <p class="DTFooterLink">The Privacy Company</p>
-              </div>
-              <div class="">
-                <h6
-                  class="DTFooterLink uppercase font-semibold mb-4 flex justify-center md:justify-start"
-                >
-                  DT-Verse
-                </h6>
-                <p class="mb-4">
-                  <a href="/solution" class="DTFooterLink">Solutions</a>
-                </p>
-                <p>
-                  <a href="/company" class="DTFooterLink">Company</a>
-                </p>
-              </div>
-              <div class="">
-                <h6
-                  class="DTFooterLink uppercase font-semibold mb-4 flex justify-center md:justify-start"
-                >
-                  Portal
-                </h6>
-                <p class="mb-4">
-                  <a href="/login" class="DTFooterLink">Customer</a>
-                </p>
-                <p class="mb-4">
-                  <a href="/login" class="DTFooterLink">Partner</a>
-                </p>
-                <p class="mb-4">
-                  <a href="/login" class="DTFooterLink">Demo</a>
-                </p>
-              </div>
-              <div class="">
-                <h6
-                  class="uppercase DTFooterLink font-semibold mb-4 flex justify-center md:justify-start"
-                >
-                  Contact
-                </h6>
-                <p
-                  class="DTFooterLink flex items-center justify-center md:justify-start mb-4"
-                >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="envelope"
-                    class="w-4 mr-4"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
-                    ></path>
-                  </svg>
-                  <a href="mailto:info@datator.tech" class="DTFooterLink"
-                    >info@datator.tech</a
-                  >
-                </p>
-                <p class="DTFooterLink">
-                  Since we preach privacy - we do not carry any cookie !
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="text-center p-6 DTFooterDown">
-            <span class="DTFooterLink">© 2022 Copyright:</span>
-            <a
-              class="DTFooterLink font-semibold"
-              href="https://www.datator.tech"
-              >Datator</a
-            >
-          </div>
-        </footer>
-      </div>
-      <!-- Sitemap End -->
-    </section>
+        </div>
+        <div class="text-center p-6 DTFooterDown">
+          <span class="DTFooterLink">© 2022 Copyright:</span>
+          <a class="DTFooterLink font-semibold" href="https://www.datator.tech"
+            >Datator</a
+          >
+        </div>
+      </footer>
+    </div>
+    <!-- Sitemap End -->
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -436,6 +425,33 @@
   </script>
   <script type="module" src="/js/login.js"></script>
   <script>
+    function validateForm() {
+      const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      var email = document.forms["login"]["email"];
+      var password = document.forms["login"]["password"];
+
+      if (email.value.length == 0 && !email.value.match(mailformat)) {
+        window.alert("You have entered an invalid email address!");
+      } else {
+        if (password.value.length == 0) {
+          window.alert("Please enter password!!");
+        } else {
+          toggleAlertMessage(true);
+          email.value = "";
+          password.value = "";
+        }
+      }
+    }
+
+    function toggleAlertMessage(state) {
+      const signup = document.getElementById("rnd");
+      if (state) {
+        signup.style.visibility = "visible";
+      } else {
+        signup.style.visibility = "hidden";
+      }
+    }
+
     function closeNavbar() {
       navbarLinks.classList.toggle("left-0");
       navbarLinks.classList.toggle("left-full");

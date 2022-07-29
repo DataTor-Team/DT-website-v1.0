@@ -29,15 +29,20 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "DT-pro";
+  src: url("/assets/DT-pro.ttf") format("truetype");
+  font-weight: normal;
+}
+
 html,
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "DT-pro", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
   color: var(--text-color-light);
-  
 }
-body{
+body {
   scrollbar-width: 5px;
   scrollbar-color: #888 #f1f1f1;
 }

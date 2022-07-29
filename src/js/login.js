@@ -9,19 +9,23 @@ toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-full");
 });
 
-function callfn(i) { document.getElementById(i).style.visibility='visible'; }
+function callfn(i) {
+  document.getElementById(i).style.visibility = "visible";
+}
 
 window.onload = () => {
-  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark");
   navbar.classList.remove("bg-white");
   navbar.classList.remove("bg-[#272727]");
-}
+};
 
 const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
 
 const modifyThemeInLocalStorage = () => {
-  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
-}
+  html.classList.contains("dark")
+    ? localStorage.setItem("theme", "dark")
+    : localStorage.setItem("theme", "light");
+};
 
 window.onscroll = () => {
   if (window.scrollY > 0) {
@@ -51,7 +55,7 @@ darkModeToggle.addEventListener("click", () => {
 const navbar_logo = document.getElementById("navbar_logo");
 const themeIcon = document.getElementById("theme_icon");
 const rightSideLogo = document.getElementById("rightside_logo");
-const heroLogo = document.getElementById("hero_logo");
+// const heroLogo = document.getElementById("hero_logo");
 const footerSmallLogo = document.getElementById("footersmall_logo");
 const homeIcon = document.getElementById("home_icon");
 
@@ -63,17 +67,17 @@ const observer = new MutationObserver((mutations) => {
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         rightSideLogo.setAttribute("src", "assets/rightSideLogo-dark.svg");
-        heroLogo.setAttribute("src", "assets/heroLogo-dark.svg");
+        // heroLogo.setAttribute("src", "assets/heroLogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
-        homeIcon.setAttribute("src","assets/homeicon.svg")
+        homeIcon.setAttribute("src", "assets/homeicon.svg");
       } else {
         // light to dark
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         rightSideLogo.setAttribute("src", "assets/rightSideLogo.svg");
-        heroLogo.setAttribute("src", "assets/heroLogo.svg");
+        // heroLogo.setAttribute("src", "assets/heroLogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
-        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
+        homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
       }
     }
   });

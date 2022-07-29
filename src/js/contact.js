@@ -14,16 +14,18 @@ toggleButton.addEventListener("click", () => {
 });
 
 window.onload = () => {
-  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark");
   navbar.classList.remove("bg-white");
   navbar.classList.remove("bg-[#272727]");
-}
+};
 
 const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
 
 const modifyThemeInLocalStorage = () => {
-  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
-}
+  html.classList.contains("dark")
+    ? localStorage.setItem("theme", "dark")
+    : localStorage.setItem("theme", "light");
+};
 
 window.onscroll = () => {
   if (window.scrollY > 0) {
@@ -64,13 +66,13 @@ const observer = new MutationObserver((mutations) => {
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         datatorBigLogo.setAttribute("src", "/assets/datatorlogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
-        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
+        homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
       } else {
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         datatorBigLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
-        homeIcon.setAttribute("src", "assets/homeicon.svg")
+        homeIcon.setAttribute("src", "assets/homeicon.svg");
       }
     }
   });

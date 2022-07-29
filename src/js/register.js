@@ -3,34 +3,36 @@ const toggleButton = document.querySelector("#toggle");
 const navbarLinks = document.querySelector("#navbarLinks");
 const darkModeToggle = document.querySelector("#theme_icon");
 const html = document.querySelector("html");
-var mode = true;
+
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("left-0");
   navbarLinks.classList.toggle("left-full");
 });
 
 window.onload = () => {
-  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark")
+  isDarkModeOn() ? html.classList.add("dark") : html.classList.remove("dark");
   navbar.classList.remove("bg-white");
   navbar.classList.remove("bg-[#272727]");
-}
+};
 
 const isDarkModeOn = () => localStorage.getItem("theme") === "dark";
 
 const modifyThemeInLocalStorage = () => {
-  html.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light");
-}
+  html.classList.contains("dark")
+    ? localStorage.setItem("theme", "dark")
+    : localStorage.setItem("theme", "light");
+};
 
 window.onscroll = () => {
   if (window.scrollY > 0) {
-    if (mode) {
+    if (!isDarkModeOn()) {
       navbar.classList.add("bg-white");
     } else {
       navbar.classList.add("bg-[#272727]");
     }
     navbar.classList.add("boxshadow");
   } else {
-    if (mode) {
+    if (!isDarkModeOn()) {
       navbar.classList.remove("bg-white");
     } else {
       navbar.classList.remove("bg-[#272727]");
@@ -59,13 +61,13 @@ const observer = new MutationObserver((mutations) => {
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         rightSideLogo.setAttribute("src", "assets/rightSideLogo-dark.svg");
-        homeIcon.setAttribute("src","assets/homeicon.svg")
+        homeIcon.setAttribute("src", "assets/homeicon.svg");
       } else {
         // light to dark
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
         themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         rightSideLogo.setAttribute("src", "assets/rightSideLogo.svg");
-        homeIcon.setAttribute("src","assets/homeicon-dark.svg")
+        homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
       }
     }
   });
@@ -79,6 +81,6 @@ document.querySelector("#form").addEventListener("submit", (event) => {
     name: document.querySelector("#name").value,
     email: document.querySelector("#email").value,
     message: document.querySelector("#message").value,
-    phone: document.querySelector("#phone").value,
+    // phone: document.querySelector("#phone").value,
   });
 });

@@ -162,7 +162,7 @@
               </a>
             </div>
             <a
-              class="font-bold text-[4.25rem] mt-4"
+              class="font-bold text-[3rem] mt-4"
               href="mailto:info@datator.tech"
               >info@datator.tech</a
             >
@@ -172,7 +172,38 @@
             </p>
           </div>
           <hr class="border-t-2 border-gray-500" />
-          <form id="submitForm" class="mt-32 w-11/12 lg:w-1/3 text-center">
+
+          <form
+            name="contactForm"
+            onsubmit="event.preventDefault();"
+            id="submitForm"
+            class="mt-32 w-11/12 lg:w-1/3 text-center"
+          >
+            <!-- Toast -->
+            <div
+              id="rnd"
+              style="visibility: hidden"
+              class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4"
+              role="alert"
+            >
+              <strong class="font-bold">Thank You!</strong><br />
+              <span class="block sm:inline">We will contact you soon!</span>
+              <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                <svg
+                  class="fill-current h-6 w-6 text-green-500"
+                  role="button"
+                  onclick="toggleAlertMessage(false)"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <title>Close</title>
+                  <path
+                    d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
+                  />
+                </svg>
+              </span>
+            </div>
+            
             <h1 class="font-bold text-[2rem] mb-4 text-center">
               Wanna Ask Query ?
             </h1>
@@ -180,6 +211,7 @@
             <input
               class="DTinput lg:mb-6 block w-full mt-2"
               type="text"
+              placeholder="Enter Full Name"
               name="name"
               id="name"
             />
@@ -187,19 +219,22 @@
             <input
               class="DTinput block mt-2 w-full"
               type="text"
+              placeholder="sample@example.com"
               name="email"
               id="email"
             />
             <label for="msg" class="text-left block mt-4">Query/Message</label>
             <textarea
-              class="DTTextArea block w-full mt-2 text-black"
+              class="DTTextArea block w-full mt-2 text-black p-4 resize-none"
               name="message"
               id="message"
+              placeholder="Tell us your message here - we will contact you !"
               cols="45"
               rows="4"
-            >
-            </textarea>
-            <button class="btngradient mt-4">Submit</button>
+            ></textarea>
+            <button onclick="validateForm()" class="btngradient mt-4">
+              Submit
+            </button>
 
             <div
               class="flex-col w-full sectionPaddings lg:hidden flex px-0 lg:px-[8rem] lg:py-[7rem]"
@@ -423,9 +458,7 @@
         </div>
         <div class="text-center p-6 DTFooterDown">
           <span class="DTFooterLink">© 2021 Copyright:</span>
-          <a
-            class="DTFooterLink font-semibold"
-            href="https://www.datator.tech"
+          <a class="DTFooterLink font-semibold" href="https://www.datator.tech"
             >Datator</a
           >
         </div>
@@ -444,6 +477,42 @@
   <!-- <script type="module" src="/js/theme.js"></script> -->
   <script type="module" src="/js/contact.js"></script>
   <script>
+    function validateForm() {
+      const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      var email = document.forms["contactForm"]["email"];
+      var nameField = document.forms["contactForm"]["name"];
+      var msg = document.forms["contactForm"]["message"];
+
+      if (email.value.length == 0 && !email.value.match(mailformat)) {
+        window.alert("You have entered an invalid email address!");
+      } else {
+        if (nameField.value.length == 0) {
+          window.alert("Please enter your Name!!");
+        } else {
+          if (msg.value.length == 0) {
+            window.alert("Please enter Message/Query");
+          } else {
+            toggleAlertMessage(true);
+            email.value = "";
+            nameField.value = "";
+            msg.value = "";
+          }
+        }
+      }
+    }
+
+    function toggleAlertMessage(state) {
+      const signup = document.getElementById("rnd");
+      if (state) {
+        signup.style.visibility = "visible";
+        setTimeout(() => {
+          signup.style.visibility = "hidden";
+        }, 5000);
+      } else {
+        signup.style.visibility = "hidden";
+      }
+    }
+
     function closeNavbar() {
       navbarLinks.classList.toggle("left-0");
       navbarLinks.classList.toggle("left-full");

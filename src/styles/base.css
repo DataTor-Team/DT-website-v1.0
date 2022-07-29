@@ -24,6 +24,10 @@
   --hero-gradient-light: linear-gradient(113.8deg, #ffffff, #b9d1e8);
   --input-outoffocus: #3e3e3e;
 }
+@font-face {
+  font-family: "DT-pro";
+  src: url("/assets/DT-pro.ttf") format("truetype");
+}
 
 * {
   margin: 0;
@@ -35,7 +39,7 @@
 }
 html,
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "DT-pro", sans-serif;
   color: var(--text-color-light);
   background-color: var(--body-color-light);
   overflow-x: hidden;
@@ -152,7 +156,7 @@ body {
   height: 70px;
   position: fixed;
   top: 1rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "DT-pro", sans-serif;
   margin: 0 1rem;
   padding: 0.75rem 1rem;
   background-color: transparent;
@@ -230,14 +234,14 @@ body {
 .DTNavbarLogoText {
   font-size: 0.75rem;
   letter-spacing: 0.25rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "DT-pro", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }
 .DTheading2Text {
   font-size: 1rem;
   letter-spacing: 0.25rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "DT-pro", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -266,7 +270,7 @@ body {
   transition: background-color 0.25s ease-in-out;
 }
 
-.scrollsnap{
+.scrollsnap {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(600px);
   scroll-snap-type: y mandatory;
