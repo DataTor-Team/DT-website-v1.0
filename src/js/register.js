@@ -73,12 +73,12 @@ const observer = new MutationObserver((mutations) => {
 
 observer.observe(document.querySelector("html"), { attributes: true });
 
-document.querySelector("#form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  axios.post("https://dt-backend-server.herokuapp.com/register", {
-    name: document.querySelector("#name").value,
-    email: document.querySelector("#email").value,
-    message: document.querySelector("#message").value,
-    // phone: document.querySelector("#phone").value,
-  });
-});
+// document.querySelector("#form").addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   axios.post("https://dt-backend-server.herokuapp.com/register", {
+//     name: document.querySelector("#name").value,
+//     email: document.querySelector("#email").value,
+//     message: document.querySelector("#message").value,
+//     // phone: document.querySelector("#phone").value,
+//   });
+// });

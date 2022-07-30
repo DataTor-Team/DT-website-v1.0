@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
 // });
 
 const navbar_logo = document.getElementById("navbar_logo");
-const themeIcon = document.getElementById("theme_icon");
+// const themeIcon = document.getElementById("theme_icon");
 const datatorBigLogo = document.getElementById("datatorbig_logo");
 const footerSmallLogo = document.getElementById("footersmall_logo");
 const homeIcon = document.getElementById("home_icon");
@@ -59,13 +59,13 @@ const observer = new MutationObserver((mutations) => {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
       if (!isDarkModeOn()) {
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
-        themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
+        // themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         datatorBigLogo.setAttribute("src", "/assets/datatorlogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
         homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
       } else {
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
-        themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
+        // themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         datatorBigLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         homeIcon.setAttribute("src", "assets/homeicon.svg");
@@ -76,27 +76,28 @@ const observer = new MutationObserver((mutations) => {
 
 observer.observe(document.querySelector("html"), { attributes: true });
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  /**
-   * @type HTMLTextAreaElement
-   */
-  const textArea = document.querySelector("#message");
-  /**
-   * @type HTMLInputElement
-   */
-  const name = document.querySelector("#name");
-  /**
-   * @type HTMLInputElement
-   */
-  const email = document.querySelector("#email");
 
-  const tempAnchorLink = document.querySelector("a");
-  tempAnchorLink.setAttribute(
-    "href",
-    `mailto:info@datator.tech?cc=${email.value}&subject=Query from ${name.value}&body=${textArea.value}`
-  );
-  tempAnchorLink.click();
+// document.getElementById("submitbtn").addEventListener("click", (event) => {
+//   event.preventDefault();
+//   /**
+//    * @type HTMLTextAreaElement
+//    */
+//   const textArea = document.querySelector("#message");
+//   /**
+//    * @type HTMLInputElement
+//    */
+//   const name = document.querySelector("#name");
+//   /**
+//    * @type HTMLInputElement
+//    */
+//   const email = document.querySelector("#email");
 
-  tempAnchorLink.remove();
-});
+//   const tempAnchorLink = document.querySelector("a");
+//   tempAnchorLink.setAttribute(
+//     "href",
+//     `mailto:info@datator.tech?cc=${email.value}&subject=Query from ${name.value}&body=${textArea.value}`
+//   );
+//   tempAnchorLink.click();
+
+//   tempAnchorLink.remove();
+// });

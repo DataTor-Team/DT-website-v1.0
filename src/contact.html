@@ -223,7 +223,6 @@
               type="email"
               name="email"
               id="email"
-              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               placeholder="sample@example.com"
             />
             <label for="msg" class="text-left block mt-4">Query/Message</label>
@@ -236,8 +235,8 @@
               rows="4"
             ></textarea>
             <button
+              id="submitbtn"
               onclick="validateForm()"
-              type="submit"
               class="btngradient mt-4"
             >
               Submit
@@ -486,12 +485,13 @@
   <script>
     function validateForm() {
       const mailformat =
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
       var email = document.forms["contactForm"]["email"];
       var nameField = document.forms["contactForm"]["name"];
       var msg = document.forms["contactForm"]["message"];
 
       if (email.value.length == 0 || !email.value.match(mailformat)) {
+        // window.alert("invalid email");
         email.focus();
       } else {
         if (nameField.value.length == 0) {
@@ -502,6 +502,7 @@
             window.alert("Please enter Message/Query");
             msg.focus();
           } else {
+            sendMail();
             toggleAlertMessage(true);
             email.value = "";
             nameField.value = "";
@@ -510,7 +511,20 @@
         }
       }
     }
+    const sendMail = () => {
+      const textArea = document.querySelector("#message");
+      const name = document.querySelector("#name");
+      const email = document.querySelector("#email");
 
+      const tempAnchorLink = document.querySelector("a");
+      tempAnchorLink.setAttribute(
+        "href",
+        `mailto:info@datator.tech?cc=${email.value}&subject=Query from ${name.value}&body=${textArea.value}`
+      );
+      tempAnchorLink.click();
+
+      tempAnchorLink.remove();
+    };
     function toggleAlertMessage(state) {
       const signup = document.getElementById("rnd");
       if (state) {
