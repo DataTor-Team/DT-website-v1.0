@@ -203,12 +203,11 @@
                 </svg>
               </span>
             </div>
-            
-            <!-- <h1 class="font-bold text-[2rem] mb-4 text-center">
-              Wanna ask query ?
-            </h1> -->
 
-<!-- 
+            <h1 class="font-bold text-[2rem] mb-4 text-center">
+              Wanna ask query ?
+            </h1>
+
             <label for="name" class="text-left block">Name</label>
             <input
               class="DTinput lg:mb-6 block w-full mt-2"
@@ -217,16 +216,14 @@
               name="name"
               id="name"
             />
-            
+
             <label for="email" class="text-left block mt-4">E-mail</label>
             <input
               class="DTinput block mt-2 w-full"
               type="email"
               name="email"
               id="email"
-              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               placeholder="sample@example.com"
-              
             />
             <label for="msg" class="text-left block mt-4">Query/Message</label>
             <textarea
@@ -237,9 +234,13 @@
               cols="45"
               rows="4"
             ></textarea>
-            <button onclick="validateForm()" class="btngradient mt-4">
+            <button
+              id="submitbtn"
+              onclick="validateForm()"
+              class="btngradient mt-4"
+            >
               Submit
-            </button> -->
+            </button>
 
             <div
               class="flex-col w-full sectionPaddings lg:hidden flex px-0 lg:px-[8rem] lg:py-[7rem]"
@@ -483,20 +484,25 @@
   <script type="module" src="/js/contact.js"></script>
   <script>
     function validateForm() {
-      const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      const mailformat =
+        /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
       var email = document.forms["contactForm"]["email"];
       var nameField = document.forms["contactForm"]["name"];
       var msg = document.forms["contactForm"]["message"];
 
-      if (email.value.length == 0 && !email.value.match(mailformat)) {
-        window.alert("You have entered an invalid email address!");
+      if (email.value.length == 0 || !email.value.match(mailformat)) {
+        // window.alert("invalid email");
+        email.focus();
       } else {
         if (nameField.value.length == 0) {
           window.alert("Please enter your Name!!");
+          nameField.focus();
         } else {
           if (msg.value.length == 0) {
             window.alert("Please enter Message/Query");
+            msg.focus();
           } else {
+            sendMail();
             toggleAlertMessage(true);
             email.value = "";
             nameField.value = "";
@@ -505,7 +511,20 @@
         }
       }
     }
+    const sendMail = () => {
+      const textArea = document.querySelector("#message");
+      const name = document.querySelector("#name");
+      const email = document.querySelector("#email");
 
+      const tempAnchorLink = document.querySelector("a");
+      tempAnchorLink.setAttribute(
+        "href",
+        `mailto:info@datator.tech?cc=${email.value}&subject=Query from ${name.value}&body=${textArea.value}`
+      );
+      tempAnchorLink.click();
+
+      tempAnchorLink.remove();
+    };
     function toggleAlertMessage(state) {
       const signup = document.getElementById("rnd");
       if (state) {
