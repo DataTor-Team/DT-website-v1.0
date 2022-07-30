@@ -1,10 +1,10 @@
 {
-  "name": "smartidly-portfolio",
+  "name": "datator-webpage",
   "version": "1.0.0",
-  "description": "The portfolio website for Smartidly",
+  "description": "The portfolio website for datator products",
   "main": "index.js",
-  "repository": "https://github.com/Smartidly-Org/portfolio",
-  "author": "Smartidly-Org",
+  "repository": "https://github.com/DataTor-Team/DT-website-v1.0/",
+  "author": "Datator-Lab",
   "license": "MIT",
   "private": true,
   "dependencies": {

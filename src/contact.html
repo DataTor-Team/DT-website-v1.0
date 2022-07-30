@@ -100,7 +100,7 @@
             href="login.html"
             >Login</a
           >
-          <img
+          <!-- <img
             id="theme_icon"
             onclick="closeNavbar()"
             class="ml-3 mr-2 dark:fill-white"
@@ -108,12 +108,12 @@
             alt="theme"
             width="18px"
             height="auto"
-          />
+          /> -->
           <a href="/" onclick="closeNavbar()">
             <img
               id="home_icon"
               class="ml-3 mr-2 NavbarHomeicon lg:block hidden"
-              width="15px"
+              width="25px"
               height="auto"
               src="assets/homeicon.svg"
               alt="home icon"
@@ -204,9 +204,11 @@
               </span>
             </div>
             
-            <h1 class="font-bold text-[2rem] mb-4 text-center">
-              Wanna Ask Query ?
-            </h1>
+            <!-- <h1 class="font-bold text-[2rem] mb-4 text-center">
+              Wanna ask query ?
+            </h1> -->
+
+<!-- 
             <label for="name" class="text-left block">Name</label>
             <input
               class="DTinput lg:mb-6 block w-full mt-2"
@@ -215,26 +217,29 @@
               name="name"
               id="name"
             />
+            
             <label for="email" class="text-left block mt-4">E-mail</label>
             <input
               class="DTinput block mt-2 w-full"
-              type="text"
-              placeholder="sample@example.com"
+              type="email"
               name="email"
               id="email"
+              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+              placeholder="sample@example.com"
+              
             />
             <label for="msg" class="text-left block mt-4">Query/Message</label>
             <textarea
               class="DTTextArea block w-full mt-2 text-black p-4 resize-none"
               name="message"
               id="message"
-              placeholder="Tell us your message here - we will contact you !"
+              placeholder=" Post your query !"
               cols="45"
               rows="4"
             ></textarea>
             <button onclick="validateForm()" class="btngradient mt-4">
               Submit
-            </button>
+            </button> -->
 
             <div
               class="flex-col w-full sectionPaddings lg:hidden flex px-0 lg:px-[8rem] lg:py-[7rem]"
