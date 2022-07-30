@@ -203,12 +203,11 @@
                 </svg>
               </span>
             </div>
-            
-            <!-- <h1 class="font-bold text-[2rem] mb-4 text-center">
-              Wanna ask query ?
-            </h1> -->
 
-<!-- 
+            <h1 class="font-bold text-[2rem] mb-4 text-center">
+              Wanna ask query ?
+            </h1>
+
             <label for="name" class="text-left block">Name</label>
             <input
               class="DTinput lg:mb-6 block w-full mt-2"
@@ -217,7 +216,7 @@
               name="name"
               id="name"
             />
-            
+
             <label for="email" class="text-left block mt-4">E-mail</label>
             <input
               class="DTinput block mt-2 w-full"
@@ -226,7 +225,6 @@
               id="email"
               pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               placeholder="sample@example.com"
-              
             />
             <label for="msg" class="text-left block mt-4">Query/Message</label>
             <textarea
@@ -237,9 +235,13 @@
               cols="45"
               rows="4"
             ></textarea>
-            <button onclick="validateForm()" class="btngradient mt-4">
+            <button
+              onclick="validateForm()"
+              type="submit"
+              class="btngradient mt-4"
+            >
               Submit
-            </button> -->
+            </button>
 
             <div
               class="flex-col w-full sectionPaddings lg:hidden flex px-0 lg:px-[8rem] lg:py-[7rem]"
@@ -483,19 +485,22 @@
   <script type="module" src="/js/contact.js"></script>
   <script>
     function validateForm() {
-      const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      const mailformat =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       var email = document.forms["contactForm"]["email"];
       var nameField = document.forms["contactForm"]["name"];
       var msg = document.forms["contactForm"]["message"];
 
-      if (email.value.length == 0 && !email.value.match(mailformat)) {
-        window.alert("You have entered an invalid email address!");
+      if (email.value.length == 0 || !email.value.match(mailformat)) {
+        email.focus();
       } else {
         if (nameField.value.length == 0) {
           window.alert("Please enter your Name!!");
+          nameField.focus();
         } else {
           if (msg.value.length == 0) {
             window.alert("Please enter Message/Query");
+            msg.focus();
           } else {
             toggleAlertMessage(true);
             email.value = "";

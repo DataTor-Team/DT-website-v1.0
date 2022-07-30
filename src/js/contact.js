@@ -41,12 +41,12 @@ window.addEventListener("scroll", () => {
   }
 });
 
-darkModeToggle.addEventListener("click", () => {
-  html.classList.toggle("dark");
-  modifyThemeInLocalStorage();
-  navbar.classList.remove("bg-white");
-  navbar.classList.remove("bg-[#272727]");
-});
+// darkModeToggle.addEventListener("click", () => {
+//   html.classList.toggle("dark");
+//   modifyThemeInLocalStorage();
+//   navbar.classList.remove("bg-white");
+//   navbar.classList.remove("bg-[#272727]");
+// });
 
 const navbar_logo = document.getElementById("navbar_logo");
 const themeIcon = document.getElementById("theme_icon");
