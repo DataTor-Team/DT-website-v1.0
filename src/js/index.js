@@ -39,22 +39,22 @@ maindiv.addEventListener("scroll", () => {
   }
 });
 
-darkModeToggle.addEventListener("click", () => {
-  html.classList.toggle("dark");
-  modifyThemeInLocalStorage();
-  navbar.classList.remove("bg-white");
-  navbar.classList.remove("bg-[#272727]");
-});
+// darkModeToggle.addEventListener("click", () => {
+//   html.classList.toggle("dark");
+//   modifyThemeInLocalStorage();
+//   navbar.classList.remove("bg-white");
+//   navbar.classList.remove("bg-[#272727]");
+// });
 
 //Images needes to be cchanged
 const navbar_logo = document.getElementById("navbar_logo");
-const themeIcon = document.getElementById("theme_icon");
+// const themeIcon = document.getElementById("theme_icon");
 const heroLogo = document.getElementById("hero_logo");
 // const footerLogo = document.getElementById("footer_logo");
 const HWSPLogo = document.getElementById("HWSP_logo");
 const DTA_logo = document.getElementById("DTA_logo");
 const footerSmallLogo = document.getElementById("footersmall_logo");
-const homeIcon = document.getElementById("home_icon");
+// const homeIcon = document.getElementById("home_icon");
 DTA_logo.style.transform = "rotate(0deg)";
 
 const observer = new MutationObserver((mutations) => {
@@ -64,24 +64,24 @@ const observer = new MutationObserver((mutations) => {
         // dark to light
         navbar_logo.setAttribute("src", "/assets/datatorlogo.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo.svg");
-        themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
+        // themeIcon.setAttribute("src", "/assets/darkmodeicon.svg");
         heroLogo.setAttribute("src", "/assets/heroLogo.svg");
         // footerLogo.setAttribute("src", "/assets/heroLogo.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo-dark.svg");
-        homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
+        // homeIcon.setAttribute("src", "assets/homeicon-dark.svg");
         scrollDownChev.setAttribute("src", "assets/downChevDark.svg");
       } else {
         // light to dark
 
         navbar_logo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         footerSmallLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
-        themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
+        // themeIcon.setAttribute("src", "/assets/lightmodeicon.svg");
         heroLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
         // footerLogo.setAttribute("src", "/assets/heroLogo-dark.svg");
         HWSPLogo.setAttribute("src", "/assets/datatorlogo-dark.svg");
         DTA_logo.setAttribute("src", "/assets/DTadvan_logo.svg");
-        homeIcon.setAttribute("src", "assets/homeicon.svg");
+        // homeIcon.setAttribute("src", "assets/homeicon.svg");
         scrollDownChev.setAttribute("src", "assets/downChevLight.svg");
       }
     }
