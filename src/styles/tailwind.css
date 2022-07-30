@@ -1199,6 +1199,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 5rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -1380,6 +1384,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-20 {
   gap: 5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2499,6 +2507,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-\[20vw\] {
     width: 20vw;
+  }
+
+  .lg\:w-\[15vw\] {
+    width: 15vw;
   }
 
   .lg\:grid-cols-4 {
