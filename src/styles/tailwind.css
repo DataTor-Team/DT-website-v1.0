@@ -1253,6 +1253,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scroll-snap-strictness: mandatory;
 }
 
+.snap-proximity {
+  --tw-scroll-snap-strictness: proximity;
+}
+
 .snap-start {
   scroll-snap-align: start;
 }
@@ -1872,6 +1876,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.text-sky-500 {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2064,6 +2073,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:right-\[30rem\] {
     right: 30rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:w-6\/12 {
