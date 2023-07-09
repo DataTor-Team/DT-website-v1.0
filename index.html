@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Smartidly - Home</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo"><img src="assets/img/logob.svg" alt="" class="nav__logo" style="margin-top: 15px; width:120px;height:50px;"></a>
+
+                <div class="nav__menu" id="nav-menu" >
+                    
+                    <ul class="nav__list">
+
+                        <li class="nav__item"><a href="#home" class="nav__link highlight-link">Home</a></li>
+                        <li class="nav__item"><a href="#products" class="nav__link highlight-link">Products</a></li>
+                        <li class="nav__item"><a href="#howitworks" class="nav__link highlight-link">How it Works</a></li>
+                        <li class="nav__item"><a href="#pricing" class="nav__link highlight-link">Pricing</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link highlight-link">Contact us</a></li>
+                        <li class="nav__item">
+                            <!-- <a href="https://smartidly-store.web.app/login" class="nav__link"> -->
+                                <a href="/test.html" class="nav__link"></a>
+                            <button class="modern-button">login</button>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                        <a href="/waitList.html" class="nav__link">
+                            <button class="modern-button">Join Waitlist</button>
+                        </a>
+                        </li>
+                        <!-- <li><i class='bx bx-moon change-theme' id="theme-button"></i></li> -->
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+        
+      <style>
+        .home {
+            position: relative;
+            padding-bottom: 14rem; 
+        }
+    
+        .home__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('assets/img/landingimg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.95;
+            z-index: -1;
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.9);
+        }
+    </style>
+
+      <section class="home" id="home">
+        <div class="home__background"></div>
+                <div class="home__container bd-container bd-grid">
+                    <div class="about__data">
+                        <h1 class="home__titlecenter" style="margin-top: 9rem;">Restaurants</h1>
+                        <h3 class="home__titlecenter">made</h3>
+                        <br></br>
+                        <img src="assets/img/logos.svg" alt="" class="about__img">
+                    </div>
+                    <br></br>
+                    <h2 class="home__titleside about__initial">Your Loyal Digital Servant</h2>
+                    <h2 class="home__titlesidetwo" style="font-style: italic;">
+                        Now, Just focus on making delicious food... 
+                    </h2>
+                </div>
+                
+            </section>
+            
+            
+
+            <!--========== SERVICES ==========-->
+            
+            <section class="services section bd-container" id="products">
+                <span class="section-subtitle">Products</span>
+                <h2 class="section-title">Our amazing services</h2>
+
+                <div class="services__container  bd-grid">
+                    <div class="services__content">
+                        
+                        <img src="assets/img/fork1.png" alt="" class="about__img" style="
+                        background-position: center;
+                        width:200px;
+                        height:200px;
+                        top: 50%;
+                        ">
+
+                        <!-- <svg class="svg-icon services__img" viewBox="0 0 20 20">
+							<path d="M17.659,9.597h-1.224c-0.199-3.235-2.797-5.833-6.032-6.033V2.341c0-0.222-0.182-0.403-0.403-0.403S9.597,2.119,9.597,2.341v1.223c-3.235,0.2-5.833,2.798-6.033,6.033H2.341c-0.222,0-0.403,0.182-0.403,0.403s0.182,0.403,0.403,0.403h1.223c0.2,3.235,2.798,5.833,6.033,6.032v1.224c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403v-1.224c3.235-0.199,5.833-2.797,6.032-6.032h1.224c0.222,0,0.403-0.182,0.403-0.403S17.881,9.597,17.659,9.597 M14.435,10.403h1.193c-0.198,2.791-2.434,5.026-5.225,5.225v-1.193c0-0.222-0.182-0.403-0.403-0.403s-0.403,0.182-0.403,0.403v1.193c-2.792-0.198-5.027-2.434-5.224-5.225h1.193c0.222,0,0.403-0.182,0.403-0.403S5.787,9.597,5.565,9.597H4.373C4.57,6.805,6.805,4.57,9.597,4.373v1.193c0,0.222,0.182,0.403,0.403,0.403s0.403-0.182,0.403-0.403V4.373c2.791,0.197,5.026,2.433,5.225,5.224h-1.193c-0.222,0-0.403,0.182-0.403,0.403S14.213,10.403,14.435,10.403"></path>
+						</svg> -->
+                        <h3 class="services__title">Customer</h3>
+                        <p class="services__description">Launch your own digital menu on a 
+                            single click, your customers can 
+                            place and pay for their orders</p>
+                            <div class="wrapper">
+                                <ul class="ull">
+                                    <li class="lil">
+                                        <h3 class="about__step-title section-subtitle">Digital Ordering</h3> 
+                                        <br></br>
+                                        <p>Customers can place orders from their phone for the menu items listed by you completely on their own</p> 
+                                    </li>
+                                    <li class="lil">
+                                        <h3 class="about__step-title section-subtitle">In-App Payments</h3> 
+                                        <br></br>
+                                        <p>Payment shall be made on their own convenience with whichever their preferred way</p> 
+                                    </li>
+                                    <li class="lil">
+                                        <h3 class="about__step-title section-subtitle">Order Tracking</h3> 
+                                        <br></br>
+                                        <p>Each stage of the order shall be transparently communicated to the customer</p> 
+                                    </li>
+                                 </ul>
+                            </div>
+                    </div>
+
+                    <div class="services__content">
+                        <img src="assets/img/spoon1.png" alt="" class="about__img" style="
+                        background-position: center;
+                        width:250px;
+                        height:200px;
+                        top: 50%;
+                        ">
+                        <!-- <svg class="svg-icon services__img" viewBox="0 0 20 20">
+							<path d="M17.431,2.156h-3.715c-0.228,0-0.413,0.186-0.413,0.413v6.973h-2.89V6.687c0-0.229-0.186-0.413-0.413-0.413H6.285c-0.228,0-0.413,0.184-0.413,0.413v6.388H2.569c-0.227,0-0.413,0.187-0.413,0.413v3.942c0,0.228,0.186,0.413,0.413,0.413h14.862c0.228,0,0.413-0.186,0.413-0.413V2.569C17.844,2.342,17.658,2.156,17.431,2.156 M5.872,17.019h-2.89v-3.117h2.89V17.019zM9.587,17.019h-2.89V7.1h2.89V17.019z M13.303,17.019h-2.89v-6.651h2.89V17.019z M17.019,17.019h-2.891V2.982h2.891V17.019z"></path>
+						</svg> -->
+                        
+                        <h3 class="services__title">Store</h3>
+                        <p class="services__description">Simplify and streamline your restaurant operations using one stop app for all and at ease</p>
+                        <div class="wrapper">
+                            <ul class="ull">
+                                <li class="lii">
+                                    <h3 class="about__step-title section-subtitle">Generative AI and Analytics</h3> 
+                                    <br></br>
+                                    <p>Enhance restaurant operations with our AI-powered app</p> 
+                                </li>
+                                <li class="lii">
+                                    <h3 class="about__step-title section-subtitle">Improve Productivity</h3> 
+                                    <br></br>
+                                    <p>Boost restaurant efficiency and savings with our streamlined app for optimized operations</p> 
+                                </li>
+                                <li class="lii">
+                                    <h3 class="about__step-title section-subtitle">Handle Operations role based</h3> 
+                                    <br></br>
+                                    <p>Unlock the potential of your restaurant operations with our feature-rich app for optimized operations</p> 
+                                </li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== ABOUT ==========-->
+            <!-- <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">How it works</span>
+                        <h2 class="section-title about__initial">Just <br> 3<br> steps to use the platform.</h2>
+                        <p class="about__description">
+                            <div class="about__step">
+                            <h3 class="about__step-title">Step 1: Sign up</h3>
+                            <p>Create an account on our platform by providing your details.</p>
+                            </div>
+                            <div class="about__step">
+                            <h3 class="about__step-title">Step 2: Explore</h3>
+                            <p>Discover a wide range of options and explore various features.</p>
+                            </div>
+                            <div class="about__step">
+                            <h3 class="about__step-title">Step 3: Enjoy</h3>
+                            <p>Start using the platform and enjoy the benefits it offers.</p>
+                            </div>
+                        </p>
+                        <div class="about__img-container">
+                            <img src="assets/img/spoonspice-1.png" alt="" class="about__img1" style="height: 20px;width: 20px;">
+                            <img src="assets/img/spoonspice-2.png" alt="" class="about__img1">
+                            <img src="assets/img/spoonspice-3.png" alt="" class="about__img1">
+                          </div>
+                    </div> 
+                </div>
+            </section> -->
+            <section class="about section bd-container" id="howitworks">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">How it works</span>
+                        <h2 class="section-title about__initial">Just </h2>
+                        <h2 class="section-title about__initial" style="color:#d04b5be9;
+                        font-weight: var(--font-medium);margin-bottom: 0; margin-top: 0;padding-top: 0;">3</h2>
+                        <h2 class="section-title about__initial">steps to use the platform</h2>
+                        <p class="about__description">
+                            <div class="about__step">
+                            <h3 class="about__step-title" style="color:#d04b5be9;
+                            font-weight: var(--font-medium);">Step 1: Sign up</h3>
+                            <p>Create an account on our platform by providing your details.</p>
+                            </div>
+                            <div class="about__step">
+                            <h3 class="about__step-title" style="color:#d04b5be9;
+                            font-weight: var(--font-medium);">Step 2: Explore</h3>
+                            <p>Discover a wide range of options and explore various features.</p>
+                            </div>
+                            <div class="about__step">
+                            <h3 class="about__step-title" style="color:#d04b5be9;
+                            font-weight: var(--font-medium);">Step 3: Enjoy</h3>
+                            <p>Start using the platform and enjoy the benefits it offers.</p>
+                            </div>
+                        </p>
+                    </div>
+                    <!-- <div class="imagecontainer">
+                        <div class="dotcontainer">
+                            <div id="dot1" class="dot dot1" onclick="handleOnClickDot(0)"></div>
+                            <div id="dot2" class="dot dot2" onclick="handleOnClickDot(1)"></div>
+                            <div id="dot3" class="dot dot3" onclick="handleOnClickDot(2)"></div>
+                        </div>
+                        <img id="howitworksimg" src="assets/img/step1.svg" alt="" class="howitworksimg">  
+                    </div> -->
+                    
+                    
+                     
+                    <!-- <div class="slider-container">
+                        <div class="pic_menu"> -->
+                          <!-- <label for="slide-dot-1"></label>
+                          <label for="slide-dot-2"></label>
+                          <label for="slide-dot-3"></label> -->
+                        <!-- </div> -->
+                        
+                         <!-- <input id="slide-dot-1" type="radio" name="slides" checked> -->
+                         <!-- <img src="assets/img/idly.jpeg" alt="" class="about__img">  -->
+                         <!-- <input id="slide-dot-2" type="radio" name="slides"> -->
+   
+                         <!-- <img src="assets/img/about.jpg" alt="" class="about__img">       -->
+
+                         <!-- <img src="assets/img/howitworks.png" alt="" class="about__img">       -->
+
+                          
+                        <!-- </div> -->
+                      </div>           
+                    </div>
+            </section>
+
+            <!--========== MENU ==========-->Ï
+            <!-- <section class="menu section bd-container" id="products">
+                <span class="section-subtitle">Products</span>
+                <h2 class="section-title">Catalogue</h2>
+
+                <div class="menu__container bd-grid"> -->
+                    <!-- <div class="menu__content">
+                        <img src="assets/img/ponniboiled.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Ponni Boiled Rice</h3>
+                        <span class="menu__detail">Every grain of Ponni Boiled rice is selected from the southern regions of India, where each harvest is partially cooked in the husk, followed by careful milling</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 5 Kg, 10 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/mattarice.png" alt="" class="menu__img" style="width:200px;height:230px;padding-bottom:50px;">
+                        <h3 class="menu__name">Matta Rice</h3>
+                        <span class="menu__detail">Matta Rice is an indigenous rice variety cultivated in black soil in parts of Kerala</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 5 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/idlyrice1.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">VIP Special Idly Rice</h3>
+                        <span class="menu__detail">Traditional South Indian Idli Rice to make soft Idlis and Dosas, wholesome as it is a rich supply of fibers and is effortless to digest and strong</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 5 Kg, 10 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/thooyamalli.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Thooyamalli Rice</h3>
+                        <span class="menu__detail">Thooyamalli is Traditional  White Rice Variety strengthens nervous system and immune System. . Thuyamalli rice is good Aroma like jasmine then the rice called as thooyaMalli. Rich Source of Vitamins and Minerals. </span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 5 Kg, 10 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/ponnipulngal.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Ponni Pulungal Rice</h3>
+                        <span class="menu__detail">Major cultivation of Ponni Rice is from the river banks of Kaveri, from cities namely Trichy, and Ariyalur. This Ponni pulungal rice is one of the staple foods that digests easily in humans. Shopping of Ponni Boiled rice Online is common and also probably ideal, for various South Indian dishes. As a consequence, we also gain immense health benefits</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 5 Kg, 10 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/seeraga.png" alt="" class="menu__img" style="width:150px;height:230px;">
+                        <h3 class="menu__name">Seeraga Samba Rice</h3>
+                        <span class="menu__detail">Seeraga Samba rice is the most expensive sub-variety and has the smallest grain, about one third the size of a grain of basmati rice. Samba rice has a distinct taste, defined as “starchy”. It retains its texture and does not thicken into lumps which is a much essential characteristic for a good biryani</span>
+                        <span class="menu__subdetail">Available in different package in multiple sizes</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/jaggery.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Jaggery Powder</h3>
+                        <span class="menu__detail">The natural cane sugar known as jaggery(Jaggery Powder) (Gur) is prized for its distinct flavour and texture. Jaggery has many health advantages, such as its capacity to cleanse the body, serve as a digestive aid, sweeten food in a nutritious way, and supply significant mineral levels. </span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 5 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/uraddal.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Whole Urad Dal</h3>
+                        <span class="menu__detail">Whole Urad is commonly used in the Indian kitchen. It is very easy to cook and can be used in making dosa, idli, and vada batter.</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 2 Kg and 5 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/toordal.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Toor Dal</h3>
+                        <span class="menu__detail">Toor Dal is the most delicious dal that can be made on a regular basis. It is mainly used for making dishes like Sambhar, Gujarati Dal and the famous Tadke Wali Dal. This dal is rich in iron, folic and magnesium and can be used to make South Indian sweet dish Obbattu as well</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 2 Kg and 5 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/moongdal.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Moong Dal</h3>
+                        <span class="menu__detail">Moong is one of the most common and frequently used dal in Indian households and it contains a lot of nutrition along with a delicious taste. There are three types of moong dal - Yellow, Split Green Moong, and Whole Green Moong Dal</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 2 Kg and 5 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/gram.png" alt="" class="menu__img" style="width:200px;height:230px;">
+                        <h3 class="menu__name">Roasted Gram</h3>
+                        <span class="menu__detail">Dry roasted Chana Dal or whole black grams (chickpeas) are typically eaten as a snack in India.Roasted chana dal, as the name suggests, is obtained by roasting chana dal. It gives chickpeas a wonderfully rich and nutty taste</span>
+                        <span class="menu__subdetail">Available in different package 1 Kg, 2 Kg and 5 Kg</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/coconutoil.png" alt="" class="menu__img" style="width:200px;height:230px;padding-bottom:50px;">
+                        <h3 class="menu__name">Coconut Oil</h3>
+                        <span class="menu__detail">Coconut oil is an edible oil derived from the kernels, meat, and milk of the coconut palm fruit. Coconut oil is a white solid fat below around 25 °C, and a clear thin liquid oil in warmer climates</span>
+                        <span class="menu__subdetail">Available in different package in multiple sizes</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/sesameoil.png" alt="" class="menu__img" style="width:100px;height:230px;">
+                        <h3 class="menu__name">Seasame Oil</h3>
+                        <span class="menu__detail">Sesame oil is an edible vegetable oil derived from sesame seeds. The oil is one of the earliest-known crop-based oils. Worldwide mass modern production is limited due to the inefficient manual harvesting process required to extract the oil</span>
+                        <span class="menu__subdetail">Available in different package in multiple sizes</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/groundnutoil.png" alt="" class="menu__img" style="width:80px;height:230px;">
+                        <h3 class="menu__name">Groundnut Oil</h3>
+                        <span class="menu__detail">Peanut oil, also known as groundnut oil or arachis oil, is a vegetable oil derived from peanuts. The oil usually has a mild or neutral flavor but, if made with roasted peanuts, has a stronger peanut flavor and aroma</span>
+                        <span class="menu__subdetail">Available in different package in multiple sizes</span>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/deepaoil.png" alt="" class="menu__img" style="width:150px;height:230px;">
+                        <h3 class="menu__name">Deepam Oil</h3>
+                        <span class="menu__detail">Dheepam lamp oil is a unique concoction of 5 pure oils and fragrances that enhance and elevate your divine experience. This exemplary blend allures enchanting luminance, and spreads the good word of light</span>
+                        <span class="menu__subdetail">Available in different package in multiple sizes</span>
+                    </div>
+                </div> -->
+                <!-- <br></br>
+                <p class="disc__description">* Highlighted images are just for reference purposes only</p>
+
+            </section> -->
+
+            <!--===== APP =======-->
+
+            <section class="app section bd-container" id="pricing">
+                
+                <!-- <div class="feature__background"></div> -->
+
+                <div class="app__container">
+                    <div class="app__data">
+                        <span class="section-subtitle app__initial">How much it costs</span>
+                        <h2 class="section-title app__initial">Pricing</h2>
+                        Experience the power of our app at zero cost, effortlessly onboard and start transforming your business. 
+                        <br></br>
+                        <p class="app__description"> Upgrade to our premium plan starts from £15 per month and unlock enhanced features that will supercharge your productivity and success.</p>
+                        
+                    </div>
+
+                    <!-- <img src="assets/img/award_image.png" alt="" class="app__img"> -->
+                </div>
+            </section>
+            
+
+            <!-- <section class="app section bd-container" id="features">
+                        <div class="home__container bd-container bd-grid">
+                            <div class="about__data">
+                                <h1 class="home__titlecenter">Restaurants</h1>
+                                <h3 class="home__titlecenter">made</h3>
+                                <br></br>
+                                <img src="assets/img/logos.svg" alt="" class="about__img">
+                            </div>
+                            <br></br>
+                            <h2 class="home__titleside about__initial">Your Loyal Digital Servant</h2>
+                        </div>
+                        <h2 class="home__titleside about__initial">
+                            Now, Just focus on making delicious food... 
+                        </h2>
+                    </section> -->
+
+            <!--========== CONTACT US ==========-->
+            <section id="contact">
+
+            </section>
+            
+        </main>
+
+        <style>
+            .divider {
+                width: 70%;
+                margin: 0 auto;
+                border-bottom: 1px solid #ccc; /* Replace with your desired color */
+                margin-bottom: 2px;
+            }
+        </style>
+        <div class="divider"></div>
+
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <h2 class="section-title contact__initial">Contact us</h2>
+                </div>
+            </div>
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">Smartidly Technologies</a>
+                    <span class="footer__description">Store. Customer</span>
+                    
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Operations HQ</h3>
+                    <ul>
+                        <li>Hatfield, UK</li>
+                        <li>Gothenburg, Sweden</li>
+                        <li>Hilversum, The Netherlands</li>
+                        <br></br>
+                        <li class="footer__title">info@smartidly.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2023 Smartidly. All rights reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+
+        <script src="/photo.js">
+
+        </script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

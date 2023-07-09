@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Smartidly - Waitlist</title>
+</head>
+
+<body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo"><img src="assets/img/logob.svg" alt="" class="nav__logo"
+                    style="margin-top: 15px; width:120px;height:50px;"></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/index.html#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="/index.html#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/index.html#howitworks" class="nav__link">How it Works</a></li>
+                    <li class="nav__item"><a href="/index.html#features" class="nav__link">Features</a></li>
+                    <li class="nav__item"><a href="/index.html#contact" class="nav__link">Contact us</a></li>
+                    <li class="nav__item">
+                        <a href="https://smartidly-store.web.app/login" class="nav__link">
+                            <button class="modern-button">login</button>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/waitList" class="nav__link">
+                            <button class="modern-button">Join Waitlist</button>
+                        </a>
+                    </li>
+                    <!-- <li><i class='bx bx-moon change-theme' id="theme-button"></i></li> -->
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <style>
+            .home {
+                position: relative;
+                padding-bottom: 16rem;
+            }
+
+            .home__background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 105%;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/waitlist2.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0.9;
+                z-index: -1;
+                box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.9);
+            }
+        </style>
+        <section class="home">
+            <div class="home__background"></div>
+            <div class="home__container bd-container bd-grid" style="align-items: center;">
+                <div class="app__container" style="background-color: white;
+                display: flex;
+                align-items: center;
+                margin-top: 20em;
+                align-items: center;
+                justify-content: center;
+                margin-left: 1rem;
+                position: relative;
+                gap: 1rem;
+                background: aliceblue;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                width: calc(100% - 2rem);
+                box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);">
+                    <div class="app__data">
+                        <h2 class="section-title app__initial">Join our Exclusive Launch August 1, 2023</h2>
+                        <span class="section-subtitle app__initial">To join our waitlist, simply provide your email
+                            address and any additional information requested below. Rest assured, your information will
+                            be kept confidential and will only be used to communicate with you regarding our
+                            product/service.</span>
+                        <br></br>
+                        <div style="display: flex;
+                        flex-direction: column;
+                        align-items: left;">
+
+                            <form action="" method="POST" id="registrationform">
+                                <!-- <div class="alert">Form Submitted Successfully</div> -->
+                                <div class="user-box">
+                                    <input type="text" name="name" value="" id="name" required />
+                                    <!-- <input type="text" name="" required=""> -->
+                                    <label>Your Name *</label>
+                                </div>
+                                <div class="user-box">
+                                    <input type="text" name="resname" value="" id="resname" required />
+
+                                    <label>Restaurant Name *</label>
+                                </div>
+                                <div class="user-box">
+                                    <input type="text" name="address" value="" id="address" required />
+                                    <label>Restaurant Address</label>
+                                </div>
+                                <div class="user-box">
+                                    <input type="number" name="phone" value="" id="phone" required />
+                                    <label>Contact Phone *</label>
+                                </div>
+                                <div style="align-items: left; justify-content: left;">
+                                    <label for="job" style="color: black;">Restaurant Type</label>
+
+                                <div class="user-box">
+                                    <!-- <label for="job">Restaurant Type</label> -->
+                                    <select name="job" id="job" required>
+                                        <optgroup label="Web">
+                                            <option value="Dine-In">Dine-In</option>
+                                            <option value="Takeaway">Takeaway</option>
+                                            <option value="CloudKitchenr">CloudKitchen</option>
+                                            <option value="Pizzeria">Pizzeria</option>
+                                        </optgroup>
+                                    </select>
+                                    <br /><br />
+                                </div>
+                                </div>
+                                
+                                <div class="user-box">
+                                    <input type="email" name="email" value="" id="email" required />
+                                    <!-- <input type="text" name="" required=""> -->
+                                    <label>Contact Email *</label>
+                                </div>
+                                <a href="#" type="submit" sendMessage()>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <!-- <button type="submit" sendMessage()>submit</button> -->
+                                    submit
+                                </a>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- <img src="assets/img/award_image.png" alt="" class="app__img"> -->
+                </div>
+        </section>
+
+        <!--========== CONTACT US ==========-->
+        <section id="contact">
+
+        </section>
+
+    </main>
+
+    
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        
+
+        <div class="contact__container bd-grid">
+            <div class="contact__data">
+                <h2 class="section-title contact__initial">Contact us</h2>
+            </div>
+        </div>
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Smartidly Technologies</a>
+                <span class="footer__description">Store. Customer</span>
+
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Operations HQ</h3>
+                <ul>
+                    <li>Hatfield, London</li>
+                    <li>Gothenburg, Sweden</li>
+                    <li>Hilversum, The Netherlands</li>
+                    <br></br>
+                    <li class="footer__title">info@smartidly.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2023 Smartidly. All rights reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>   -->
+    <script src="firebase/firebase.js"></script>
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    
+          const firebaseConfig = {
+            apiKey: "AIzaSyCv2RFfs5gxrbzB5oKcnVJg6hSvCHwmKSU",
+            databaseURL: "https://smartidly-dev-default-rtdb.europe-west1.firebasedatabase.app",
+                  authDomain: "smartidly-dev.firebaseapp.com",
+                  projectId: "smartidly-dev",
+                  storageBucket: "smartidly-dev.appspot.com",
+                  messagingSenderId: "81865255417",
+                  appId: "1:81865255417:web:e1514fac61b4ffe256b528"
+          };
+    
+          // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+    
+    
+    
+        //listen for submit event//(1)
+        document
+          .getElementById('registrationform')
+          .addEventListener('submit', formSubmit);
+    
+        //Submit form(2)
+        function formSubmit(e) {
+          e.preventDefault();
+          // Get Values from the DOM
+          let name = document.querySelector('#name').value;
+          let resname = document.querySelector('#resname').value;
+          let restype = document.querySelector('#job').value;
+          let address = document.querySelector('#address').value;
+          let phone = document.querySelector('#phone').value;
+          let email = document.querySelector('#email').value;
+    
+          //send message values(3)
+          sendMessage(name, resname, restype, address, phone, email);
+        }
+    
+        //Send Message to Firebase(4)
+        function sendMessage(name, resname, restype, address, phone, email) {
+          const database = getDatabase();
+    
+          set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
+            name: name,
+            resname: resname,
+            restype: restype,
+            address: address,
+            phone: phone,
+            email: email
+          }).then(() => {
+              //Show Alert Message(5)
+        //    document.querySelector('.alert').style.display = 'block';
+        //     //Hide Alert Message After Seven Seconds(6)
+        //    setTimeout(function () {
+        //    document.querySelector('.alert').style.display = 'none';
+        //    }, 7000);
+           document.getElementById('registrationform').reset();
+          }).catch((error) => {
+            alert(error)
+          })
+        }
+      </script>
+
+</body>
+
+</html>
