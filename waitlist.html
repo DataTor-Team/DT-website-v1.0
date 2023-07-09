@@ -95,12 +95,21 @@
                             be kept confidential and will only be used to communicate with you regarding our
                             product/service.</span>
                         <br></br>
+                        <div id="successMessage" style="display: none; color: green;">Form Submitted Successfully!
+                            <br></br>
+                            <a href="/index.html" class="nav__link">
+                                <button class="modern-button">Back to Home</button>
+                            </a>
+                        </div>
+                          
+
                         <div style="display: flex;
                         flex-direction: column;
                         align-items: left;">
 
                             <form action="" method="POST" id="registrationform">
                                 <!-- <div class="alert">Form Submitted Successfully</div> -->
+                                <div id="successMessage" style="display: none; color: green;">Form Submitted Successfully!</div>
                                 <div class="user-box">
                                     <input type="text" name="name" value="" id="name" required />
                                     <!-- <input type="text" name="" required=""> -->
@@ -141,7 +150,7 @@
                                     <!-- <input type="text" name="" required=""> -->
                                     <label>Contact Email *</label>
                                 </div>
-                                <a href="#" type="submit" sendMessage()>
+                                <a href="#" type="submit" onclick="submitForm(event)" sendMessage() >
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -149,7 +158,19 @@
                                     <!-- <button type="submit" sendMessage()>submit</button> -->
                                     submit
                                 </a>
+                                
+
                             </form>
+
+                            <script>
+                                function submitForm(event) {
+                                    event.preventDefault();
+                                    var form = document.getElementById("registrationform");
+                                    form.style.display = "none";
+                                    var successMessage = document.getElementById("successMessage");
+                                    successMessage.style.display = "block";
+                                }
+                            </script>
 
                         </div>
 
